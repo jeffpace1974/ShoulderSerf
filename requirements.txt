@@ -1,0 +1,13 @@
+obsws-python==1.7.2
+pillow==10.0.0
+numpy==1.24.3
+opencv-python==4.8.0.74
+pyaudio==0.2.11
+websockets==11.0.3
+python-dotenv==1.0.0
+pydantic==2.3.0
+openai==1.3.0
+anthropic==0.7.0
+yt-dlp==2023.12.30
+requests==2.31.0
+flask==3.1.1

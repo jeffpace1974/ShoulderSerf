@@ -1,0 +1,501 @@
+Detailed List: Videos Ready for Claude Vision Processing
+======================================================================
+
+  1. Video ID: pkDt_u8v3ss
+     Current Generic Text: "C.S. Lewis Content 1915"
+     Video Title: Read on C. S. Lewis - ep18 : 1915 Part 6
+     Thumbnail URL: https://i.ytimg.com/vi/pkDt_u8v3ss/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/pkDt_u8v3ss.jpg
+
+  2. Video ID: t8yyFh34nc4
+     Current Generic Text: "C.S. Lewis Content 1915"
+     Video Title: Read on C. S. Lewis - ep17 : 1915 Part 5
+     Thumbnail URL: https://i.ytimg.com/vi/t8yyFh34nc4/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/t8yyFh34nc4.jpg
+
+  3. Video ID: iRjrGfTM4vg
+     Current Generic Text: "C.S. Lewis Content 1915"
+     Video Title: Read on C. S. Lewis - ep16 : 1915 Part 4
+     Thumbnail URL: https://i.ytimg.com/vi/iRjrGfTM4vg/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/iRjrGfTM4vg.jpg
+
+  4. Video ID: jtDdFEvA5pQ
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: The Hunter, The King, The Husband...Approaching at Infinite Speed
+     Thumbnail URL: https://i.ytimg.com/vi/jtDdFEvA5pQ/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/jtDdFEvA5pQ.jpg
+
+  5. Video ID: mbeW3MXev4s
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Read on C. S. Lewis - ep32 : The Quest of Bleheris (Part 5)
+     Thumbnail URL: https://i.ytimg.com/vi/mbeW3MXev4s/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/mbeW3MXev4s.jpg
+
+  6. Video ID: vCKf_QCS8Qk
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Read on C. S. Lewis - ep31 : The Quest of Bleheris (Part 4)
+     Thumbnail URL: https://i.ytimg.com/vi/vCKf_QCS8Qk/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/vCKf_QCS8Qk.jpg
+
+  7. Video ID: lQhpErUXFeg
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Read on C. S. Lewis - ep11
+     Thumbnail URL: https://i.ytimg.com/vi/lQhpErUXFeg/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/lQhpErUXFeg.jpg
+
+  8. Video ID: or6ubGtvMBs
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Read on C. S. Lewis - ep9
+     Thumbnail URL: https://i.ytimg.com/vi/or6ubGtvMBs/hqdefault.jpg?v=66dd97fa
+     Local Thumbnail: vision_batch_10/or6ubGtvMBs.jpg
+
+  9. Video ID: rU26RdJRUb8
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: The Pilgrim’s Regress -  Michael Ward
+     Thumbnail URL: https://i.ytimg.com/vi/rU26RdJRUb8/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AHUBoAC1gOKAgwIABABGGUgTShEMA8=&rs=AOn4CLBVd3Z-klXxSf-FdeRepdhPr1e-nA
+     Local Thumbnail: vision_batch_11/rU26RdJRUb8.jpg
+
+ 10. Video ID: kUPSyguw3E8
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Read on C. S. Lewis - ep6
+     Thumbnail URL: https://i.ytimg.com/vi/kUPSyguw3E8/hqdefault.jpg?v=66dd96cc
+     Local Thumbnail: vision_batch_10/kUPSyguw3E8.jpg
+
+ 11. Video ID: Ei8ZnYAVyJ8
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Read on C. S. Lewis - ep4
+     Thumbnail URL: https://i.ytimg.com/vi/Ei8ZnYAVyJ8/hqdefault.jpg?v=66dd9611
+     Local Thumbnail: vision_batch_03/Ei8ZnYAVyJ8.jpg
+
+ 12. Video ID: grgzHpn_9p4
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Read on C. S. Lewis - ep2
+     Thumbnail URL: https://i.ytimg.com/vi/grgzHpn_9p4/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/grgzHpn_9p4.jpg
+
+ 13. Video ID: jOy7vawSGBo
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Standby
+     Thumbnail URL: https://i.ytimg.com/vi/jOy7vawSGBo/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/jOy7vawSGBo.jpg
+
+ 14. Video ID: gaTbJWgAMGc
+     Current Generic Text: "C.S. Lewis Content 1924"
+     Video Title: Read on C. S. Lewis - ep1
+     Thumbnail URL: https://i.ytimg.com/vi/gaTbJWgAMGc/sddefault.jpg?v=66d1a74a
+     Local Thumbnail: vision_batch_09/gaTbJWgAMGc.jpg
+
+ 15. Video ID: jVnnrEVV8JQ
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep173 : 1922/1923 Diary and Letters (Part 50/Part1)
+     Thumbnail URL: https://i.ytimg.com/vi/jVnnrEVV8JQ/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/jVnnrEVV8JQ.jpg
+
+ 16. Video ID: ogWppT20-ZE
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep171 : 1922 Diary and Letters (Part 48)
+     Thumbnail URL: https://i.ytimg.com/vi/ogWppT20-ZE/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/ogWppT20-ZE.jpg
+
+ 17. Video ID: yqmcRQl9lII
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep170 : 1922 Diary and Letters (Part 47)
+     Thumbnail URL: https://i.ytimg.com/vi/yqmcRQl9lII/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/yqmcRQl9lII.jpg
+
+ 18. Video ID: wqhBqXBVfeU
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep168 : 1922 Diary and Letters (Part 45)
+     Thumbnail URL: https://i.ytimg.com/vi/wqhBqXBVfeU/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/wqhBqXBVfeU.jpg
+
+ 19. Video ID: k8jHak4M8uY
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep163 : 1922 Diary and Letters (Part 40)
+     Thumbnail URL: https://i.ytimg.com/vi/k8jHak4M8uY/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/k8jHak4M8uY.jpg
+
+ 20. Video ID: sE7AcqYUCFY
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep152 : 1922 Diary and Letters (Part 36)
+     Thumbnail URL: https://i.ytimg.com/vi/sE7AcqYUCFY/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/sE7AcqYUCFY.jpg
+
+ 21. Video ID: qQZH3ayu1rg
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep151 : 1922 Diary and Letters (Part 35)
+     Thumbnail URL: https://i.ytimg.com/vi/qQZH3ayu1rg/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/qQZH3ayu1rg.jpg
+
+ 22. Video ID: lCkd8loVcow
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep148 : 1922 Diary and Letters (Part 32)
+     Thumbnail URL: https://i.ytimg.com/vi/lCkd8loVcow/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/lCkd8loVcow.jpg
+
+ 23. Video ID: ufSTCNjNhw8
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep144 : 1922 Diary and Letters (Part 28)
+     Thumbnail URL: https://i.ytimg.com/vi/ufSTCNjNhw8/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/ufSTCNjNhw8.jpg
+
+ 24. Video ID: tKO-2R-tYT0
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep139 : 1922 Diary and Letters (Part 23)
+     Thumbnail URL: https://i.ytimg.com/vi/tKO-2R-tYT0/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/tKO-2R-tYT0.jpg
+
+ 25. Video ID: qKbTnY9SMnY
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep137 : 1922 Diary and Letters (Part 21)
+     Thumbnail URL: https://i.ytimg.com/vi/qKbTnY9SMnY/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/qKbTnY9SMnY.jpg
+
+ 26. Video ID: u8gTL8cbdGE
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep136 : 1922 Diary and Letters (Part 20)
+     Thumbnail URL: https://i.ytimg.com/vi/u8gTL8cbdGE/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/u8gTL8cbdGE.jpg
+
+ 27. Video ID: iZIPxxeXeW0
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep134.2 : 1922 Diary and Letters (Part 18)
+     Thumbnail URL: https://i.ytimg.com/vi/iZIPxxeXeW0/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/iZIPxxeXeW0.jpg
+
+ 28. Video ID: pGET1sQQBf0
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep132 : 1922 Diary and Letters (Part 16)
+     Thumbnail URL: https://i.ytimg.com/vi/pGET1sQQBf0/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/pGET1sQQBf0.jpg
+
+ 29. Video ID: hGQ6n__bYyY
+     Current Generic Text: "C.S. Lewis Daily Life 1922"
+     Video Title: Read on C. S. Lewis - ep127 : 1922 Diary and Letters (Part 11)
+     Thumbnail URL: https://i.ytimg.com/vi/hGQ6n__bYyY/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/hGQ6n__bYyY.jpg
+
+ 30. Video ID: t_ZcYpvG0ac
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep200 : 1923 Diary and Letters (Part 26)
+     Thumbnail URL: https://i.ytimg.com/vi/t_ZcYpvG0ac/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/t_ZcYpvG0ac.jpg
+
+ 31. Video ID: twolJccdGcw
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep198 : 1923 Diary and Letters (Part 24)
+     Thumbnail URL: https://i.ytimg.com/vi/twolJccdGcw/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/twolJccdGcw.jpg
+
+ 32. Video ID: u-RSiV7fRpw
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep195 : 1923 Diary and Letters (Part 21)
+     Thumbnail URL: https://i.ytimg.com/vi/u-RSiV7fRpw/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/u-RSiV7fRpw.jpg
+
+ 33. Video ID: rTnIb8oNfDM
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep193 : 1923 Diary and Letters (Part 19)
+     Thumbnail URL: https://i.ytimg.com/vi/rTnIb8oNfDM/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/rTnIb8oNfDM.jpg
+
+ 34. Video ID: wTuFdngHuTc
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep191 : 1923 Diary and Letters (Part 17)
+     Thumbnail URL: https://i.ytimg.com/vi/wTuFdngHuTc/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/wTuFdngHuTc.jpg
+
+ 35. Video ID: ofhyBHW8z4k
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep189 : 1923 Diary and Letters (Part 15)
+     Thumbnail URL: https://i.ytimg.com/vi/ofhyBHW8z4k/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/ofhyBHW8z4k.jpg
+
+ 36. Video ID: kXp2HoXfXc8
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep184 : 1923 Diary and Letters (Part 10)
+     Thumbnail URL: https://i.ytimg.com/vi/kXp2HoXfXc8/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/kXp2HoXfXc8.jpg
+
+ 37. Video ID: mE57ByRzl3U
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep183 : 1923 Diary and Letters (Part 9)
+     Thumbnail URL: https://i.ytimg.com/vi/mE57ByRzl3U/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/mE57ByRzl3U.jpg
+
+ 38. Video ID: jk7PSuAe3Eg
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep178 : 1923 Diary and Letters (Part 6)
+     Thumbnail URL: https://i.ytimg.com/vi/jk7PSuAe3Eg/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/jk7PSuAe3Eg.jpg
+
+ 39. Video ID: yr_y-tfE3aI
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep177 : 1923 Diary and Letters (Part 5)
+     Thumbnail URL: https://i.ytimg.com/vi/yr_y-tfE3aI/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/yr_y-tfE3aI.jpg
+
+ 40. Video ID: i7ga2qUsXSk
+     Current Generic Text: "C.S. Lewis Daily Life 1923"
+     Video Title: Read on C. S. Lewis - ep175.2 : 1923 Diary and Letters (Part 3)
+     Thumbnail URL: https://i.ytimg.com/vi/i7ga2qUsXSk/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/i7ga2qUsXSk.jpg
+
+ 41. Video ID: xwy6qszmNgA
+     Current Generic Text: "C.S. Lewis During the War Years 1916"
+     Video Title: Read on C. S. Lewis - ep34 : 1916 (Part 11)
+     Thumbnail URL: https://i.ytimg.com/vi/xwy6qszmNgA/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/xwy6qszmNgA.jpg
+
+ 42. Video ID: hZr0IMB9Po8
+     Current Generic Text: "C.S. Lewis During the War Years 1916"
+     Video Title: Read on C. S. Lewis - ep25 : 1916 Part 7
+     Thumbnail URL: https://i.ytimg.com/vi/hZr0IMB9Po8/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/hZr0IMB9Po8.jpg
+
+ 43. Video ID: wMLHpCq8Ct4
+     Current Generic Text: "C.S. Lewis During the War Years 1916"
+     Video Title: Read on C. S. Lewis - ep22 : 1916 Part 4
+     Thumbnail URL: https://i.ytimg.com/vi/wMLHpCq8Ct4/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/wMLHpCq8Ct4.jpg
+
+ 44. Video ID: gJHD287wZMk
+     Current Generic Text: "C.S. Lewis During the War Years 1916"
+     Video Title: Read on C. S. Lewis - ep20 : 1916 Part 2
+     Thumbnail URL: https://i.ytimg.com/vi/gJHD287wZMk/maxresdefault.jpg
+     Local Thumbnail: vision_batch_09/gJHD287wZMk.jpg
+
+ 45. Video ID: tECAIH0FnGM
+     Current Generic Text: "C.S. Lewis During the War Years 1917"
+     Video Title: Read on C. S. Lewis - ep44 : 1917 (Part 7)
+     Thumbnail URL: https://i.ytimg.com/vi/tECAIH0FnGM/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/tECAIH0FnGM.jpg
+
+ 46. Video ID: sJdniDXNt5A
+     Current Generic Text: "C.S. Lewis During the War Years 1917"
+     Video Title: Read on C. S. Lewis - ep40 : 1917 (Part 3)
+     Thumbnail URL: https://i.ytimg.com/vi/sJdniDXNt5A/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/sJdniDXNt5A.jpg
+
+ 47. Video ID: vmt1VU4Co-A
+     Current Generic Text: "C.S. Lewis During the War Years 1917"
+     Video Title: Read on C. S. Lewis - ep39 : 1917 (Part 2)
+     Thumbnail URL: https://i.ytimg.com/vi/vmt1VU4Co-A/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/vmt1VU4Co-A.jpg
+
+ 48. Video ID: v7aGA1muBAw
+     Current Generic Text: "C.S. Lewis During the War Years 1918"
+     Video Title: Read on C. S. Lewis - ep68 : 1918 (Part 5)
+     Thumbnail URL: https://i.ytimg.com/vi/v7aGA1muBAw/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/v7aGA1muBAw.jpg
+
+ 49. Video ID: q2Mq6WkFY6E
+     Current Generic Text: "C.S. Lewis During the War Years 1918"
+     Video Title: Read on C. S. Lewis - ep67 : 1918 (Part 4)
+     Thumbnail URL: https://i.ytimg.com/vi/q2Mq6WkFY6E/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/q2Mq6WkFY6E.jpg
+
+ 50. Video ID: scFtJbfEKM4
+     Current Generic Text: "C.S. Lewis During the War Years 1918"
+     Video Title: Read on C. S. Lewis - ep64 : 1918 (Part 1)
+     Thumbnail URL: https://i.ytimg.com/vi/scFtJbfEKM4/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/scFtJbfEKM4.jpg
+
+ 51. Video ID: qRBixOTYT8Y
+     Current Generic Text: "C.S. Lewis Post-War Recovery 1919"
+     Video Title: Read on C. S. Lewis - ep81 : 1919 (Part 6)
+     Thumbnail URL: https://i.ytimg.com/vi/qRBixOTYT8Y/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/qRBixOTYT8Y.jpg
+
+ 52. Video ID: mKfXxMwvVt0
+     Current Generic Text: "C.S. Lewis Post-War Recovery 1919"
+     Video Title: Read on C. S. Lewis - ep75 : 1919 (Part 1)
+     Thumbnail URL: https://i.ytimg.com/vi/mKfXxMwvVt0/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/mKfXxMwvVt0.jpg
+
+ 53. Video ID: s9COrn6gAJM
+     Current Generic Text: "C.S. Lewis Post-War Recovery 1920"
+     Video Title: Read on C. S. Lewis - ep87 : 1920 (Part 3)
+     Thumbnail URL: https://i.ytimg.com/vi/s9COrn6gAJM/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/s9COrn6gAJM.jpg
+
+ 54. Video ID: xBWulCq82kk
+     Current Generic Text: "C.S. Lewis Post-War Recovery 1921"
+     Video Title: Read on C. S. Lewis - ep115 : 1921 Letters (Part 10)
+     Thumbnail URL: https://i.ytimg.com/vi/xBWulCq82kk/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/xBWulCq82kk.jpg
+
+ 55. Video ID: qosX_c0Ub2I
+     Current Generic Text: "C.S. Lewis Post-War Recovery 1921"
+     Video Title: Read on C. S. Lewis - ep109 : 1921 Letters (Part 4)
+     Thumbnail URL: https://i.ytimg.com/vi/qosX_c0Ub2I/maxresdefault.jpg
+     Local Thumbnail: vision_batch_10/qosX_c0Ub2I.jpg
+
+ 56. Video ID: uiFUC3CPV1k
+     Current Generic Text: "C.S. Lewis Post-War Recovery 1921"
+     Video Title: Read on C. S. Lewis - ep106 : 1921 Letters (Part 1)
+     Thumbnail URL: https://i.ytimg.com/vi/uiFUC3CPV1k/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/uiFUC3CPV1k.jpg
+
+ 57. Video ID: zCJ27kUrVFc
+     Current Generic Text: "C.S. Lewis University Studies 1922"
+     Video Title: Read on C. S. Lewis - ep155 : 1922 Dymer - A Work in Progress (Part 3)
+     Thumbnail URL: https://i.ytimg.com/vi/zCJ27kUrVFc/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/zCJ27kUrVFc.jpg
+
+ 58. Video ID: uUBlgJgRdts
+     Current Generic Text: "C.S. Lewis University Studies 1922"
+     Video Title: Read on C. S. Lewis - ep154 : 1922 Dymer - A Work in Progress (Part 2)
+     Thumbnail URL: https://i.ytimg.com/vi/uUBlgJgRdts/maxresdefault.jpg
+     Local Thumbnail: vision_batch_12/uUBlgJgRdts.jpg
+
+ 59. Video ID: trNrZIvcR5I
+     Current Generic Text: "C.S. Lewis University Studies 1923"
+     Video Title: Read on C. S. Lewis - ep180 : 1923 Dymer - A Work in Progress (Part 7)
+     Thumbnail URL: https://i.ytimg.com/vi/trNrZIvcR5I/maxresdefault.jpg
+     Local Thumbnail: vision_batch_11/trNrZIvcR5I.jpg
+
+ 60. Video ID: My7OwOajaj0
+     Current Generic Text: "Dymer A Work in Progress 1922"
+     Video Title: Read on C. S. Lewis - ep159 : 1922 Dymer - A Work in Progress (Part 7)
+     Thumbnail URL: https://i.ytimg.com/vi/My7OwOajaj0/maxresdefault.jpg
+     Local Thumbnail: vision_batch_05/My7OwOajaj0.jpg
+
+ 61. Video ID: YKAIh3hvP_w
+     Current Generic Text: "Dymer A Work in Progress 1922"
+     Video Title: Read on C. S. Lewis - ep158 : 1922 Dymer - A Work in Progress (Part 6)
+     Thumbnail URL: https://i.ytimg.com/vi/YKAIh3hvP_w/maxresdefault.jpg
+     Local Thumbnail: vision_batch_07/YKAIh3hvP_w.jpg
+
+ 62. Video ID: FXsFyZkDUxc
+     Current Generic Text: "Dymer A Work in Progress 1922"
+     Video Title: Read on C. S. Lewis - ep157 : 1922 Dymer - A Work in Progress (Part 5)
+     Thumbnail URL: https://i.ytimg.com/vi/FXsFyZkDUxc/maxresdefault.jpg
+     Local Thumbnail: vision_batch_03/FXsFyZkDUxc.jpg
+
+ 63. Video ID: O7uJtBnjbwE
+     Current Generic Text: "Dymer A Work in Progress 1922"
+     Video Title: Read on C. S. Lewis - ep156 : 1922 Dymer - A Work in Progress (Part 4)
+     Thumbnail URL: https://i.ytimg.com/vi/O7uJtBnjbwE/maxresdefault.jpg
+     Local Thumbnail: vision_batch_05/O7uJtBnjbwE.jpg
+
+ 64. Video ID: bIDCQSiqrlw
+     Current Generic Text: "Dymer A Work in Progress 1923"
+     Video Title: Read on C. S. Lewis - ep181 : 1923 Dymer - A Work in Progress (Part 8)
+     Thumbnail URL: https://i.ytimg.com/vi/bIDCQSiqrlw/maxresdefault.jpg
+     Local Thumbnail: vision_batch_08/bIDCQSiqrlw.jpg
+
+ 65. Video ID: MaC57tUcJEQ
+     Current Generic Text: "1913"
+     Video Title: Read on C. S. Lewis - ep10
+     Thumbnail URL: https://i.ytimg.com/vi/MaC57tUcJEQ/maxresdefault.jpg
+     Local Thumbnail: vision_batch_05/MaC57tUcJEQ.jpg
+
+ 66. Video ID: UJO0M2LSwpg
+     Current Generic Text: "1914 Part 2"
+     Video Title: Read on C. S. Lewis - ep12
+     Thumbnail URL: https://i.ytimg.com/vi/UJO0M2LSwpg/maxresdefault.jpg
+     Local Thumbnail: vision_batch_06/UJO0M2LSwpg.jpg
+
+ 67. Video ID: b33fYNav1tU
+     Current Generic Text: "1915 Part 1"
+     Video Title: Read on C. S. Lewis - ep13 : 1915 Part 1
+     Thumbnail URL: https://i.ytimg.com/vi/b33fYNav1tU/maxresdefault.jpg
+     Local Thumbnail: vision_batch_07/b33fYNav1tU.jpg
+
+ 68. Video ID: Vx8DsTkFaYo
+     Current Generic Text: "1915 Part 2"
+     Video Title: Read on C. S. Lewis - ep14 : 1915 Part 2
+     Thumbnail URL: https://i.ytimg.com/vi/Vx8DsTkFaYo/maxresdefault.jpg
+     Local Thumbnail: vision_batch_06/Vx8DsTkFaYo.jpg
+
+ 69. Video ID: IdwhZbc83W8
+     Current Generic Text: "1915 Part 3"
+     Video Title: Read on C. S. Lewis - ep15 : 1915 Part 3
+     Thumbnail URL: https://i.ytimg.com/vi/IdwhZbc83W8/maxresdefault.jpg
+     Local Thumbnail: vision_batch_04/IdwhZbc83W8.jpg
+
+ 70. Video ID: UyeWqW9RrYs
+     Current Generic Text: "1916 Part 5"
+     Video Title: Read on C. S. Lewis - ep23 : 1916 Part 5
+     Thumbnail URL: https://i.ytimg.com/vi/UyeWqW9RrYs/maxresdefault.jpg
+     Local Thumbnail: vision_batch_06/UyeWqW9RrYs.jpg
+
+ 71. Video ID: e9uJ6xZ2oyY
+     Current Generic Text: "1916 Part 6"
+     Video Title: Read on C. S. Lewis - ep24 : 1916 Part 6
+     Thumbnail URL: https://i.ytimg.com/vi/e9uJ6xZ2oyY/maxresdefault.jpg
+     Local Thumbnail: vision_batch_08/e9uJ6xZ2oyY.jpg
+
+ 72. Video ID: V6uHAsfHPwY
+     Current Generic Text: "1916 Part 9"
+     Video Title: Read on C. S. Lewis - ep27 : 1916 Part 9
+     Thumbnail URL: https://i.ytimg.com/vi/V6uHAsfHPwY/maxresdefault.jpg
+     Local Thumbnail: vision_batch_06/V6uHAsfHPwY.jpg
+
+ 73. Video ID: -UGOdDXq4qw
+     Current Generic Text: "C.S. Lewis 1916 Part 1"
+     Video Title: Read on C. S. Lewis - ep19 : 1916 Part 1
+     Thumbnail URL: https://i.ytimg.com/vi/-UGOdDXq4qw/maxresdefault.jpg
+     Local Thumbnail: vision_batch_01/-UGOdDXq4qw.jpg
+
+ 74. Video ID: -rhF9juohqM
+     Current Generic Text: "C.S. Lewis 1916 Part 3"
+     Video Title: Read on C. S. Lewis - ep21 : 1916 Part 3
+     Thumbnail URL: https://i.ytimg.com/vi/-rhF9juohqM/maxresdefault.jpg
+     Local Thumbnail: vision_batch_01/-rhF9juohqM.jpg
+
+ 75. Video ID: 8_mBexirQ8E
+     Current Generic Text: "C.S. Lewis 1916 Part 8"
+     Video Title: Read on C. S. Lewis - ep26 : 1916 Part 8
+     Thumbnail URL: https://i.ytimg.com/vi/8_mBexirQ8E/maxresdefault.jpg
+     Local Thumbnail: vision_batch_02/8_mBexirQ8E.jpg
+
+ 76. Video ID: GBdtgb5Bt0w
+     Current Generic Text: "C.S. Lewis 1916 Part 10"
+     Video Title: Read on C. S. Lewis - ep33 : Collected Letters 1916 (Part 10)
+     Thumbnail URL: https://i.ytimg.com/vi/GBdtgb5Bt0w/maxresdefault.jpg
+     Local Thumbnail: vision_batch_03/GBdtgb5Bt0w.jpg
+
+ 77. Video ID: SO7UxoiPOAY
+     Current Generic Text: "SO7UxoiPOAY"
+     Video Title: Read on C. S. Lewis - ep5
+     Thumbnail URL: https://i.ytimg.com/vi/SO7UxoiPOAY/hqdefault.jpg?v=66dd9662
+     Local Thumbnail: vision_batch_06/SO7UxoiPOAY.jpg
+
+ 78. Video ID: Ufkk3Ofb9Q8
+     Current Generic Text: "Ufkk3Ofb9Q8"
+     Video Title: Read on C. S. Lewis - ep8
+     Thumbnail URL: https://i.ytimg.com/vi/Ufkk3Ofb9Q8/hqdefault.jpg?v=66dd97b3
+     Local Thumbnail: vision_batch_06/Ufkk3Ofb9Q8.jpg
+
+ 79. Video ID: a9TML0PlDs8
+     Current Generic Text: "a9TML0PlDs8"
+     Video Title: The Pilgrim’s Regress -  Possible Insight on ‘The Brown Girls’
+     Thumbnail URL: https://i.ytimg.com/vi/a9TML0PlDs8/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AHUBoAC1gOKAgwIABABGHIgWCgRMA8=&rs=AOn4CLDKV6b7hOTHLsm-XvRMa4dnPfgJIg
+     Local Thumbnail: vision_batch_07/a9TML0PlDs8.jpg
+
+ 80. Video ID: 09Az3PD9Kqs
+     Current Generic Text: "C.S. Lewis Keeps a Diary 1922"
+     Video Title: Read on C. S. Lewis - ep119 : 1922 Diary and Letters (Part 3)
+     Thumbnail URL: https://i.ytimg.com/vi/09Az3PD9Kqs/maxresdefault.jpg
+     Local Thumbnail: vision_batch_01/09Az3PD9Kqs.jpg
+
+ 81. Video ID: W0i78r4YRuA
+     Current Generic Text: "C.S. Lewis Runs with Pat 1924"
+     Video Title: Read on C. S. Lewis - ep215.2 : 1924 Diary and Letters (Part 11)
+     Thumbnail URL: https://i.ytimg.com/vi/W0i78r4YRuA/maxresdefault.jpg
+     Local Thumbnail: vision_batch_06/W0i78r4YRuA.jpg
+
+ 82. Video ID: BAZs2K5-nWM
+     Current Generic Text: "C.S. Lewis Sleeps In 1922"
+     Video Title: Read on C. S. Lewis - ep128 : 1922 Diary and Letters (Part 12)
+     Thumbnail URL: https://i.ytimg.com/vi/BAZs2K5-nWM/maxresdefault.jpg
+     Local Thumbnail: vision_batch_03/BAZs2K5-nWM.jpg
+
+ 83. Video ID: cpRMiyL2Zxc
+     Current Generic Text: "C.S. Lewis Wins at Cards 1923"
+     Video Title: Read on C. S. Lewis - ep174 : 1923 Diary and Letters (Part 2)
+     Thumbnail URL: https://i.ytimg.com/vi/cpRMiyL2Zxc/maxresdefault.jpg
+     Local Thumbnail: vision_batch_08/cpRMiyL2Zxc.jpg
+

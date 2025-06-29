@@ -1,0 +1,2614 @@
+Title: How Elite AI Agencies Build Prompts - The PDER Process
+Uploader: Liam Ottley
+Upload Date: 20250331
+Duration: 2447 seconds
+Video ID: i70LfKB6TqU
+URL: https://youtube.com/watch?v=i70LfKB6TqU
+============================================================
+
+over the past two years my AI agency
+over the past two years my AI agency morning side AI has built AI systems for
+morning side AI has built AI systems for
+morning side AI has built AI systems for companies of all sizes from local
+companies of all sizes from local
+companies of all sizes from local martial arts gyms to publicly traded
+martial arts gyms to publicly traded
+martial arts gyms to publicly traded companies and even an NBA team and at
+companies and even an NBA team and at
+companies and even an NBA team and at the core of every one of our client
+the core of every one of our client
+the core of every one of our client projects are a handful of powerful AI
+projects are a handful of powerful AI
+projects are a handful of powerful AI prompts which in a few hundred carefully
+prompts which in a few hundred carefully
+prompts which in a few hundred carefully chosen words can automate hundreds or
+chosen words can automate hundreds or
+chosen words can automate hundreds or even thousands of hours of manual work
+even thousands of hours of manual work
+even thousands of hours of manual work so being able to write really really
+so being able to write really really
+so being able to write really really good prompts like these is a superpower
+good prompts like these is a superpower
+good prompts like these is a superpower these days regardless of what career
+these days regardless of what career
+these days regardless of what career you're in but the tricky thing is that
+you're in but the tricky thing is that
+you're in but the tricky thing is that writing these kinds of really good
+writing these kinds of really good
+writing these kinds of really good prompts usually takes a lot of time and
+prompts usually takes a lot of time and
+prompts usually takes a lot of time and effort realizing this at Morningside AI
+effort realizing this at Morningside AI
+effort realizing this at Morningside AI it became a major priority for us to
+it became a major priority for us to
+it became a major priority for us to figure out how to write these kind of
+figure out how to write these kind of
+figure out how to write these kind of elite production grade prompts for our
+elite production grade prompts for our
+elite production grade prompts for our client projects as quickly as possible
+client projects as quickly as possible
+client projects as quickly as possible and so over the past 2 years using the
+and so over the past 2 years using the
+and so over the past 2 years using the latest in AI prompting research and
+latest in AI prompting research and
+latest in AI prompting research and professional grade prompting software we
+professional grade prompting software we
+professional grade prompting software we created our own rapid prompt engineering
+created our own rapid prompt engineering
+created our own rapid prompt engineering system called the Peter process and in
+system called the Peter process and in
+system called the Peter process and in this video I'm going to be revealing our
+this video I'm going to be revealing our
+this video I'm going to be revealing our entire system including the exact prompt
+entire system including the exact prompt
+entire system including the exact prompt engineering tools and software we use
+engineering tools and software we use
+engineering tools and software we use and the process as well that we use at
+and the process as well that we use at
+and the process as well that we use at Morningside AI to craft hyper effective
+Morningside AI to craft hyper effective
+Morningside AI to craft hyper effective prompts in just minutes that are able to
+prompts in just minutes that are able to
+prompts in just minutes that are able to extract the most value from AI models
+extract the most value from AI models
+extract the most value from AI models possible without having to spend all day
+possible without having to spend all day
+possible without having to spend all day writing and testing those prompts so
+writing and testing those prompts so
+writing and testing those prompts so we're going to start quickly with an
+we're going to start quickly with an
+we're going to start quickly with an overview of the Peter framework and then
+overview of the Peter framework and then
+overview of the Peter framework and then diving into a more Hands-On walkthrough
+diving into a more Hands-On walkthrough
+diving into a more Hands-On walkthrough of exactly what it looks like when it's
+of exactly what it looks like when it's
+of exactly what it looks like when it's in action and we're basically going to
+in action and we're basically going to
+in action and we're basically going to be building a business grade prompt from
+be building a business grade prompt from
+be building a business grade prompt from scratch using this process so whether
+scratch using this process so whether
+scratch using this process so whether you're an employee who's just keen on
+you're an employee who's just keen on
+you're an employee who's just keen on automating some of the work you do or
+automating some of the work you do or
+automating some of the work you do or you're an AI agency owner wanting to
+you're an AI agency owner wanting to
+you're an AI agency owner wanting to deliver better client results and more
+deliver better client results and more
+deliver better client results and more consistently or if you're a business
+consistently or if you're a business
+consistently or if you're a business owner and you're looking to train up
+owner and you're looking to train up
+owner and you're looking to train up your own team on how to write prompts
+your own team on how to write prompts
+your own team on how to write prompts well and write them fast and be able to
+well and write them fast and be able to
+well and write them fast and be able to automate their own work then this video
+automate their own work then this video
+automate their own work then this video will show you how the professionals do
+will show you how the professionals do
+will show you how the professionals do it so first and foremost let's just talk
+it so first and foremost let's just talk
+it so first and foremost let's just talk about what makes prompt engineering so
+about what makes prompt engineering so
+about what makes prompt engineering so powerful right it's kind of overused and
+powerful right it's kind of overused and
+powerful right it's kind of overused and over talked about but when done right it
+over talked about but when done right it
+over talked about but when done right it is essentially like having a magic wand
+is essentially like having a magic wand
+is essentially like having a magic wand that can transform data from one form
+that can transform data from one form
+that can transform data from one form into another you're taking some kind of
+into another you're taking some kind of
+into another you're taking some kind of raw information and then turning it into
+raw information and then turning it into
+raw information and then turning it into something valuable just by writing some
+something valuable just by writing some
+something valuable just by writing some magic words in the middle it's pretty
+magic words in the middle it's pretty
+magic words in the middle it's pretty magical when you think about it but
+magical when you think about it but
+magical when you think about it but here's the reality that most people face
+here's the reality that most people face
+here's the reality that most people face right there's a massive difference
+right there's a massive difference
+right there's a massive difference between casual prompting that most
+between casual prompting that most
+between casual prompting that most people do and professional prompt
+people do and professional prompt
+people do and professional prompt engineering which is what I'm going to
+engineering which is what I'm going to
+engineering which is what I'm going to teach you how to do in this video so
+teach you how to do in this video so
+teach you how to do in this video so when you are just chatting to chat gbt
+when you are just chatting to chat gbt
+when you are just chatting to chat gbt you can go back and forth and you can
+you can go back and forth and you can
+you can go back and forth and you can kind of refine your requests by asking
+kind of refine your requests by asking
+kind of refine your requests by asking follow-up prompts and sending more more
+follow-up prompts and sending more more
+follow-up prompts and sending more more questions than nudg in the right
+questions than nudg in the right
+questions than nudg in the right directions until you get what you want
+directions until you get what you want
+directions until you get what you want so it may take a few tries but
+so it may take a few tries but
+so it may take a few tries but eventually you will get to the outcome
+eventually you will get to the outcome
+eventually you will get to the outcome you want but in the real world whether
+you want but in the real world whether
+you want but in the real world whether you're Building Systems for businesses
+you're Building Systems for businesses
+you're Building Systems for businesses like myself and the team at morning side
+like myself and the team at morning side
+like myself and the team at morning side AI or you're creating some client
+AI or you're creating some client
+AI or you're creating some client deliverables or you're automating entire
+deliverables or you're automating entire
+deliverables or you're automating entire workflows you need to be able to prompt
+workflows you need to be able to prompt
+workflows you need to be able to prompt at a level of what's called single shot
+at a level of what's called single shot
+at a level of what's called single shot prompting basically your prompt needs to
+prompting basically your prompt needs to
+prompting basically your prompt needs to be able to work perfectly the first time
+be able to work perfectly the first time
+be able to work perfectly the first time every time without any human
+every time without any human
+every time without any human intervention and kind of going back and
+intervention and kind of going back and
+intervention and kind of going back and forth and saying hey look could you
+forth and saying hey look could you
+forth and saying hey look could you could you do it without these words or
+could you do it without these words or
+could you do it without these words or in this kind of tone right you don't
+in this kind of tone right you don't
+in this kind of tone right you don't have that back and forth it needs to be
+have that back and forth it needs to be
+have that back and forth it needs to be able to be given data transform that how
+able to be given data transform that how
+able to be given data transform that how you want it and do that reliably at
+you want it and do that reliably at
+you want it and do that reliably at scale and this is where all of the value
+scale and this is where all of the value
+scale and this is where all of the value really is for prompt engineering as a
+really is for prompt engineering as a
+really is for prompt engineering as a skill but this is also where most people
+skill but this is also where most people
+skill but this is also where most people get stuck in this frustrating trade-off
+get stuck in this frustrating trade-off
+get stuck in this frustrating trade-off that I mentioned earlier on one hand you
+that I mentioned earlier on one hand you
+that I mentioned earlier on one hand you can either write prompts quickly that
+can either write prompts quickly that
+can either write prompts quickly that perform okay or you can spend hours
+perform okay or you can spend hours
+perform okay or you can spend hours crafting the ones that work flawlessly
+crafting the ones that work flawlessly
+crafting the ones that work flawlessly and when you're trying to build
+and when you're trying to build
+and when you're trying to build something valuable whether that's for
+something valuable whether that's for
+something valuable whether that's for your employer or for your clients or for
+your employer or for your clients or for
+your employer or for your clients or for your own business neither option is
+your own business neither option is
+your own business neither option is acceptable let me give you some quick
+acceptable let me give you some quick
+acceptable let me give you some quick examples of why this matters so say
+examples of why this matters so say
+examples of why this matters so say you're an employee right imagine you are
+you're an employee right imagine you are
+you're an employee right imagine you are automating a weekly report that normally
+automating a weekly report that normally
+automating a weekly report that normally takes you 3 hours so a mediocre prompt
+takes you 3 hours so a mediocre prompt
+takes you 3 hours so a mediocre prompt that you do quickly might get you maybe
+that you do quickly might get you maybe
+that you do quickly might get you maybe 70% of the way there there's still an
+70% of the way there there's still an
+70% of the way there there's still an hour or so of cleanup work that you have
+hour or so of cleanup work that you have
+hour or so of cleanup work that you have to do whereas a great prompt that you
+to do whereas a great prompt that you
+to do whereas a great prompt that you spend a lot of time on might do 95% of
+spend a lot of time on might do 95% of
+spend a lot of time on might do 95% of the work for you and pretty much save
+the work for you and pretty much save
+the work for you and pretty much save you that entire 3 hours and for AI
+you that entire 3 hours and for AI
+you that entire 3 hours and for AI automation agency owners when you are
+automation agency owners when you are
+automation agency owners when you are delivering to your clients the
+delivering to your clients the
+delivering to your clients the difference between a good and a great
+difference between a good and a great
+difference between a good and a great prompt can mean the difference between a
+prompt can mean the difference between a
+prompt can mean the difference between a one-time project and a long-term
+one-time project and a long-term
+one-time project and a long-term retainer and relationship with thousands
+retainer and relationship with thousands
+retainer and relationship with thousands and thousands of dollars per month or if
+and thousands of dollars per month or if
+and thousands of dollars per month or if you're a business owner training your
+you're a business owner training your
+you're a business owner training your team to write Elite prompts means that
+team to write Elite prompts means that
+team to write Elite prompts means that you can Implement AI across your entire
+you can Implement AI across your entire
+you can Implement AI across your entire organization with consistent and
+organization with consistent and
+organization with consistent and reliable results so what was in
+reliable results so what was in
+reliable results so what was in realizing the difference between these
+realizing the difference between these
+realizing the difference between these good and great prompts and how much
+good and great prompts and how much
+good and great prompts and how much extra leg work you can get the AI
+extra leg work you can get the AI
+extra leg work you can get the AI systems to do with the great prompts but
+systems to do with the great prompts but
+systems to do with the great prompts but also factoring in that these take a lot
+also factoring in that these take a lot
+also factoring in that these take a lot longer to write that we decided to
+longer to write that we decided to
+longer to write that we decided to create our own process at morning side
+create our own process at morning side
+create our own process at morning side AI to always get the best prompts that
+AI to always get the best prompts that
+AI to always get the best prompts that get the most out of AI models without
+get the most out of AI models without
+get the most out of AI models without having to spend all day writing and
+having to spend all day writing and
+having to spend all day writing and testing
+testing
+testing them so the Peter process is a
+them so the Peter process is a
+them so the Peter process is a systematic approach that allows us to
+systematic approach that allows us to
+systematic approach that allows us to create these high performing prompts in
+create these high performing prompts in
+create these high performing prompts in a fraction of the time that it would
+a fraction of the time that it would
+a fraction of the time that it would normally take us it's so simple that
+normally take us it's so simple that
+normally take us it's so simple that anyone can be trained on it so that they
+anyone can be trained on it so that they
+anyone can be trained on it so that they can use it in their own role for
+can use it in their own role for
+can use it in their own role for automating work so it's very helpful not
+automating work so it's very helpful not
+automating work so it's very helpful not just for our AI engineers and developers
+just for our AI engineers and developers
+just for our AI engineers and developers when they're doing client work it's it's
+when they're doing client work it's it's
+when they're doing client work it's it's helpful to teach our entire team so that
+helpful to teach our entire team so that
+helpful to teach our entire team so that they know how to create their own AI
+they know how to create their own AI
+they know how to create their own AI tools within their work and automate
+tools within their work and automate
+tools within their work and automate different parts of their own work that
+different parts of their own work that
+different parts of their own work that they would rather not be doing so it's a
+they would rather not be doing so it's a
+they would rather not be doing so it's a win-win across the whole organization
+win-win across the whole organization
+win-win across the whole organization when people are using this kind of
+when people are using this kind of
+when people are using this kind of process so P or PD stands for firstly p
+process so P or PD stands for firstly p
+process so P or PD stands for firstly p is plan which is clearly defining what
+is plan which is clearly defining what
+is plan which is clearly defining what you need the prompt to do before even
+you need the prompt to do before even
+you need the prompt to do before even writing a single word so this is
+writing a single word so this is
+writing a single word so this is something that many people chop up on
+something that many people chop up on
+something that many people chop up on and don't even do D is for draft and
+and don't even do D is for draft and
+and don't even do D is for draft and this is rapidly generating an initial
+this is rapidly generating an initial
+this is rapidly generating an initial prompt using an AI tool that we've
+prompt using an AI tool that we've
+prompt using an AI tool that we've created that basically rapidly applies
+created that basically rapidly applies
+created that basically rapidly applies the latest research back techniques when
+the latest research back techniques when
+the latest research back techniques when it comes to prompting then e is evaluate
+it comes to prompting then e is evaluate
+it comes to prompting then e is evaluate and this is using a professional prompt
+and this is using a professional prompt
+and this is using a professional prompt engineering software which I'll show you
+engineering software which I'll show you
+engineering software which I'll show you in a second in order to strategically
+in a second in order to strategically
+in a second in order to strategically test the prompt that againsts multiple
+test the prompt that againsts multiple
+test the prompt that againsts multiple expected inputs so it's rapid testing in
+expected inputs so it's rapid testing in
+expected inputs so it's rapid testing in a special prompt engineering environment
+a special prompt engineering environment
+a special prompt engineering environment and finally R is for refine which is
+and finally R is for refine which is
+and finally R is for refine which is looking at the responses that you get
+looking at the responses that you get
+looking at the responses that you get from the tests we do within software and
+from the tests we do within software and
+from the tests we do within software and then making targeted improvements and
+then making targeted improvements and
+then making targeted improvements and then repeating that cycle over and over
+then repeating that cycle over and over
+then repeating that cycle over and over again and what makes this process so
+again and what makes this process so
+again and what makes this process so powerful is that it combines three
+powerful is that it combines three
+powerful is that it combines three critical elements that most people Miss
+critical elements that most people Miss
+critical elements that most people Miss in their prompt engineering which is
+in their prompt engineering which is
+in their prompt engineering which is firstly using research back prompting
+firstly using research back prompting
+firstly using research back prompting techniques that are already baked into
+techniques that are already baked into
+techniques that are already baked into this process it's using custom AI tools
+this process it's using custom AI tools
+this process it's using custom AI tools that generate solid first drafts of the
+that generate solid first drafts of the
+that generate solid first drafts of the prompt for you saving you tons of time
+prompt for you saving you tons of time
+prompt for you saving you tons of time and thirdly using a professional prompt
+and thirdly using a professional prompt
+and thirdly using a professional prompt engineering IDE that most people have
+engineering IDE that most people have
+engineering IDE that most people have never heard of and the best part is that
+never heard of and the best part is that
+never heard of and the best part is that I'm going to be sharing all of these
+I'm going to be sharing all of these
+I'm going to be sharing all of these tools with you for free that we use at
+tools with you for free that we use at
+tools with you for free that we use at morning side so you're going to get
+morning side so you're going to get
+morning side so you're going to get access to our prompt planning worksheet
+access to our prompt planning worksheet
+access to our prompt planning worksheet our AI prompt generator tool and also a
+our AI prompt generator tool and also a
+our AI prompt generator tool and also a link to the professional prompt IDE that
+link to the professional prompt IDE that
+link to the professional prompt IDE that we use as well and so for the rest of
+we use as well and so for the rest of
+we use as well and so for the rest of this video to show you how this looks in
+this video to show you how this looks in
+this video to show you how this looks in action I'm going to be walking you
+action I'm going to be walking you
+action I'm going to be walking you through each step of the Peter process
+through each step of the Peter process
+through each step of the Peter process while actually building a production
+while actually building a production
+while actually building a production grade prompt from scratch so you're
+grade prompt from scratch so you're
+grade prompt from scratch so you're going to get to see exactly how we do it
+going to get to see exactly how we do it
+going to get to see exactly how we do it at morning side with nothing held back
+at morning side with nothing held back
+at morning side with nothing held back so let's start with the first component
+so let's start with the first component
+so let's start with the first component which is
+which is
+which is planning the planning phase is where
+planning the planning phase is where
+planning the planning phase is where most people go wrong before they even
+most people go wrong before they even
+most people go wrong before they even started really they just jump straight
+started really they just jump straight
+started really they just jump straight into writing a prompt without clearly
+into writing a prompt without clearly
+into writing a prompt without clearly defining what they needed to do so at
+defining what they needed to do so at
+defining what they needed to do so at morning side we start every prompt with
+morning side we start every prompt with
+morning side we start every prompt with a planning worksheet that answers some
+a planning worksheet that answers some
+a planning worksheet that answers some very key questions that you need to know
+very key questions that you need to know
+very key questions that you need to know before going into things questions like
+before going into things questions like
+before going into things questions like what are the inputs and what data is
+what are the inputs and what data is
+what are the inputs and what data is this prompt actually going to be
+this prompt actually going to be
+this prompt actually going to be processing what format does the output
+processing what format does the output
+processing what format does the output need to be in where can I find some high
+need to be in where can I find some high
+need to be in where can I find some high quality examples of input and output
+quality examples of input and output
+quality examples of input and output pairs which model should be used based
+pairs which model should be used based
+pairs which model should be used based on the budget and performance needs of
+on the budget and performance needs of
+on the budget and performance needs of this prompt and of this use case what
+this prompt and of this use case what
+this prompt and of this use case what are the specific requirements or
+are the specific requirements or
+are the specific requirements or constraints that have come to me from
+constraints that have come to me from
+constraints that have come to me from the client or from the the project as a
+the client or from the the project as a
+the client or from the the project as a whole so this planning phase typically
+whole so this planning phase typically
+whole so this planning phase typically takes 5 to 10 minutes but it can save
+takes 5 to 10 minutes but it can save
+takes 5 to 10 minutes but it can save hours and hours of frustration later so
+hours and hours of frustration later so
+hours and hours of frustration later so here on screen we have the prompt
+here on screen we have the prompt
+here on screen we have the prompt planning sheet which you guys are going
+planning sheet which you guys are going
+planning sheet which you guys are going to be able to get a copy of this is a
+to be able to get a copy of this is a
+to be able to get a copy of this is a resource directly out of my accelerator
+resource directly out of my accelerator
+resource directly out of my accelerator as with some of the other stuff I'm
+as with some of the other stuff I'm
+as with some of the other stuff I'm going to be sharing now before we can
+going to be sharing now before we can
+going to be sharing now before we can actually get into planning we need to
+actually get into planning we need to
+actually get into planning we need to know what kind of prompt we're going to
+know what kind of prompt we're going to
+know what kind of prompt we're going to be writing so in this video I've come up
+be writing so in this video I've come up
+be writing so in this video I've come up with a hypothetical uh scenario say you
+with a hypothetical uh scenario say you
+with a hypothetical uh scenario say you are an AI automation agency delivering a
+are an AI automation agency delivering a
+are an AI automation agency delivering a project for a client or maybe you're a
+project for a client or maybe you're a
+project for a client or maybe you're a business and you're doing this
+business and you're doing this
+business and you're doing this internally but we're going to be
+internally but we're going to be
+internally but we're going to be creating a prompt that is an email order
+creating a prompt that is an email order
+creating a prompt that is an email order responder um that can basically classify
+responder um that can basically classify
+responder um that can basically classify inbound emails to this fantasy uh
+inbound emails to this fantasy uh
+inbound emails to this fantasy uh e-commerce that I've come up with which
+e-commerce that I've come up with which
+e-commerce that I've come up with which is called Tech Gear Pro and they sell
+is called Tech Gear Pro and they sell
+is called Tech Gear Pro and they sell Tech products online and this prompt
+Tech products online and this prompt
+Tech products online and this prompt that we're about to write is going to be
+that we're about to write is going to be
+that we're about to write is going to be attached to their uh email inbox so
+attached to their uh email inbox so
+attached to their uh email inbox so every new email is going to be run
+every new email is going to be run
+every new email is going to be run through the prompt we write and the
+through the prompt we write and the
+through the prompt we write and the prompt is basically expected to be able
+prompt is basically expected to be able
+prompt is basically expected to be able to classify firstly so what kind of
+to classify firstly so what kind of
+to classify firstly so what kind of query is this is asking about order
+query is this is asking about order
+query is this is asking about order status are they asking for a return or a
+status are they asking for a return or a
+status are they asking for a return or a refund are they having technical issues
+refund are they having technical issues
+refund are they having technical issues and they need technical support or does
+and they need technical support or does
+and they need technical support or does it fall outside of these so we have four
+it fall outside of these so we have four
+it fall outside of these so we have four broad categories and that's the
+broad categories and that's the
+broad categories and that's the classification step and then within each
+classification step and then within each
+classification step and then within each of these we have a bit more detail and a
+of these we have a bit more detail and a
+of these we have a bit more detail and a bit more complexity CU I thought that
+bit more complexity CU I thought that
+bit more complexity CU I thought that was a bit too simple I want to give you
+was a bit too simple I want to give you
+was a bit too simple I want to give you guys a bit more of an advanced example
+guys a bit more of an advanced example
+guys a bit more of an advanced example so that you really see how you can apply
+so that you really see how you can apply
+so that you really see how you can apply this to difficult problems within
+this to difficult problems within
+this to difficult problems within businesses or even within your own maybe
+businesses or even within your own maybe
+businesses or even within your own maybe you're an employee and you do this stuff
+you're an employee and you do this stuff
+you're an employee and you do this stuff so if the email comes in and it
+so if the email comes in and it
+so if the email comes in and it classifies it as an order status inquiry
+classifies it as an order status inquiry
+classifies it as an order status inquiry if it's been 0 to 7 Days the process is
+if it's been 0 to 7 Days the process is
+if it's been 0 to 7 Days the process is basically to reassure them that hey look
+basically to reassure them that hey look
+basically to reassure them that hey look usually take 7 to 10 days um please just
+usually take 7 to 10 days um please just
+usually take 7 to 10 days um please just wait a few days you can track your order
+wait a few days you can track your order
+wait a few days you can track your order here at this ra but if it's over 8 days
+here at this ra but if it's over 8 days
+here at this ra but if it's over 8 days then this thing is going to go back and
+then this thing is going to go back and
+then this thing is going to go back and say hey look I'm going to be looking
+say hey look I'm going to be looking
+say hey look I'm going to be looking into this for you this should be here by
+into this for you this should be here by
+into this for you this should be here by now and that's basically buying the
+now and that's basically buying the
+now and that's basically buying the human teen time so in the real world um
+human teen time so in the real world um
+human teen time so in the real world um this is an autoresponder that deals with
+this is an autoresponder that deals with
+this is an autoresponder that deals with as much of the stuff up front as it can
+as much of the stuff up front as it can
+as much of the stuff up front as it can like hey your order should be on the way
+like hey your order should be on the way
+like hey your order should be on the way no worries just check this page but if
+no worries just check this page but if
+no worries just check this page but if it's gone over that then it can flag the
+it's gone over that then it can flag the
+it's gone over that then it can flag the human team and say hey look um give an
+human team and say hey look um give an
+human team and say hey look um give an instant response to the customer so that
+instant response to the customer so that
+instant response to the customer so that they're not sitting there getting all
+they're not sitting there getting all
+they're not sitting there getting all anti because they're not getting a
+anti because they're not getting a
+anti because they're not getting a response and basically buys the team
+response and basically buys the team
+response and basically buys the team time to look into it and then come in
+time to look into it and then come in
+time to look into it and then come in with another response the same thing
+with another response the same thing
+with another response the same thing happens with uh return and refund
+happens with uh return and refund
+happens with uh return and refund requests here obviously for most
+requests here obviously for most
+requests here obviously for most e-commerce stores they've got maybe
+e-commerce stores they've got maybe
+e-commerce stores they've got maybe 30-day returns policy so um part of the
+30-day returns policy so um part of the
+30-day returns policy so um part of the input data that we're going to be
+input data that we're going to be
+input data that we're going to be getting with these emails which we'll
+getting with these emails which we'll
+getting with these emails which we'll see in a second this will make a lot
+see in a second this will make a lot
+see in a second this will make a lot more sense in in a second but part of
+more sense in in a second but part of
+more sense in in a second but part of the data that we're going to be getting
+the data that we're going to be getting
+the data that we're going to be getting is also how many days since they Place
+is also how many days since they Place
+is also how many days since they Place their order so if it's been less than 30
+their order so if it's been less than 30
+their order so if it's been less than 30 days since they purchased then the AI
+days since they purchased then the AI
+days since they purchased then the AI autoresponder can automatically give
+autoresponder can automatically give
+autoresponder can automatically give them the process for doing that return
+them the process for doing that return
+them the process for doing that return and getting the refund if it's been more
+and getting the refund if it's been more
+and getting the refund if it's been more then they sort of buy a better time for
+then they sort of buy a better time for
+then they sort of buy a better time for the team and say Hey look let me check
+the team and say Hey look let me check
+the team and say Hey look let me check if there's anything else I can do um and
+if there's anything else I can do um and
+if there's anything else I can do um and then the human team can step and same
+then the human team can step and same
+then the human team can step and same thing for technical support fairly
+thing for technical support fairly
+thing for technical support fairly straightforward it's trying to handle
+straightforward it's trying to handle
+straightforward it's trying to handle most of the situations up front but if
+most of the situations up front but if
+most of the situations up front but if it is a b more complex then it's buying
+it is a b more complex then it's buying
+it is a b more complex then it's buying time for the human so that's really the
+time for the human so that's really the
+time for the human so that's really the the value of the system it gets back to
+the value of the system it gets back to
+the value of the system it gets back to customers as quickly as possible answers
+customers as quickly as possible answers
+customers as quickly as possible answers as many of those easy to answer
+as many of those easy to answer
+as many of those easy to answer questions or just like routing them to
+questions or just like routing them to
+questions or just like routing them to the right resources as you can see with
+the right resources as you can see with
+the right resources as you can see with these links but in the case where the
+these links but in the case where the
+these links but in the case where the human does need a step and it's buying
+human does need a step and it's buying
+human does need a step and it's buying time and giving them a response while
+time and giving them a response while
+time and giving them a response while the humans come and solve it when they
+the humans come and solve it when they
+the humans come and solve it when they come onto their next shift and so this
+come onto their next shift and so this
+come onto their next shift and so this whole thing here is basically a a brief
+whole thing here is basically a a brief
+whole thing here is basically a a brief or a write up of what this project would
+or a write up of what this project would
+or a write up of what this project would be about and it's got all the context we
+be about and it's got all the context we
+be about and it's got all the context we need in order to be able to build a
+need in order to be able to build a
+need in order to be able to build a system to execute on this so now that we
+system to execute on this so now that we
+system to execute on this so now that we know what we're trying to do here we can
+know what we're trying to do here we can
+know what we're trying to do here we can go back to our planning sheet and fill
+go back to our planning sheet and fill
+go back to our planning sheet and fill this out quickly so what are the inputs
+this out quickly so what are the inputs
+this out quickly so what are the inputs if any inputs are going to be the uh
+if any inputs are going to be the uh
+if any inputs are going to be the uh customer email and the uh number of days
+customer email and the uh number of days
+customer email and the uh number of days since purchase so that's what we're
+since purchase so that's what we're
+since purchase so that's what we're expecting to be passed into this prompt
+expecting to be passed into this prompt
+expecting to be passed into this prompt and the sort of system as a whole once
+and the sort of system as a whole once
+and the sort of system as a whole once it's baked into some kind of workflow
+it's baked into some kind of workflow
+it's baked into some kind of workflow automation whereas the IP coming from a
+automation whereas the IP coming from a
+automation whereas the IP coming from a any in many cases The Prompt is needing
+any in many cases The Prompt is needing
+any in many cases The Prompt is needing to apply some kind of thinking or some
+to apply some kind of thinking or some
+to apply some kind of thinking or some kind of process and in this case the IP
+kind of process and in this case the IP
+kind of process and in this case the IP is coming from this document here which
+is coming from this document here which
+is coming from this document here which is all of this uh information so all of
+is all of this uh information so all of
+is all of this uh information so all of this is basically the IP in other cases
+this is basically the IP in other cases
+this is basically the IP in other cases where you're writing these prompts it
+where you're writing these prompts it
+where you're writing these prompts it may be for you're writing scripting or
+may be for you're writing scripting or
+may be for you're writing scripting or you're doing short FM content scripting
+you're doing short FM content scripting
+you're doing short FM content scripting or any kind of other content repurposing
+or any kind of other content repurposing
+or any kind of other content repurposing in this IP section you could have some
+in this IP section you could have some
+in this IP section you could have some Alexi you could have some previous
+Alexi you could have some previous
+Alexi you could have some previous examples of high performing scripts that
+examples of high performing scripts that
+examples of high performing scripts that you put out on your social media Etc but
+you put out on your social media Etc but
+you put out on your social media Etc but it's basically like what's the juice
+it's basically like what's the juice
+it's basically like what's the juice what's the meat what's actually uh
+what's the meat what's actually uh
+what's the meat what's actually uh telling it how to transform this data
+telling it how to transform this data
+telling it how to transform this data what are the instructions on how it
+what are the instructions on how it
+what are the instructions on how it should be doing its task so in this case
+should be doing its task so in this case
+should be doing its task so in this case where's IP coming from is um
+where's IP coming from is um
+where's IP coming from is um project brief what format does the
+project brief what format does the
+project brief what format does the output need to be in just a plain text
+output need to be in just a plain text
+output need to be in just a plain text email um respond so the output of this
+email um respond so the output of this
+email um respond so the output of this prompt is just going to be the email
+prompt is just going to be the email
+prompt is just going to be the email that the AI has written to respond to so
+that the AI has written to respond to so
+that the AI has written to respond to so that's not too complicated in a bunch of
+that's not too complicated in a bunch of
+that's not too complicated in a bunch of use cases for this kind of prompt
+use cases for this kind of prompt
+use cases for this kind of prompt engineering you'd want it to Output in
+engineering you'd want it to Output in
+engineering you'd want it to Output in Json so that you can do something with
+Json so that you can do something with
+Json so that you can do something with it uh via another step in a workflow
+it uh via another step in a workflow
+it uh via another step in a workflow automation or you want to extract some
+automation or you want to extract some
+automation or you want to extract some information and put into a database so
+information and put into a database so
+information and put into a database so the output format is important and how
+the output format is important and how
+the output format is important and how where can I get two to three high
+where can I get two to three high
+where can I get two to three high quality examples as you're going to see
+quality examples as you're going to see
+quality examples as you're going to see in the uh for prompt generator tool we
+in the uh for prompt generator tool we
+in the uh for prompt generator tool we do need input output examples in order
+do need input output examples in order
+do need input output examples in order to get the best possible prompt for my
+to get the best possible prompt for my
+to get the best possible prompt for my first draft generation in this case I've
+first draft generation in this case I've
+first draft generation in this case I've also included it on uh this write up so
+also included it on uh this write up so
+also included it on uh this write up so I'll give you guys access to all these
+I'll give you guys access to all these
+I'll give you guys access to all these resources it'll be in my free school
+resources it'll be in my free school
+resources it'll be in my free school Community you can just go onto School
+Community you can just go onto School
+Community you can just go onto School join for free it'll take a few minutes
+join for free it'll take a few minutes
+join for free it'll take a few minutes to get accepted then in the YouTube
+to get accepted then in the YouTube
+to get accepted then in the YouTube resources tab there'll be this video and
+resources tab there'll be this video and
+resources tab there'll be this video and we'll have all of the resources here
+we'll have all of the resources here
+we'll have all of the resources here including the the perfect prompt
+including the the perfect prompt
+including the the perfect prompt generator tool um access to the software
+generator tool um access to the software
+generator tool um access to the software that I'm going to be showing you in a
+that I'm going to be showing you in a
+that I'm going to be showing you in a second and also uh this document here
+second and also uh this document here
+second and also uh this document here and the prompt planning sheet Etc so
+and the prompt planning sheet Etc so
+and the prompt planning sheet Etc so that's all on the school community and
+that's all on the school community and
+that's all on the school community and here I've generated some example
+here I've generated some example
+here I've generated some example responses so as you can see uh we are
+responses so as you can see uh we are
+responses so as you can see uh we are expecting inputs of customer email and
+expecting inputs of customer email and
+expecting inputs of customer email and number of days since purchase so the
+number of days since purchase so the
+number of days since purchase so the inputs we have this QA format QA QA
+inputs we have this QA format QA QA
+inputs we have this QA format QA QA question answer question answer this
+question answer question answer this
+question answer question answer this will make a bit more sense when we do
+will make a bit more sense when we do
+will make a bit more sense when we do the drafting step next but basically we
+the drafting step next but basically we
+the drafting step next but basically we have the input of the email and we have
+have the input of the email and we have
+have the input of the email and we have um the number of days since purchase and
+um the number of days since purchase and
+um the number of days since purchase and this is the expected output so we have
+this is the expected output so we have
+this is the expected output so we have one pair here and an example input and
+one pair here and an example input and
+one pair here and an example input and output and then we have another pair
+output and then we have another pair
+output and then we have another pair here slightly different and the example
+here slightly different and the example
+here slightly different and the example output
+output
+output and the input here and another output
+and the input here and another output
+and the input here and another output example as well so these kinds of input
+example as well so these kinds of input
+example as well so these kinds of input and output pairs are really essential to
+and output pairs are really essential to
+and output pairs are really essential to make sure that the output is coming in
+make sure that the output is coming in
+make sure that the output is coming in the right format right tone of voice um
+the right format right tone of voice um
+the right format right tone of voice um and you guys will see in a second how
+and you guys will see in a second how
+and you guys will see in a second how when we bake this into the prompt we can
+when we bake this into the prompt we can
+when we bake this into the prompt we can even turn it on and off and see how much
+even turn it on and off and see how much
+even turn it on and off and see how much of a difference this makes so we have
+of a difference this makes so we have
+of a difference this makes so we have our examples here so we can go back to
+our examples here so we can go back to
+our examples here so we can go back to our prompting sheet um we can say client
+our prompting sheet um we can say client
+our prompting sheet um we can say client has provided they are included in the
+has provided they are included in the
+has provided they are included in the brief and can this be done in one step
+brief and can this be done in one step
+brief and can this be done in one step now in this case I'd say yes but
+now in this case I'd say yes but
+now in this case I'd say yes but sometimes you may need to chain multiple
+sometimes you may need to chain multiple
+sometimes you may need to chain multiple prompts together for example you may
+prompts together for example you may
+prompts together for example you may want to throw a whole bunch of
+want to throw a whole bunch of
+want to throw a whole bunch of information in and get it to write an
+information in and get it to write an
+information in and get it to write an outline and then it needs to go over
+outline and then it needs to go over
+outline and then it needs to go over that outline and kind of approve that it
+that outline and kind of approve that it
+that outline and kind of approve that it meets some kind of criteria or way that
+meets some kind of criteria or way that
+meets some kind of criteria or way that you like to structure your videos and
+you like to structure your videos and
+you like to structure your videos and then you need to do another step after
+then you need to do another step after
+then you need to do another step after that that's going to actually flesh it
+that that's going to actually flesh it
+that that's going to actually flesh it out into say a script or or into some
+out into say a script or or into some
+out into say a script or or into some piece of content that you want to write
+piece of content that you want to write
+piece of content that you want to write so sometimes it's called prompt chaining
+so sometimes it's called prompt chaining
+so sometimes it's called prompt chaining and you want to do multiple steps where
+and you want to do multiple steps where
+and you want to do multiple steps where it's you're asking a bit too much for it
+it's you're asking a bit too much for it
+it's you're asking a bit too much for it to do it all in one step but in this
+to do it all in one step but in this
+to do it all in one step but in this case we can do the classification of
+case we can do the classification of
+case we can do the classification of what type it is and also the generation
+what type it is and also the generation
+what type it is and also the generation of the response Allin one go you could
+of the response Allin one go you could
+of the response Allin one go you could split that out into okay let's do a
+split that out into okay let's do a
+split that out into okay let's do a classifier first that's more specialized
+classifier first that's more specialized
+classifier first that's more specialized in the writing of the responses rather
+in the writing of the responses rather
+in the writing of the responses rather than of the classification but in this
+than of the classification but in this
+than of the classification but in this case I think it's Overkill can this be
+case I think it's Overkill can this be
+case I think it's Overkill can this be done in one step yes and which model
+done in one step yes and which model
+done in one step yes and which model should be used this really comes down to
+should be used this really comes down to
+should be used this really comes down to a number of factors like how much is
+a number of factors like how much is
+a number of factors like how much is this going to be used if this is going
+this going to be used if this is going
+this going to be used if this is going to be hitting the API maybe thousands of
+to be hitting the API maybe thousands of
+to be hitting the API maybe thousands of times a month when it comes to the model
+times a month when it comes to the model
+times a month when it comes to the model we need to be thinking about what is
+we need to be thinking about what is
+we need to be thinking about what is this task for what context is it and how
+this task for what context is it and how
+this task for what context is it and how many times is it going to be used how
+many times is it going to be used how
+many times is it going to be used how difficult is the task so for more
+difficult is the task so for more
+difficult is the task so for more difficult tasks you're obviously going
+difficult tasks you're obviously going
+difficult tasks you're obviously going to want to go for the more expensive and
+to want to go for the more expensive and
+to want to go for the more expensive and and smarter models which typically do
+and smarter models which typically do
+and smarter models which typically do cost more but at the at the same time if
+cost more but at the at the same time if
+cost more but at the at the same time if this thing is going to be running
+this thing is going to be running
+this thing is going to be running thousands and thousands of times a month
+thousands and thousands of times a month
+thousands and thousands of times a month you may have a bit of a trade-off where
+you may have a bit of a trade-off where
+you may have a bit of a trade-off where hey we need a really intelligent model
+hey we need a really intelligent model
+hey we need a really intelligent model and we needed a lot so what's the best
+and we needed a lot so what's the best
+and we needed a lot so what's the best trade-off here how can I get it to work
+trade-off here how can I get it to work
+trade-off here how can I get it to work with the cheapest model possible or if
+with the cheapest model possible or if
+with the cheapest model possible or if it's only going to be used maybe a
+it's only going to be used maybe a
+it's only going to be used maybe a handful or a few dozen times a month
+handful or a few dozen times a month
+handful or a few dozen times a month then you may as well just go for a very
+then you may as well just go for a very
+then you may as well just go for a very smart model and just get the best
+smart model and just get the best
+smart model and just get the best results from it so in the cases where
+results from it so in the cases where
+results from it so in the cases where there's super high volume you're going
+there's super high volume you're going
+there's super high volume you're going to want to try and get the cheapest
+to want to try and get the cheapest
+to want to try and get the cheapest model possible but that can make a
+model possible but that can make a
+model possible but that can make a little bit more difficult and require a
+little bit more difficult and require a
+little bit more difficult and require a bit more prompt engineering but that's
+bit more prompt engineering but that's
+bit more prompt engineering but that's really where the value of of being a
+really where the value of of being a
+really where the value of of being a good prompt engineer and and having a
+good prompt engineer and and having a
+good prompt engineer and and having a good process comes from which is you can
+good process comes from which is you can
+good process comes from which is you can get better performance out of Cheaper
+get better performance out of Cheaper
+get better performance out of Cheaper models where other people have to rely
+models where other people have to rely
+models where other people have to rely on really really expensive ones you can
+on really really expensive ones you can
+on really really expensive ones you can use much cheaper ones with better
+use much cheaper ones with better
+use much cheaper ones with better instructions and get the same or even a
+instructions and get the same or even a
+instructions and get the same or even a better result so in this case because it
+better result so in this case because it
+better result so in this case because it is a kind of writing task I'm going to
+is a kind of writing task I'm going to
+is a kind of writing task I'm going to go with uh
+go with uh
+go with uh Claude son it 3.7 which is come out
+Claude son it 3.7 which is come out
+Claude son it 3.7 which is come out recently which is the best smartest
+recently which is the best smartest
+recently which is the best smartest writing model but that is really just
+writing model but that is really just
+writing model but that is really just the starting point we can Benchmark it
+the starting point we can Benchmark it
+the starting point we can Benchmark it with that and then we can try to go down
+with that and then we can try to go down
+with that and then we can try to go down to cheaper and cheaper models even
+to cheaper and cheaper models even
+to cheaper and cheaper models even within the CLA family but we want to
+within the CLA family but we want to
+within the CLA family but we want to Benchmark it and see just how good we
+Benchmark it and see just how good we
+Benchmark it and see just how good we can get it and then if we can use our
+can get it and then if we can use our
+can get it and then if we can use our engineering to work that model down to
+engineering to work that model down to
+engineering to work that model down to something cheaper and cheaper and does
+something cheaper and cheaper and does
+something cheaper and cheaper and does the client have specific requests none
+the client have specific requests none
+the client have specific requests none aside from in the brief okay so step two
+aside from in the brief okay so step two
+aside from in the brief okay so step two of the planning sheet is actually
+of the planning sheet is actually
+of the planning sheet is actually requirement Gathering so this is
+requirement Gathering so this is
+requirement Gathering so this is prepping everything that we're going to
+prepping everything that we're going to
+prepping everything that we're going to be putting into our AI tool in a second
+be putting into our AI tool in a second
+be putting into our AI tool in a second and a lot of this I'm just going to be a
+and a lot of this I'm just going to be a
+and a lot of this I'm just going to be a to grab directly from our sheet but this
+to grab directly from our sheet but this
+to grab directly from our sheet but this is really where you collect a lot of the
+is really where you collect a lot of the
+is really where you collect a lot of the information that's going to allow you to
+information that's going to allow you to
+information that's going to allow you to rapidly draft it in the next step so the
+rapidly draft it in the next step so the
+rapidly draft it in the next step so the purpose of this prompt I can go back to
+purpose of this prompt I can go back to
+purpose of this prompt I can go back to here maybe grab all of this and just
+here maybe grab all of this and just
+here maybe grab all of this and just take it back over inputs again this is
+take it back over inputs again this is
+take it back over inputs again this is similar to what we had just up here we
+similar to what we had just up here we
+similar to what we had just up here we can just grab
+these and a bit of context so this is
+these and a bit of context so this is the email and then days of purchase
+the email and then days of purchase
+the email and then days of purchase number of days since the cost be used
+number of days since the cost be used
+number of days since the cost be used for this is to be used for determining
+for this is to be used for determining
+for this is to be used for determining actions um such as refund request and
+actions um such as refund request and
+actions um such as refund request and now that we're at this IP section it's
+now that we're at this IP section it's
+now that we're at this IP section it's asking for the secret Source or
+asking for the secret Source or
+asking for the secret Source or methodology which we have in the brief
+methodology which we have in the brief
+methodology which we have in the brief here so if we go response categories and
+here so if we go response categories and
+here so if we go response categories and guidelines copy all of this
+we actually had this information here um
+we actually had this information here um maybe I'll just grab that and put it in
+maybe I'll just grab that and put it in
+maybe I'll just grab that and put it in as well this is the IP or secret
+source and for the output we can just do
+source and for the output we can just do similar to what we had before so this
+similar to what we had before so this
+similar to what we had before so this step one of exploration is just to get
+step one of exploration is just to get
+step one of exploration is just to get your thoughts out on the page and make
+your thoughts out on the page and make
+your thoughts out on the page and make sure that you know what you're doing
+sure that you know what you're doing
+sure that you know what you're doing when you head into the second phase here
+when you head into the second phase here
+when you head into the second phase here so if we go down
+so if we go down
+so if we go down and plain text emo response and then for
+and plain text emo response and then for
+and plain text emo response and then for the examples we can go back down and
+the examples we can go back down and
+the examples we can go back down and grab our examples from the a client
+brief well we've got that there and at
+brief well we've got that there and at the bottom of the sheet there's actually
+the bottom of the sheet there's actually
+the bottom of the sheet there's actually another finished example so that if you
+another finished example so that if you
+another finished example so that if you are doing another prompt you can look at
+are doing another prompt you can look at
+are doing another prompt you can look at this and get an idea of how you can fill
+this and get an idea of how you can fill
+this and get an idea of how you can fill that out for a different kind of prompt
+that out for a different kind of prompt
+that out for a different kind of prompt and as I said this is from accelerator
+and as I said this is from accelerator
+and as I said this is from accelerator so there's some other stuff here and the
+so there's some other stuff here and the
+so there's some other stuff here and the next step is to use our plan in
+next step is to use our plan in
+next step is to use our plan in generating our draft which we're going
+generating our draft which we're going
+generating our draft which we're going to be covering in a second using our
+to be covering in a second using our
+to be covering in a second using our perfect prompt generator tools since
+perfect prompt generator tools since
+perfect prompt generator tools since we've filled out this entire requirement
+we've filled out this entire requirement
+we've filled out this entire requirement Gathering section we have completed our
+Gathering section we have completed our
+Gathering section we have completed our planning and now we're ready to move on
+planning and now we're ready to move on
+planning and now we're ready to move on to the drafting using our AI tool the
+to the drafting using our AI tool the
+to the drafting using our AI tool the perfect PR
+perfect PR
+perfect PR generator so to do the drafting step we
+generator so to do the drafting step we
+generator so to do the drafting step we need to sign up to relevance AI uh
+need to sign up to relevance AI uh
+need to sign up to relevance AI uh there'll be a link here in the resource
+there'll be a link here in the resource
+there'll be a link here in the resource so this will be on the school Community
+so this will be on the school Community
+so this will be on the school Community um and you can sign up to relevant Ai
+um and you can sign up to relevant Ai
+um and you can sign up to relevant Ai and once you have you can click this
+and once you have you can click this
+and once you have you can click this link which is going to allow you to
+link which is going to allow you to
+link which is going to allow you to clone a copy of our perfect prom
+clone a copy of our perfect prom
+clone a copy of our perfect prom generator into your account and up in
+generator into your account and up in
+generator into your account and up in the top right hand corner you'll see the
+the top right hand corner you'll see the
+the top right hand corner you'll see the Clone button so you want to click this
+Clone button so you want to click this
+Clone button so you want to click this and clone it into your account that
+and clone it into your account that
+and clone it into your account that means you are going to be responsible
+means you are going to be responsible
+means you are going to be responsible for uh paying the billing for it they've
+for uh paying the billing for it they've
+for uh paying the billing for it they've got a really good free plan so uh you
+got a really good free plan so uh you
+got a really good free plan so uh you don't need to worry about that and
+don't need to worry about that and
+don't need to worry about that and before we jump into using this and using
+before we jump into using this and using
+before we jump into using this and using the plan that we've just written to
+the plan that we've just written to
+the plan that we've just written to generate this prompt in a few seconds I
+generate this prompt in a few seconds I
+generate this prompt in a few seconds I just want to go behind the scenes a
+just want to go behind the scenes a
+just want to go behind the scenes a little bit and you guys will be able to
+little bit and you guys will be able to
+little bit and you guys will be able to check this out as well once it's in your
+check this out as well once it's in your
+check this out as well once it's in your account but you can see how I've put
+account but you can see how I've put
+account but you can see how I've put this tool together so this is what I
+this tool together so this is what I
+this tool together so this is what I want you guys to be able to do with the
+want you guys to be able to do with the
+want you guys to be able to do with the prompts that you create so whether
+prompts that you create so whether
+prompts that you create so whether you're an employee whether you're an
+you're an employee whether you're an
+you're an employee whether you're an agency owner whether you're a business
+agency owner whether you're a business
+agency owner whether you're a business owner using relevance AI to create your
+owner using relevance AI to create your
+owner using relevance AI to create your own tools like this this is an AI tool
+own tools like this this is an AI tool
+own tools like this this is an AI tool it's weird because we're using an AI
+it's weird because we're using an AI
+it's weird because we're using an AI prompt to create an AI tool that creates
+prompt to create an AI tool that creates
+prompt to create an AI tool that creates AI prompts can be a little bit tricky to
+AI prompts can be a little bit tricky to
+AI prompts can be a little bit tricky to wrap your head around but this is our
+wrap your head around but this is our
+wrap your head around but this is our perfect prompt generator tool and it's
+perfect prompt generator tool and it's
+perfect prompt generator tool and it's going to take in the use case
+going to take in the use case
+going to take in the use case information which is lot of what we just
+information which is lot of what we just
+information which is lot of what we just wrote in the planning and it's also
+wrote in the planning and it's also
+wrote in the planning and it's also going to take in some input and output
+going to take in some input and output
+going to take in some input and output examples when we click run on this it's
+examples when we click run on this it's
+examples when we click run on this it's going to send it to a an LM step here
+going to send it to a an LM step here
+going to send it to a an LM step here where I have baked in all of the latest
+where I have baked in all of the latest
+where I have baked in all of the latest research such as role prompting uh such
+research such as role prompting uh such
+research such as role prompting uh such as Chain of Thought prompting you have
+as Chain of Thought prompting you have
+as Chain of Thought prompting you have emotion prompting uh use of markdown
+emotion prompting uh use of markdown
+emotion prompting uh use of markdown formatting Etc uh fucha prompting Etc
+formatting Etc uh fucha prompting Etc
+formatting Etc uh fucha prompting Etc all of the information is already baked
+all of the information is already baked
+all of the information is already baked into this so what happens when you click
+into this so what happens when you click
+into this so what happens when you click on run this tool what it does is it
+on run this tool what it does is it
+on run this tool what it does is it passes in all of the information we did
+passes in all of the information we did
+passes in all of the information we did in the plan passes it into this and in a
+in the plan passes it into this and in a
+in the plan passes it into this and in a few seconds it applies all of those best
+few seconds it applies all of those best
+few seconds it applies all of those best practices for prompting to to the uh the
+practices for prompting to to the uh the
+practices for prompting to to the uh the inputs and to the use case that you've
+inputs and to the use case that you've
+inputs and to the use case that you've explained in the inputs so I might
+explained in the inputs so I might
+explained in the inputs so I might actually just change this to uh CL 3.7
+actually just change this to uh CL 3.7
+actually just change this to uh CL 3.7 and so now you're ready to see just how
+and so now you're ready to see just how
+and so now you're ready to see just how quickly this uh prompt can be right in
+quickly this uh prompt can be right in
+quickly this uh prompt can be right in the draft so instead of having to do
+the draft so instead of having to do
+the draft so instead of having to do this all manually um you get to do it in
+this all manually um you get to do it in
+this all manually um you get to do it in a few seconds so if we come back to our
+a few seconds so if we come back to our
+a few seconds so if we come back to our planning sheet you go back up what you
+planning sheet you go back up what you
+planning sheet you go back up what you want to do is take um all of this first
+want to do is take um all of this first
+want to do is take um all of this first section from the purpose down
+section from the purpose down
+section from the purpose down to the examples so we just grab the
+to the examples so we just grab the
+to the examples so we just grab the output go back to relevance Ai and the
+output go back to relevance Ai and the
+output go back to relevance Ai and the perfect promp generator tool if we paste
+perfect promp generator tool if we paste
+perfect promp generator tool if we paste this in and that's all of this use case
+this in and that's all of this use case
+this in and that's all of this use case information what is the prompt doing in
+information what is the prompt doing in
+information what is the prompt doing in why give as much information as possible
+why give as much information as possible
+why give as much information as possible and then we can go down to our input and
+and then we can go down to our input and
+and then we can go down to our input and output examples and we can grab it here
+output examples and we can grab it here
+output examples and we can grab it here go
+down and if we paste this in here now
+down and if we paste this in here now and click run if we give it a few
+and click run if we give it a few
+and click run if we give it a few seconds it's going to write the full
+seconds it's going to write the full
+seconds it's going to write the full draft for this prompt and it's analyzing
+draft for this prompt and it's analyzing
+draft for this prompt and it's analyzing the use case all the information we
+the use case all the information we
+the use case all the information we provided on it all the rules that we
+provided on it all the rules that we
+provided on it all the rules that we gave it and that IP that we talked about
+gave it and that IP that we talked about
+gave it and that IP that we talked about and then it's applying all of the best
+and then it's applying all of the best
+and then it's applying all of the best prompting practices that are research
+prompting practices that are research
+prompting practices that are research back that we've included in the perfect
+back that we've included in the perfect
+back that we've included in the perfect prompt generator tool just here and now
+prompt generator tool just here and now
+prompt generator tool just here and now if we scroll down you can see that we've
+if we scroll down you can see that we've
+if we scroll down you can see that we've got the full prompt written out so let's
+got the full prompt written out so let's
+got the full prompt written out so let's just take a scem through it right we
+just take a scem through it right we
+just take a scem through it right we have a role you are an expert customer
+have a role you are an expert customer
+have a role you are an expert customer support autor responded for Te Gear Pro
+support autor responded for Te Gear Pro
+support autor responded for Te Gear Pro R skilled in analyzing customer
+R skilled in analyzing customer
+R skilled in analyzing customer inquiries identifying to issue types and
+inquiries identifying to issue types and
+inquiries identifying to issue types and crafting personalized help with
+crafting personalized help with
+crafting personalized help with responses that either resolve issues
+responses that either resolve issues
+responses that either resolve issues completely or set appropriate
+completely or set appropriate
+completely or set appropriate expectations for human followup
+expectations for human followup
+expectations for human followup responses are friendly concise R task
+responses are friendly concise R task
+responses are friendly concise R task and the task it seems to have nailed
+and the task it seems to have nailed
+and the task it seems to have nailed which is analyze the incoming customer
+which is analyze the incoming customer
+which is analyze the incoming customer email and provide an appropriate
+email and provide an appropriate
+email and provide an appropriate response using the step-by-step process
+response using the step-by-step process
+response using the step-by-step process so this is Chain of Thought prompting
+so this is Chain of Thought prompting
+so this is Chain of Thought prompting which it's applied carefully read the
+which it's applied carefully read the
+which it's applied carefully read the customer's email identify the order type
+customer's email identify the order type
+customer's email identify the order type consider the days since the purchase
+consider the days since the purchase
+consider the days since the purchase determine if the issue can be completely
+determine if the issue can be completely
+determine if the issue can be completely resolved Etc so it's taken all of that
+resolved Etc so it's taken all of that
+resolved Etc so it's taken all of that IP and that juice and instructions that
+IP and that juice and instructions that
+IP and that juice and instructions that we've provided and it's applied it
+we've provided and it's applied it
+we've provided and it's applied it through a a Chain of Thought method in
+through a a Chain of Thought method in
+through a a Chain of Thought method in this case and then here we have things
+this case and then here we have things
+this case and then here we have things like emotion prompting which is saying
+like emotion prompting which is saying
+like emotion prompting which is saying we greatly value your ability to strike
+we greatly value your ability to strike
+we greatly value your ability to strike the perfect balance your expertise is is
+the perfect balance your expertise is is
+the perfect balance your expertise is is really really appreciated and this is
+really really appreciated and this is
+really really appreciated and this is proven uh through research to improve
+proven uh through research to improve
+proven uh through research to improve the performance of the prompts versus
+the performance of the prompts versus
+the performance of the prompts versus when you don't have these emotional
+when you don't have these emotional
+when you don't have these emotional words in it as well so it's all woven in
+words in it as well so it's all woven in
+words in it as well so it's all woven in there all of the best and latest
+there all of the best and latest
+there all of the best and latest research and prompt engineering and here
+research and prompt engineering and here
+research and prompt engineering and here we have the inputs that it's going to be
+we have the inputs that it's going to be
+we have the inputs that it's going to be expecting and then also as context it's
+expecting and then also as context it's
+expecting and then also as context it's given all of the rules um that the AI
+given all of the rules um that the AI
+given all of the rules um that the AI needs to be following when responding
+needs to be following when responding
+needs to be following when responding and it's got our examples in here too um
+and it's got our examples in here too um
+and it's got our examples in here too um the layout seems to be a little bit off
+the layout seems to be a little bit off
+the layout seems to be a little bit off but um it's also got the notes section
+but um it's also got the notes section
+but um it's also got the notes section down the end and what we want to do from
+down the end and what we want to do from
+down the end and what we want to do from here we have technically done the
+here we have technically done the
+here we have technically done the drafting as you can see that's really
+drafting as you can see that's really
+drafting as you can see that's really where we put a lot of effort into the
+where we put a lot of effort into the
+where we put a lot of effort into the plan because once you throw it into here
+plan because once you throw it into here
+plan because once you throw it into here um and we click this format it then we
+um and we click this format it then we
+um and we click this format it then we have it all ready to go nicely formatted
+have it all ready to go nicely formatted
+have it all ready to go nicely formatted and markdown formatting which is another
+and markdown formatting which is another
+and markdown formatting which is another thing that helps with prompt performance
+thing that helps with prompt performance
+thing that helps with prompt performance and we have it all nicely structured and
+and we have it all nicely structured and
+and we have it all nicely structured and ready to go into the next step so that
+ready to go into the next step so that
+ready to go into the next step so that is drafting and now we can jump into
+is drafting and now we can jump into
+is drafting and now we can jump into actually evaluating using our prompt
+actually evaluating using our prompt
+actually evaluating using our prompt engineering software called prompt
+engineering software called prompt
+engineering software called prompt metheus okay so here we are this is the
+metheus okay so here we are this is the
+metheus okay so here we are this is the software that we use at Morningside for
+software that we use at Morningside for
+software that we use at Morningside for prompt engineering and this has been in
+prompt engineering and this has been in
+prompt engineering and this has been in sort of secret weapon of mine and the
+sort of secret weapon of mine and the
+sort of secret weapon of mine and the team for a long time I have shared it
+team for a long time I have shared it
+team for a long time I have shared it with my accelerator members but now I
+with my accelerator members but now I
+with my accelerator members but now I think it's time to to probably share uh
+think it's time to to probably share uh
+think it's time to to probably share uh with you all on the channel here it's
+with you all on the channel here it's
+with you all on the channel here it's what's called a prompt engineering ID e
+what's called a prompt engineering ID e
+what's called a prompt engineering ID e which is an integrated development
+which is an integrated development
+which is an integrated development environment and this is what um coders
+environment and this is what um coders
+environment and this is what um coders or developers use when they are writing
+or developers use when they are writing
+or developers use when they are writing software so you may be familiar with vs
+software so you may be familiar with vs
+software so you may be familiar with vs code I'll put some stuff up on screen it
+code I'll put some stuff up on screen it
+code I'll put some stuff up on screen it may ring a few BS if you've ever watched
+may ring a few BS if you've ever watched
+may ring a few BS if you've ever watched any kind of tutorials but applications
+any kind of tutorials but applications
+any kind of tutorials but applications like vs code are basically a a
+like vs code are basically a a
+like vs code are basically a a all-in-one development software that
+all-in-one development software that
+all-in-one development software that allows developers to easily write code
+allows developers to easily write code
+allows developers to easily write code manage files uh run code via the
+manage files uh run code via the
+manage files uh run code via the terminal it's all all the tools you need
+terminal it's all all the tools you need
+terminal it's all all the tools you need really in one place it's the integrated
+really in one place it's the integrated
+really in one place it's the integrated development environment and this is a
+development environment and this is a
+development environment and this is a prompt engineering integrated
+prompt engineering integrated
+prompt engineering integrated development environment with all of the
+development environment with all of the
+development environment with all of the best tools that you need to be able to
+best tools that you need to be able to
+best tools that you need to be able to write and test and improve prompts like
+write and test and improve prompts like
+write and test and improve prompts like a like an engineer and taking more of a
+a like an engineer and taking more of a
+a like an engineer and taking more of a scientific approach rather than sort of
+scientific approach rather than sort of
+scientific approach rather than sort of an artsy approach which is what many
+an artsy approach which is what many
+an artsy approach which is what many people do to some success of course I
+people do to some success of course I
+people do to some success of course I know this is not a sponsored video I'm
+know this is not a sponsored video I'm
+know this is not a sponsored video I'm not getting paid by anyone to promote
+not getting paid by anyone to promote
+not getting paid by anyone to promote this or relevance um this is just
+this or relevance um this is just
+this or relevance um this is just showing you exactly what we do at
+showing you exactly what we do at
+showing you exactly what we do at morning side so uh the link to sign up
+morning side so uh the link to sign up
+morning side so uh the link to sign up to Prometheus will be with all the other
+to Prometheus will be with all the other
+to Prometheus will be with all the other links and resources on the school so you
+links and resources on the school so you
+links and resources on the school so you can get it there and sign up and once
+can get it there and sign up and once
+can get it there and sign up and once you're inside you'll see something that
+you're inside you'll see something that
+you're inside you'll see something that looks a bit like this and so on the left
+looks a bit like this and so on the left
+looks a bit like this and so on the left side here we have our prompts and data
+side here we have our prompts and data
+side here we have our prompts and data sets I'm just going to click add a new
+sets I'm just going to click add a new
+sets I'm just going to click add a new prompt here and we can start to build
+prompt here and we can start to build
+prompt here and we can start to build out our prompt within prompt metheus so
+out our prompt within prompt metheus so
+out our prompt within prompt metheus so that we can start to test it and uh
+that we can start to test it and uh
+that we can start to test it and uh evaluate we are in the evaluate part of
+evaluate we are in the evaluate part of
+evaluate we are in the evaluate part of the Peter process now which means we
+the Peter process now which means we
+the Peter process now which means we need to load up our prompt into prompt
+need to load up our prompt into prompt
+need to load up our prompt into prompt metheus we need to run some inputs
+metheus we need to run some inputs
+metheus we need to run some inputs against it and evaluate where we are
+against it and evaluate where we are
+against it and evaluate where we are like how far are we off where we're
+like how far are we off where we're
+like how far are we off where we're actually trying to get to is the tone
+actually trying to get to is the tone
+actually trying to get to is the tone where we need it to be is the prompt
+where we need it to be is the prompt
+where we need it to be is the prompt actually getting the classification
+actually getting the classification
+actually getting the classification correct so testing all of these things
+correct so testing all of these things
+correct so testing all of these things is what the evaluation step is with this
+is what the evaluation step is with this
+is what the evaluation step is with this initial draft so to get things set up in
+initial draft so to get things set up in
+initial draft so to get things set up in PR metheus it's actually really really
+PR metheus it's actually really really
+PR metheus it's actually really really easy if you just go back to relevance Ai
+easy if you just go back to relevance Ai
+easy if you just go back to relevance Ai and you copy these sections if I copy
+and you copy these sections if I copy
+and you copy these sections if I copy the roll here and I go back and then I'm
+the roll here and I go back and then I'm
+the roll here and I go back and then I'm going to add this block as
+going to add this block as
+going to add this block as roll and you'll see why we start to
+roll and you'll see why we start to
+roll and you'll see why we start to separate them into these different
+separate them into these different
+separate them into these different chunks as it makes it a lot easier for
+chunks as it makes it a lot easier for
+chunks as it makes it a lot easier for us to test things so we have our roll in
+us to test things so we have our roll in
+us to test things so we have our roll in here I'm going to add another block
+here I'm going to add another block
+here I'm going to add another block here that's the task this
+here that's the task this
+here that's the task this time I am going to leave that off
+I'm just going to skip over the data
+I'm just going to skip over the data here for now because we need to do
+here for now because we need to do
+here for now because we need to do something that's a little bit different
+something that's a little bit different
+something that's a little bit different for this um which is going to take in
+for this um which is going to take in
+for this um which is going to take in the various different inputs we want to
+the various different inputs we want to
+the various different inputs we want to test so we can get specifics
+so what you can see me doing here is
+so what you can see me doing here is putting the markdown formatting in so
+putting the markdown formatting in so
+putting the markdown formatting in so this just helps the AI to understand the
+this just helps the AI to understand the
+this just helps the AI to understand the structure of the prompt better so this
+structure of the prompt better so this
+structure of the prompt better so this is it's reading this as a heading and
+is it's reading this as a heading and
+is it's reading this as a heading and this is a like an H2 or or a heading two
+this is a like an H2 or or a heading two
+this is a like an H2 or or a heading two um so it gives it a lot more structure
+um so it gives it a lot more structure
+um so it gives it a lot more structure so this is a specific section this is
+so this is a specific section this is
+so this is a specific section this is the task this is the role Etc and here
+the task this is the role Etc and here
+the task this is the role Etc and here we have a uh a sort of Hing to under the
+we have a uh a sort of Hing to under the
+we have a uh a sort of Hing to under the context which is all about the uh the
+context which is all about the uh the
+context which is all about the uh the response categories and guidelines as
+response categories and guidelines as
+response categories and guidelines as well so now I can do the same with the
+well so now I can do the same with the
+well so now I can do the same with the examples
+and now we could just grab the notes
+and now we could just grab the notes Here
+we have all the different components of
+we have all the different components of the prompt split up into the different
+the prompt split up into the different
+the prompt split up into the different sections so that's going to make it very
+sections so that's going to make it very
+sections so that's going to make it very easy for us to test in a second but the
+easy for us to test in a second but the
+easy for us to test in a second but the last step before we actually start
+last step before we actually start
+last step before we actually start evaluating is we need to go and insert
+evaluating is we need to go and insert
+evaluating is we need to go and insert the variable or the data set like I said
+the variable or the data set like I said
+the variable or the data set like I said earlier we want to be able to test this
+earlier we want to be able to test this
+earlier we want to be able to test this against multiple different inputs and
+against multiple different inputs and
+against multiple different inputs and determine if it's working as expected so
+determine if it's working as expected so
+determine if it's working as expected so promp neus allows us to do this very
+promp neus allows us to do this very
+promp neus allows us to do this very easily by going into what's called data
+easily by going into what's called data
+easily by going into what's called data sets and if I go back to the uh
+sets and if I go back to the uh
+sets and if I go back to the uh information that was provided by the
+information that was provided by the
+information that was provided by the client or the brief for the project I
+client or the brief for the project I
+client or the brief for the project I have all of the input data here so we
+have all of the input data here so we
+have all of the input data here so we have these
+have these
+have these peers we can go this is the email and
+peers we can go this is the email and
+peers we can go this is the email and then the day since purchases in there as
+then the day since purchases in there as
+then the day since purchases in there as well so if you look at this aside from
+well so if you look at this aside from
+well so if you look at this aside from the from in the subject which you could
+the from in the subject which you could
+the from in the subject which you could probably kill and and take out we have
+probably kill and and take out we have
+probably kill and and take out we have the same format in the examples here so
+the same format in the examples here so
+the same format in the examples here so the email and then the day since
+the email and then the day since
+the email and then the day since purchase so that's the input format that
+purchase so that's the input format that
+purchase so that's the input format that is expecting and also just to make it a
+is expecting and also just to make it a
+is expecting and also just to make it a bit easier we can say rename this here
+bit easier we can say rename this here
+bit easier we can say rename this here with this little rename button on the
+with this little rename button on the
+with this little rename button on the side you can say this is our
+side you can say this is our
+side you can say this is our um Tech Gear
+um Tech Gear
+um Tech Gear Pro email we can also rename our data
+Pro email we can also rename our data
+Pro email we can also rename our data dat set here um Tech Gear
+dat set here um Tech Gear
+dat set here um Tech Gear Pro and so this is one item in the data
+Pro and so this is one item in the data
+Pro and so this is one item in the data set this will all make sense in a second
+set this will all make sense in a second
+set this will all make sense in a second so stick with me if we then go add
+so stick with me if we then go add
+so stick with me if we then go add another
+another
+another item we go back to
+this add another item so I've got 10 of
+this add another item so I've got 10 of these to add in um these are going to be
+these to add in um these are going to be
+these to add in um these are going to be on the resource you can copy them in if
+on the resource you can copy them in if
+on the resource you can copy them in if you're following along but the idea is
+you're following along but the idea is
+you're following along but the idea is the same that uh you want to have a
+the same that uh you want to have a
+the same that uh you want to have a bunch of different cases that we can
+bunch of different cases that we can
+bunch of different cases that we can test against and I'm just going to sort
+test against and I'm just going to sort
+test against and I'm just going to sort of go off camera and just add these in
+of go off camera and just add these in
+of go off camera and just add these in now all right so now I have 10 items in
+now all right so now I have 10 items in
+now all right so now I have 10 items in my data set and these are dummy emails
+my data set and these are dummy emails
+my data set and these are dummy emails or dummy data sets that are going to be
+or dummy data sets that are going to be
+or dummy data sets that are going to be passed to The Prompt um or hypothetical
+passed to The Prompt um or hypothetical
+passed to The Prompt um or hypothetical ones that it should be able to deal with
+ones that it should be able to deal with
+ones that it should be able to deal with and sort of trying to simulate as much
+and sort of trying to simulate as much
+and sort of trying to simulate as much as possible what it would look like in
+as possible what it would look like in
+as possible what it would look like in the real world so now we can go back to
+the real world so now we can go back to
+the real world so now we can go back to our uh te Gear Pro email autoresponder
+our uh te Gear Pro email autoresponder
+our uh te Gear Pro email autoresponder prompt and we need to insert into here a
+prompt and we need to insert into here a
+prompt and we need to insert into here a data block so we can click on Tech
+data block so we can click on Tech
+data block so we can click on Tech gearpro here and as you can see we can
+gearpro here and as you can see we can
+gearpro here and as you can see we can now cycle through all these different
+now cycle through all these different
+now cycle through all these different cases to test which is super great um
+cases to test which is super great um
+cases to test which is super great um and here what we want to do is add on
+and here what we want to do is add on
+and here what we want to do is add on the end if we go back to relevance AI
+the end if we go back to relevance AI
+the end if we go back to relevance AI can see that we did have a little bit
+can see that we did have a little bit
+can see that we did have a little bit here and this is basically where it was
+here and this is basically where it was
+here and this is basically where it was saying we should input the variables
+saying we should input the variables
+saying we should input the variables what I like to do is add a little bit
+what I like to do is add a little bit
+what I like to do is add a little bit more uh we can go like um
+more uh we can go like um
+more uh we can go like um input data and so this stuff here is
+input data and so this stuff here is
+input data and so this stuff here is obviously going to slot right underneath
+obviously going to slot right underneath
+obviously going to slot right underneath whatever we have here so we can say
+whatever we have here so we can say
+whatever we have here so we can say classify and
+write and then we have it now when we
+write and then we have it now when we run this it's going to fit just under
+run this it's going to fit just under
+run this it's going to fit just under here and this is going to be the uh
+here and this is going to be the uh
+here and this is going to be the uh input data section so I'll click back to
+input data section so I'll click back to
+input data section so I'll click back to one here and we almost almost ready all
+one here and we almost almost ready all
+one here and we almost almost ready all we need to do now is to select the model
+we need to do now is to select the model
+we need to do now is to select the model so as I said I wanted to run a a clae
+so as I said I wanted to run a a clae
+so as I said I wanted to run a a clae 3.7 which is the latest one they have
+3.7 which is the latest one they have
+3.7 which is the latest one they have gives us the prices here which is super
+gives us the prices here which is super
+gives us the prices here which is super helpful when you are planning these out
+helpful when you are planning these out
+helpful when you are planning these out it has all of the options here for
+it has all of the options here for
+it has all of the options here for temperature um I might just put this
+temperature um I might just put this
+temperature um I might just put this down to 0.1 for temperature and this is
+down to 0.1 for temperature and this is
+down to 0.1 for temperature and this is something we're going to be testing in
+something we're going to be testing in
+something we're going to be testing in the next step and you have things like
+the next step and you have things like
+the next step and you have things like the token limit um I would probably chop
+the token limit um I would probably chop
+the token limit um I would probably chop that down to 400 there's things like
+that down to 400 there's things like
+that down to 400 there's things like Json mode so remember when we talked
+Json mode so remember when we talked
+Json mode so remember when we talked about how you can have different kinds
+about how you can have different kinds
+about how you can have different kinds of outputs Json mode allows you to play
+of outputs Json mode allows you to play
+of outputs Json mode allows you to play around with that and and sort of strict
+around with that and and sort of strict
+around with that and and sort of strict and force a Jon formatted output and
+and force a Jon formatted output and
+and force a Jon formatted output and before we actually run this you will
+before we actually run this you will
+before we actually run this you will need to set up your API keys so you can
+need to set up your API keys so you can
+need to set up your API keys so you can come to your account down here by
+come to your account down here by
+come to your account down here by clicking on the bottom left and manage
+clicking on the bottom left and manage
+clicking on the bottom left and manage API Keys you can see I've got my
+API Keys you can see I've got my
+API Keys you can see I've got my anthropic one in there you can go to
+anthropic one in there you can go to
+anthropic one in there you can go to console. anthropic tocom and you can set
+console. anthropic tocom and you can set
+console. anthropic tocom and you can set up your account um and get your API key
+up your account um and get your API key
+up your account um and get your API key and pop it in here you can do it for all
+and pop it in here you can do it for all
+and pop it in here you can do it for all these different providers deep seek
+these different providers deep seek
+these different providers deep seek Gemini grock mistol open AI I've got
+Gemini grock mistol open AI I've got
+Gemini grock mistol open AI I've got mine in there too xai and everything so
+mine in there too xai and everything so
+mine in there too xai and everything so in order to use the models you obviously
+in order to use the models you obviously
+in order to use the models you obviously need to access it through their API but
+need to access it through their API but
+need to access it through their API but this is how you can manage your API Keys
+this is how you can manage your API Keys
+this is how you can manage your API Keys within prom metheus so now we are ready
+within prom metheus so now we are ready
+within prom metheus so now we are ready to give this a spin we have all the data
+to give this a spin we have all the data
+to give this a spin we have all the data in we are going to be testing this first
+in we are going to be testing this first
+in we are going to be testing this first case which is I ordered the premium
+case which is I ordered the premium
+case which is I ordered the premium wireless earbuds on Monday and was
+wireless earbuds on Monday and was
+wireless earbuds on Monday and was wondering when they were arrive I paid
+wondering when they were arrive I paid
+wondering when they were arrive I paid for standard shipping and I'm just
+for standard shipping and I'm just
+for standard shipping and I'm just curious about the timeline so this is
+curious about the timeline so this is
+curious about the timeline so this is someone who purchased recently and is
+someone who purchased recently and is
+someone who purchased recently and is wondering where their product is it
+wondering where their product is it
+wondering where their product is it should be able to correctly classify
+should be able to correctly classify
+should be able to correctly classify this as an email about an order status
+this as an email about an order status
+this as an email about an order status and then realize that since it's just 4
+and then realize that since it's just 4
+and then realize that since it's just 4 days since purchase that they should
+days since purchase that they should
+days since purchase that they should just be sort of prompted to wait a
+just be sort of prompted to wait a
+just be sort of prompted to wait a little bit longer so if we give this a
+little bit longer so if we give this a
+little bit longer so if we give this a spin all right there we go we have our
+spin all right there we go we have our
+spin all right there we go we have our first response and it's saying after
+first response and it's saying after
+first response and it's saying after analyzing the customer email I can see
+analyzing the customer email I can see
+analyzing the customer email I can see this so first thing we've noticed
+this so first thing we've noticed
+this so first thing we've noticed already as we test the first one is that
+already as we test the first one is that
+already as we test the first one is that it's doing this typical AI thing with
+it's doing this typical AI thing with
+it's doing this typical AI thing with the of conversational chat models we
+the of conversational chat models we
+the of conversational chat models we have these days it's it's writing a bit
+have these days it's it's writing a bit
+have these days it's it's writing a bit of a lead into it so right there that's
+of a lead into it so right there that's
+of a lead into it so right there that's something that I'd want to tweak and
+something that I'd want to tweak and
+something that I'd want to tweak and that's going to be in the next step of
+that's going to be in the next step of
+that's going to be in the next step of refining at this point you'd want to be
+refining at this point you'd want to be
+refining at this point you'd want to be making some notes of the different
+making some notes of the different
+making some notes of the different issues that you want to solve and say
+issues that you want to solve and say
+issues that you want to solve and say hey look I want to add down in the note
+hey look I want to add down in the note
+hey look I want to add down in the note section what I want to do is add in a a
+section what I want to do is add in a a
+section what I want to do is add in a a reminder that they should only be
+reminder that they should only be
+reminder that they should only be replying with the email there should be
+replying with the email there should be
+replying with the email there should be no other context provided just the email
+no other context provided just the email
+no other context provided just the email is the output but it also does depend on
+is the output but it also does depend on
+is the output but it also does depend on the system if this was not fully
+the system if this was not fully
+the system if this was not fully automated and then the AI wasn't
+automated and then the AI wasn't
+automated and then the AI wasn't actually going to send this email
+actually going to send this email
+actually going to send this email automatically
+automatically
+automatically then having this a bit of a summary and
+then having this a bit of a summary and
+then having this a bit of a summary and sort of Chain of Thought of it
+sort of Chain of Thought of it
+sort of Chain of Thought of it explaining why it's doing or why it
+explaining why it's doing or why it
+explaining why it's doing or why it wrote what it wrote can actually be
+wrote what it wrote can actually be
+wrote what it wrote can actually be quite helpful because it increases the
+quite helpful because it increases the
+quite helpful because it increases the accuracy of it but in this case we're
+accuracy of it but in this case we're
+accuracy of it but in this case we're assuming that this is going to be for an
+assuming that this is going to be for an
+assuming that this is going to be for an automated response system and so you
+automated response system and so you
+automated response system and so you wouldn't want it to attack any of that
+wouldn't want it to attack any of that
+wouldn't want it to attack any of that on so it's very important that we prompt
+on so it's very important that we prompt
+on so it's very important that we prompt that out but for now we can see that
+that out but for now we can see that
+that out but for now we can see that it's getting uh the classification and
+it's getting uh the classification and
+it's getting uh the classification and the response right based off our
+the response right based off our
+the response right based off our instructions what you can do in PR
+instructions what you can do in PR
+instructions what you can do in PR metheus is grade them very easily
+metheus is grade them very easily
+metheus is grade them very easily because there's the stuff at the top
+because there's the stuff at the top
+because there's the stuff at the top I've given it a thumbs down and this is
+I've given it a thumbs down and this is
+I've given it a thumbs down and this is going to allow me to see over time which
+going to allow me to see over time which
+going to allow me to see over time which ones are good responses of which are
+ones are good responses of which are
+ones are good responses of which are this one is a missing order but it's
+this one is a missing order but it's
+this one is a missing order but it's taken longer than 10 days so we should
+taken longer than 10 days so we should
+taken longer than 10 days so we should be able to see it's saying hey look let
+be able to see it's saying hey look let
+be able to see it's saying hey look let me go and get a human on
+me go and get a human on
+me go and get a human on this there we go it's saying um this
+this there we go it's saying um this
+this there we go it's saying um this delay is unusual I'm personally looking
+delay is unusual I'm personally looking
+delay is unusual I'm personally looking into what happens R I'll keep you
+into what happens R I'll keep you
+into what happens R I'll keep you updated over the next 24 so it's
+updated over the next 24 so it's
+updated over the next 24 so it's basically buying time for the human team
+basically buying time for the human team
+basically buying time for the human team and again this is probably a thumbs down
+and again this is probably a thumbs down
+and again this is probably a thumbs down because it's got the stuff at the start
+because it's got the stuff at the start
+because it's got the stuff at the start and I think already we can start to see
+and I think already we can start to see
+and I think already we can start to see where we want to be tweaking The Prompt
+where we want to be tweaking The Prompt
+where we want to be tweaking The Prompt and the direction that we want to be
+and the direction that we want to be
+and the direction that we want to be making changes so we can jump into the
+making changes so we can jump into the
+making changes so we can jump into the next tip which is going to be the refine
+next tip which is going to be the refine
+next tip which is going to be the refine stage so in this refining process this
+stage so in this refining process this
+stage so in this refining process this is a an iterative thing that you do sort
+is a an iterative thing that you do sort
+is a an iterative thing that you do sort of over and over it goes evaluate and
+of over and over it goes evaluate and
+of over and over it goes evaluate and refine and evaluate where you're making
+refine and evaluate where you're making
+refine and evaluate where you're making changes to the prompt evaluating them
+changes to the prompt evaluating them
+changes to the prompt evaluating them again and it's a cycle that you go
+again and it's a cycle that you go
+again and it's a cycle that you go through until you're happy with the
+through until you're happy with the
+through until you're happy with the results so in this case as I said we're
+results so in this case as I said we're
+results so in this case as I said we're getting this filler or this uh this
+getting this filler or this uh this
+getting this filler or this uh this Preamble um at the start of all of them
+Preamble um at the start of all of them
+Preamble um at the start of all of them which we want to immediately try to buff
+which we want to immediately try to buff
+which we want to immediately try to buff out um which we can go likely to say the
+out um which we can go likely to say the
+out um which we can go likely to say the task section here um actually let's go
+task section here um actually let's go
+task section here um actually let's go to the specific section I'm going to
+to the specific section I'm going to
+to the specific section I'm going to create a new version so this is one of
+create a new version so this is one of
+create a new version so this is one of the tools that we have within prop
+the tools that we have within prop
+the tools that we have within prop metheus is that we can add a variant so
+metheus is that we can add a variant so
+metheus is that we can add a variant so I'm going to create a variant of these
+I'm going to create a variant of these
+I'm going to create a variant of these specifics I'm actually going to go back
+specifics I'm actually going to go back
+specifics I'm actually going to go back and copy what we had I'm going to put it
+and copy what we had I'm going to put it
+and copy what we had I'm going to put it in here and say add one more to the
+in here and say add one more to the
+in here and say add one more to the bottom of this and say
+bottom of this and say
+bottom of this and say your response so I've said your response
+your response so I've said your response
+your response so I've said your response should not include anything other than
+should not include anything other than
+should not include anything other than the email to be sent to the customer do
+the email to be sent to the customer do
+the email to be sent to the customer do not include any other prbl reasoning
+not include any other prbl reasoning
+not include any other prbl reasoning this is
+this is
+this is because you are part of a an automated
+because you are part of a an automated
+because you are part of a an automated resp response system so Le you must not
+resp response system so Le you must not
+resp response system so Le you must not have this
+have this
+have this extra con content at the start of
+extra con content at the start of
+extra con content at the start of your responses and then I'll probably
+your responses and then I'll probably
+your responses and then I'll probably try to reinforce this again I might just
+try to reinforce this again I might just
+try to reinforce this again I might just copy it for now um I will make a
+copy it for now um I will make a
+copy it for now um I will make a duplicate of the context because I think
+duplicate of the context because I think
+duplicate of the context because I think in the uh in the context
+in the uh in the context
+in the uh in the context here we can make it a lot clearer that
+here we can make it a lot clearer that
+here we can make it a lot clearer that this is an automated system rather than
+this is an automated system rather than
+this is an automated system rather than one that it's allowed to do this kind of
+one that it's allowed to do this kind of
+one that it's allowed to do this kind of stuff at the start so there I've just
+stuff at the start so there I've just
+stuff at the start so there I've just added in a little bit of extra giving it
+added in a little bit of extra giving it
+added in a little bit of extra giving it even an example of the kind of stuff I'm
+even an example of the kind of stuff I'm
+even an example of the kind of stuff I'm talking about so I've taken a little
+talking about so I've taken a little
+talking about so I've taken a little excerpt out of this and say adding
+excerpt out of this and say adding
+excerpt out of this and say adding reasoning or any other waffle like XYZ
+reasoning or any other waffle like XYZ
+reasoning or any other waffle like XYZ could be disastrous because it would
+could be disastrous because it would
+could be disastrous because it would reveal that the system is automated so I
+reveal that the system is automated so I
+reveal that the system is automated so I have a new version of my context here um
+have a new version of my context here um
+have a new version of my context here um I could tack it on to the end of the
+I could tack it on to the end of the
+I could tack it on to the end of the notes but we have our new version of the
+notes but we have our new version of the
+notes but we have our new version of the specifics with this one added at the end
+specifics with this one added at the end
+specifics with this one added at the end and a new version of the context so now
+and a new version of the context so now
+and a new version of the context so now we can give this a run I'll probably run
+we can give this a run I'll probably run
+we can give this a run I'll probably run it back over the first two that we just
+it back over the first two that we just
+it back over the first two that we just did to make sure that we''ve got them
+did to make sure that we''ve got them
+did to make sure that we''ve got them picked off there we go so we're getting
+picked off there we go so we're getting
+picked off there we go so we're getting the kind of responses we want I think
+the kind of responses we want I think
+the kind of responses we want I think the formatting could be improved but in
+the formatting could be improved but in
+the formatting could be improved but in the real world you'd be building this
+the real world you'd be building this
+the real world you'd be building this into some kind of workflow Automation
+into some kind of workflow Automation
+into some kind of workflow Automation and you could do an additional step
+and you could do an additional step
+and you could do an additional step after that's a formatter that preps it
+after that's a formatter that preps it
+after that's a formatter that preps it for say the Gmail or whatever email
+for say the Gmail or whatever email
+for say the Gmail or whatever email system that you're using to send and it
+system that you're using to send and it
+system that you're using to send and it can make sure that it's actually
+can make sure that it's actually
+can make sure that it's actually formatted correctly but in this case uh
+formatted correctly but in this case uh
+formatted correctly but in this case uh we've just got the the content correct
+we've just got the the content correct
+we've just got the the content correct and the classification correct so now we
+and the classification correct so now we
+and the classification correct so now we can give this a nice thumbs up and we
+can give this a nice thumbs up and we
+can give this a nice thumbs up and we can go to the next one and run it again
+can go to the next one and run it again
+can go to the next one and run it again and the goal here is to be able to go
+and the goal here is to be able to go
+and the goal here is to be able to go through all of these um examples the
+through all of these um examples the
+through all of these um examples the input examples that I've put into the
+input examples that I've put into the
+input examples that I've put into the data set and for it to be categorizing
+data set and for it to be categorizing
+data set and for it to be categorizing correctly and giving the right kinds of
+correctly and giving the right kinds of
+correctly and giving the right kinds of responses based on the examples and
+responses based on the examples and
+responses based on the examples and based on the uh the guidelines that the
+based on the uh the guidelines that the
+based on the uh the guidelines that the customer or the client is given us yep
+customer or the client is given us yep
+customer or the client is given us yep so this one's saying that they're going
+so this one's saying that they're going
+so this one's saying that they're going to be looking into it with than 24 hours
+to be looking into it with than 24 hours
+to be looking into it with than 24 hours that's all good and we can go through to
+that's all good and we can go through to
+that's all good and we can go through to number three
+number three
+number three here so I think it's pretty clear what
+here so I think it's pretty clear what
+here so I think it's pretty clear what the refinement process is from here and
+the refinement process is from here and
+the refinement process is from here and the evaluation refinement Loop um you go
+the evaluation refinement Loop um you go
+the evaluation refinement Loop um you go back and forth until you get in the kind
+back and forth until you get in the kind
+back and forth until you get in the kind of results that you're looking for I
+of results that you're looking for I
+of results that you're looking for I want to give you a few more tips here um
+want to give you a few more tips here um
+want to give you a few more tips here um just so you can play around more levers
+just so you can play around more levers
+just so you can play around more levers that you can pull and there are a few
+that you can pull and there are a few
+that you can pull and there are a few big ones here and this actually really
+big ones here and this actually really
+big ones here and this actually really helps you to understand prompt
+helps you to understand prompt
+helps you to understand prompt engineering on on a much deeper level
+engineering on on a much deeper level
+engineering on on a much deeper level because say here we have the switch
+because say here we have the switch
+because say here we have the switch where we can toggle things on and off so
+where we can toggle things on and off so
+where we can toggle things on and off so entire sections can be toggled on and
+entire sections can be toggled on and
+entire sections can be toggled on and off so we can do some interesting
+off so we can do some interesting
+off so we can do some interesting experiments like okay if I turn off the
+experiments like okay if I turn off the
+experiments like okay if I turn off the roll section and then I run this again
+roll section and then I run this again
+roll section and then I run this again is it going to come out much different
+is it going to come out much different
+is it going to come out much different to what it just
+did so looks like it's pretty much the
+did so looks like it's pretty much the same there so it appears that the roll
+same there so it appears that the roll
+same there so it appears that the roll is not actually adding much to it in
+is not actually adding much to it in
+is not actually adding much to it in this case likely because we've got so
+this case likely because we've got so
+this case likely because we've got so much context elsewhere but this is a
+much context elsewhere but this is a
+much context elsewhere but this is a fairly straightforward use case and we
+fairly straightforward use case and we
+fairly straightforward use case and we are using quite a powerful model which
+are using quite a powerful model which
+are using quite a powerful model which is something we can test in a second
+is something we can test in a second
+is something we can test in a second actually is bringing that model quality
+actually is bringing that model quality
+actually is bringing that model quality down and seeing if we can get the same
+down and seeing if we can get the same
+down and seeing if we can get the same results with an even cheaper model um or
+results with an even cheaper model um or
+results with an even cheaper model um or another good one that I like to do is
+another good one that I like to do is
+another good one that I like to do is turning off the examples and seeing if
+turning off the examples and seeing if
+turning off the examples and seeing if they're actually making a difference
+they're actually making a difference
+they're actually making a difference because in a lot of cases your examples
+because in a lot of cases your examples
+because in a lot of cases your examples are going to be a massive massive amount
+are going to be a massive massive amount
+are going to be a massive massive amount wall of text um especially when you have
+wall of text um especially when you have
+wall of text um especially when you have large inputs um and you maybe have a a
+large inputs um and you maybe have a a
+large inputs um and you maybe have a a whole V YouTube video that you want to
+whole V YouTube video that you want to
+whole V YouTube video that you want to put in and the transcript is the input
+put in and the transcript is the input
+put in and the transcript is the input and and therefore your example section
+and and therefore your example section
+and and therefore your example section is gigantic um but in this case let's
+is gigantic um but in this case let's
+is gigantic um but in this case let's just turn off our examples and we'll
+just turn off our examples and we'll
+just turn off our examples and we'll give it a spin and see how this one
+give it a spin and see how this one
+give it a spin and see how this one comes out I actually there is a bit of a
+comes out I actually there is a bit of a
+comes out I actually there is a bit of a difference see here we have the roll and
+difference see here we have the roll and
+difference see here we have the roll and the task on and it gave us this nice
+the task on and it gave us this nice
+the task on and it gave us this nice nicely formatted exactly how we wanted
+nicely formatted exactly how we wanted
+nicely formatted exactly how we wanted it and then if we go up we have taken
+it and then if we go up we have taken
+it and then if we go up we have taken the roll out and one we getting the
+the roll out and one we getting the
+the roll out and one we getting the subject in there so it seems to be a lot
+subject in there so it seems to be a lot
+subject in there so it seems to be a lot less accurate it's not following the
+less accurate it's not following the
+less accurate it's not following the exact response format that we've asked
+exact response format that we've asked
+exact response format that we've asked for here which is it's obviously
+for here which is it's obviously
+for here which is it's obviously ignoring the fact that we said look you
+ignoring the fact that we said look you
+ignoring the fact that we said look you you can't put in any other stuff that's
+you can't put in any other stuff that's
+you can't put in any other stuff that's going to reveal that this is not a
+going to reveal that this is not a
+going to reveal that this is not a respond so this would be a fail this one
+respond so this would be a fail this one
+respond so this would be a fail this one would be good and here you can see we've
+would be good and here you can see we've
+would be good and here you can see we've added the roll back in but taken out the
+added the roll back in but taken out the
+added the roll back in but taken out the examples and we're seeing similar issues
+examples and we're seeing similar issues
+examples and we're seeing similar issues again so the role in this case actually
+again so the role in this case actually
+again so the role in this case actually appears to be doing quite a lot it's
+appears to be doing quite a lot it's
+appears to be doing quite a lot it's paying a lot more attention to the
+paying a lot more attention to the
+paying a lot more attention to the instructions we give it and also
+instructions we give it and also
+instructions we give it and also understanding that it's part of an
+understanding that it's part of an
+understanding that it's part of an autoresponder system and therefore this
+autoresponder system and therefore this
+autoresponder system and therefore this stuff can't be included it appears that
+stuff can't be included it appears that
+stuff can't be included it appears that the example section where we have it
+the example section where we have it
+the example section where we have it here but not in here is not actually
+here but not in here is not actually
+here but not in here is not actually doing that much so you can see how you
+doing that much so you can see how you
+doing that much so you can see how you can start to test and figure out what
+can start to test and figure out what
+can start to test and figure out what parts of the prompt are actually moving
+parts of the prompt are actually moving
+parts of the prompt are actually moving the needle what parts are needed um that
+the needle what parts are needed um that
+the needle what parts are needed um that actually isn't isn't a green thumb so if
+actually isn't isn't a green thumb so if
+actually isn't isn't a green thumb so if we turn everything back
+we turn everything back
+we turn everything back on I've shown you guys how you can
+on I've shown you guys how you can
+on I've shown you guys how you can create new versions of sections easiest
+create new versions of sections easiest
+create new versions of sections easiest way is to right click on one of these
+way is to right click on one of these
+way is to right click on one of these tabs and click duplicate and it's going
+tabs and click duplicate and it's going
+tabs and click duplicate and it's going to give you a and a duplicate version of
+to give you a and a duplicate version of
+to give you a and a duplicate version of that you can make changes to it chops
+that you can make changes to it chops
+that you can make changes to it chops and bits out and the last test that I'd
+and bits out and the last test that I'd
+and bits out and the last test that I'd want to do here is see if we can get the
+want to do here is see if we can get the
+want to do here is see if we can get the same performance um let's just run
+same performance um let's just run
+same performance um let's just run through a couple of these there we go um
+four five and six so we'll just get
+four five and six so we'll just get these filled out using the uh the best
+these filled out using the uh the best
+these filled out using the uh the best prompt that we know is is performing how
+prompt that we know is is performing how
+prompt that we know is is performing how we want it to and there we go we have
+we want it to and there we go we have
+we want it to and there we go we have all of these responses let's just double
+all of these responses let's just double
+all of these responses let's just double check this last one number six this is a
+check this last one number six this is a
+check this last one number six this is a technical support one and it seems to be
+technical support one and it seems to be
+technical support one and it seems to be dealing with that correctly there so
+dealing with that correctly there so
+dealing with that correctly there so that's good this is performing as
+that's good this is performing as
+that's good this is performing as expected now if we change this down to a
+expected now if we change this down to a
+expected now if we change this down to a cheaper version of claude's model so 3.5
+cheaper version of claude's model so 3.5
+cheaper version of claude's model so 3.5 hiu and we run this on six here and then
+hiu and we run this on six here and then
+hiu and we run this on six here and then we compare
+we compare
+we compare them now actually this probably isn't a
+them now actually this probably isn't a
+them now actually this probably isn't a fair comparison because uh this part
+fair comparison because uh this part
+fair comparison because uh this part with this tech support kind of questions
+with this tech support kind of questions
+with this tech support kind of questions it is coming up with its own AI
+it is coming up with its own AI
+it is coming up with its own AI generated responses to we don't actually
+generated responses to we don't actually
+generated responses to we don't actually have a knowledge base on tech support
+have a knowledge base on tech support
+have a knowledge base on tech support which is what you do with more of an
+which is what you do with more of an
+which is what you do with more of an agent based build but if we go back to
+agent based build but if we go back to
+agent based build but if we go back to um let's just do one two and three again
+um let's just do one two and three again
+um let's just do one two and three again so an easy way of doing this would be to
+so an easy way of doing this would be to
+so an easy way of doing this would be to just go to High and we'll run
+just go to High and we'll run
+just go to High and we'll run one and then we'll switch to Sonet 3.7
+one and then we'll switch to Sonet 3.7
+one and then we'll switch to Sonet 3.7 and we'll compare it side by
+and we'll compare it side by
+and we'll compare it side by side and it appears that we are
+side and it appears that we are
+side and it appears that we are getting yeah pretty much the same thing
+getting yeah pretty much the same thing
+getting yeah pretty much the same thing and you can see the cost has gone from
+and you can see the cost has gone from
+and you can see the cost has gone from 83 cents here down to 24 cents it's
+83 cents here down to 24 cents it's
+83 cents here down to 24 cents it's taken almost a second less to get this
+taken almost a second less to get this
+taken almost a second less to get this same kind of result so prop metheus is
+same kind of result so prop metheus is
+same kind of result so prop metheus is great for giving you some helpful
+great for giving you some helpful
+great for giving you some helpful outputs like this obviously this is uh 3
+outputs like this obviously this is uh 3
+outputs like this obviously this is uh 3 times cheaper um than this one and if we
+times cheaper um than this one and if we
+times cheaper um than this one and if we go for back to uh 3.5 here and we test
+go for back to uh 3.5 here and we test
+go for back to uh 3.5 here and we test number two and then we go to uh 3.7 we
+number two and then we go to uh 3.7 we
+number two and then we go to uh 3.7 we test number two again you can see okay
+test number two again you can see okay
+test number two again you can see okay we are
+we are
+we are getting yep pretty much the same
+getting yep pretty much the same
+getting yep pretty much the same response um exactly the same on both of
+response um exactly the same on both of
+response um exactly the same on both of them there's also other things you can
+them there's also other things you can
+them there's also other things you can play with if you're doing more writing
+play with if you're doing more writing
+play with if you're doing more writing based tasks like come into the
+based tasks like come into the
+based tasks like come into the temperature and play around with the
+temperature and play around with the
+temperature and play around with the temperature but I think I've given you a
+temperature but I think I've given you a
+temperature but I think I've given you a pretty good rundown of the entire
+pretty good rundown of the entire
+pretty good rundown of the entire process of uh how we build prompts it's
+process of uh how we build prompts it's
+process of uh how we build prompts it's Peter process we write the plan out use
+Peter process we write the plan out use
+Peter process we write the plan out use that plan put it into the tool to
+that plan put it into the tool to
+that plan put it into the tool to rapidly generate the draft fit all the
+rapidly generate the draft fit all the
+rapidly generate the draft fit all the pieces into promt metheus here set up
+pieces into promt metheus here set up
+pieces into promt metheus here set up your data sets and then rapidly go
+your data sets and then rapidly go
+your data sets and then rapidly go through and test all of them to make
+through and test all of them to make
+through and test all of them to make sure it's working and that refinement
+sure it's working and that refinement
+sure it's working and that refinement cycle and the different levers you have
+cycle and the different levers you have
+cycle and the different levers you have to pull on like turning sections off
+to pull on like turning sections off
+to pull on like turning sections off creating new uh variations of certain
+creating new uh variations of certain
+creating new uh variations of certain sections playing around with the model
+sections playing around with the model
+sections playing around with the model the temperature etc those are all your
+the temperature etc those are all your
+the temperature etc those are all your tools and I want to just give you a
+tools and I want to just give you a
+tools and I want to just give you a final sort of Keystone or cap to this
+final sort of Keystone or cap to this
+final sort of Keystone or cap to this entire project which is how you can turn
+entire project which is how you can turn
+entire project which is how you can turn these prompts into uh usable tools that
+these prompts into uh usable tools that
+these prompts into uh usable tools that can actually be really helpful for you
+can actually be really helpful for you
+can actually be really helpful for you either as an employee or or or business
+either as an employee or or or business
+either as an employee or or or business owner is to actually go back to relevant
+owner is to actually go back to relevant
+owner is to actually go back to relevant Ai and to make handy internal tools for
+Ai and to make handy internal tools for
+Ai and to make handy internal tools for yourself or for other people in the
+yourself or for other people in the
+yourself or for other people in the company or even for clients if you're an
+company or even for clients if you're an
+company or even for clients if you're an AI Agency on relevance here say if you
+AI Agency on relevance here say if you
+AI Agency on relevance here say if you wanted to turn this into a autoresponder
+wanted to turn this into a autoresponder
+wanted to turn this into a autoresponder tool not a super great example but you'd
+tool not a super great example but you'd
+tool not a super great example but you'd probably do this more for say like uh
+probably do this more for say like uh
+probably do this more for say like uh content generation where you put in a
+content generation where you put in a
+content generation where you put in a couple of inputs and it gives you uh
+couple of inputs and it gives you uh
+couple of inputs and it gives you uh through your prompt engineering work
+through your prompt engineering work
+through your prompt engineering work it's going to be a to transform that
+it's going to be a to transform that
+it's going to be a to transform that into an ideal kind of content for
+into an ideal kind of content for
+into an ideal kind of content for whatever platform you're choosing but in
+whatever platform you're choosing but in
+whatever platform you're choosing but in this case we can then take all of these
+this case we can then take all of these
+this case we can then take all of these um this is of course taking in two
+um this is of course taking in two
+um this is of course taking in two inputs so we could say input one is
+inputs so we could say input one is
+inputs so we could say input one is going to be email
+content we can go a have be short text
+content we can go a have be short text and we can go um days since per then we
+and we can go um days since per then we
+and we can go um days since per then we can go to an llm step here and what we
+can go to an llm step here and what we
+can go to an llm step here and what we can do is just start to build out our
+can do is just start to build out our
+can do is just start to build out our prompt again inside relevant Ai and then
+prompt again inside relevant Ai and then
+prompt again inside relevant Ai and then we can just pop these in here and go
+we can just pop these in here and go
+we can just pop these in here and go email
+content and put in the email there and
+content and put in the email there and if we go at days since
+if we go at days since
+if we go at days since purchase don't need to put this in of
+purchase don't need to put this in of
+purchase don't need to put this in of course cuz we're going to be passing
+course cuz we're going to be passing
+course cuz we're going to be passing that in within relevance and we can just
+that in within relevance and we can just
+that in within relevance and we can just dump the rest of the prompt there here
+dump the rest of the prompt there here
+dump the rest of the prompt there here now that we've finalized it and really
+now that we've finalized it and really
+now that we've finalized it and really worked it through so the thing is that
+worked it through so the thing is that
+worked it through so the thing is that testing it within something like
+testing it within something like
+testing it within something like relevance or any other kind of workflow
+relevance or any other kind of workflow
+relevance or any other kind of workflow Builder would be a lot more difficult
+Builder would be a lot more difficult
+Builder would be a lot more difficult and take a whole lot more time and you
+and take a whole lot more time and you
+and take a whole lot more time and you don't have anywhere near as much control
+don't have anywhere near as much control
+don't have anywhere near as much control um and it's just really an inferior way
+um and it's just really an inferior way
+um and it's just really an inferior way of testing and building the prompt so we
+of testing and building the prompt so we
+of testing and building the prompt so we can then replicate The Prompt that we
+can then replicate The Prompt that we
+can then replicate The Prompt that we chose here which is going to be our claw
+chose here which is going to be our claw
+chose here which is going to be our claw 3.5 hiu and if we save and
+3.5 hiu and if we save and
+3.5 hiu and if we save and publish we now have our own email reply
+publish we now have our own email reply
+publish we now have our own email reply generator tool so say if you want to
+generator tool so say if you want to
+generator tool so say if you want to make a tool like this use your your pro
+make a tool like this use your your pro
+make a tool like this use your your pro engineering skills or get your your
+engineering skills or get your your
+engineering skills or get your your staff or team to do this and then you
+staff or team to do this and then you
+staff or team to do this and then you can go to
+can go to
+can go to use how you could even go share this is
+use how you could even go share this is
+use how you could even go share this is usually how I'd like to share them
+usually how I'd like to share them
+usually how I'd like to share them around the
+around the
+around the company copy this and now you've got
+company copy this and now you've got
+company copy this and now you've got this cool Standalone tool where anyone
+this cool Standalone tool where anyone
+this cool Standalone tool where anyone in the company can access this tool and
+in the company can access this tool and
+in the company can access this tool and I can go back and do the exact same
+I can go back and do the exact same
+I can go back and do the exact same thing we did and we put in
+thing we did and we put in
+thing we did and we put in our where's my
+order and we've got four days since
+order and we've got four days since purchase
+purchase
+purchase and Bam that's how you can create your
+and Bam that's how you can create your
+and Bam that's how you can create your own handy dandy AI tools um and use them
+own handy dandy AI tools um and use them
+own handy dandy AI tools um and use them sort of wherever you need within your
+sort of wherever you need within your
+sort of wherever you need within your business within your personal life um
+business within your personal life um
+business within your personal life um and using that prompt Engineering
+and using that prompt Engineering
+and using that prompt Engineering Process and there you go we're getting
+Process and there you go we're getting
+Process and there you go we're getting the kind of outputs we want and this can
+the kind of outputs we want and this can
+the kind of outputs we want and this can be used by API all sorts of different
+be used by API all sorts of different
+be used by API all sorts of different things but that's the prompt Engineering
+things but that's the prompt Engineering
+things but that's the prompt Engineering Process first and foremost that I wanted
+Process first and foremost that I wanted
+Process first and foremost that I wanted to teach you and while that planning
+to teach you and while that planning
+to teach you and while that planning phase can feel a bit clunky at first
+phase can feel a bit clunky at first
+phase can feel a bit clunky at first it's so good if you just rip through
+it's so good if you just rip through
+it's so good if you just rip through that and then you paste that into the
+that and then you paste that into the
+that and then you paste that into the the AI tool to generate it and before
+the AI tool to generate it and before
+the AI tool to generate it and before you know it you've got a like 90% of the
+you know it you've got a like 90% of the
+you know it you've got a like 90% of the way there with a few tweaks needed as
+way there with a few tweaks needed as
+way there with a few tweaks needed as you saw but being able to extract more
+you saw but being able to extract more
+you saw but being able to extract more value out of these AI models and not
+value out of these AI models and not
+value out of these AI models and not having pay for that tradeoff of okay I
+having pay for that tradeoff of okay I
+having pay for that tradeoff of okay I don't have the time to spend to make a
+don't have the time to spend to make a
+don't have the time to spend to make a really good prompt this is the the whole
+really good prompt this is the the whole
+really good prompt this is the the whole system that we use at warning sides so I
+system that we use at warning sides so I
+system that we use at warning sides so I hope that's been helpful for you guys if
+hope that's been helpful for you guys if
+hope that's been helpful for you guys if you want to get all the resources and
+you want to get all the resources and
+you want to get all the resources and the perfect prompt generator tool I will
+the perfect prompt generator tool I will
+the perfect prompt generator tool I will even give you access to our perfect
+even give you access to our perfect
+even give you access to our perfect prompt generator tool for AI agents
+prompt generator tool for AI agents
+prompt generator tool for AI agents which is a bit more complex but I know a
+which is a bit more complex but I know a
+which is a bit more complex but I know a lot of you guys are building agents now
+lot of you guys are building agents now
+lot of you guys are building agents now and we have a really really good tool
+and we have a really really good tool
+and we have a really really good tool for doing that as well so that's all
+for doing that as well so that's all
+for doing that as well so that's all going to be linked in the first link in
+going to be linked in the first link in
+going to be linked in the first link in the description will be to our school
+the description will be to our school
+the description will be to our school you go to YouTube resources on school
+you go to YouTube resources on school
+you go to YouTube resources on school once you're inside and you'll find this
+once you're inside and you'll find this
+once you're inside and you'll find this video and all the resources will be on
+video and all the resources will be on
+video and all the resources will be on there also my entire free course as well
+there also my entire free course as well
+there also my entire free course as well for building AI businesses building AI
+for building AI businesses building AI
+for building AI businesses building AI systems building agents and everything
+systems building agents and everything
+systems building agents and everything is in there as well so that's all for
+is in there as well so that's all for
+is in there as well so that's all for the video guys if you want to check out
+the video guys if you want to check out
+the video guys if you want to check out my recent video which is massive
+my recent video which is massive
+my recent video which is massive breakdown of how to build AI agents like
+breakdown of how to build AI agents like
+breakdown of how to build AI agents like probably the best resource on the entire
+probably the best resource on the entire
+probably the best resource on the entire internet right now about how to learn AI
+internet right now about how to learn AI
+internet right now about how to learn AI agent building um if you're a
+agent building um if you're a
+agent building um if you're a non-technical person or even if you are
+non-technical person or even if you are
+non-technical person or even if you are a technical person that's up there but
+a technical person that's up there but
+a technical person that's up there but that's all for the video guys thank you
+that's all for the video guys thank you
+that's all for the video guys thank you so much for watching and I will see you
+so much for watching and I will see you
+so much for watching and I will see you in the next one

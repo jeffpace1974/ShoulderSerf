@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat: C.S. Lewis Caption Database</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .chat-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .model-select {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            font-size: 14px;
+        }
+
+        .model-select option {
+            background: #333;
+            color: white;
+        }
+
+        .chat-messages {
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            max-width: 80%;
+            line-height: 1.4;
+        }
+
+        .message.user {
+            background: #007bff;
+            color: white;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .message.ai {
+            background: white;
+            color: #333;
+            border: 1px solid #e9ecef;
+            margin-right: auto;
+        }
+
+        .message.system {
+            background: #e9ecef;
+            color: #6c757d;
+            text-align: center;
+            font-style: italic;
+            max-width: 100%;
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .chat-input-row {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: vertical;
+            min-height: 50px;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .send-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            min-width: 80px;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .clear-btn {
+            padding: 8px 16px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .search-results {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: none;
+        }
+
+        .results-header {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 15px 20px;
+            font-weight: bold;
+        }
+
+        .result-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-title {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 5px;
+        }
+
+        .result-text {
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .result-meta {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .youtube-link {
+            color: #dc3545;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .youtube-link:hover {
+            text-decoration: underline;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .ai-response {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .database-info {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Chat: C.S. Lewis Database</h1>
+            <p>Ask ChatGPT anything about C.S. Lewis - it can search the entire caption database and explain its findings</p>
+        </div>
+
+        <div class="database-info">
+            <strong>💬 Chat with AI about C.S. Lewis content</strong><br>
+            Ask questions, get explanations, and have conversations about search results from 240+ episodes
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>💬 AI Conversation</h3>
+                <div>
+                    <select id="modelSelect" class="model-select">
+                        <option value="">Loading models...</option>
+                    </select>
+                    <button onclick="clearChat()" class="clear-btn">Clear Chat</button>
+                </div>
+            </div>
+            
+            <div id="chatMessages" class="chat-messages">
+                <div class="message system">
+                    Welcome! I'm your AI assistant for exploring C.S. Lewis content. Ask me anything about Lewis's life, writings, letters, or diaries. I can search the entire database and explain what I find.
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="chat-input-row">
+                    <textarea 
+                        id="chatInput" 
+                        class="chat-input" 
+                        placeholder="Ask me anything about C.S. Lewis..."
+                        rows="2"
+                    ></textarea>
+                    <button onclick="sendMessage()" id="sendBtn" class="send-btn">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            AI is thinking and searching the database...
+        </div>
+
+        <div id="searchResults" class="search-results">
+            <div class="results-header">
+                <span id="resultsTitle">Search Results</span>
+            </div>
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+
+    <script>
+        let conversationHistory = [];
+
+        // Load AI models on page load
+        window.onload = function() {
+            loadModels();
+            
+            // Add enter key support for chat input
+            document.getElementById('chatInput').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+        };
+
+        function loadModels() {
+            fetch('/ai-models')
+                .then(response => response.json())
+                .then(models => {
+                    const select = document.getElementById('modelSelect');
+                    select.innerHTML = '';
+                    
+                    Object.entries(models).forEach(([key, model]) => {
+                        const option = document.createElement('option');
+                        option.value = key;
+                        option.textContent = `${model.name} - ${model.description}`;
+                        if (key === 'gpt-4-turbo') option.selected = true;
+                        select.appendChild(option);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading models:', error);
+                    document.getElementById('modelSelect').innerHTML = '<option value="gpt-4-turbo">GPT-4 Turbo (Default)</option>';
+                });
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            const model = document.getElementById('modelSelect').value || 'gpt-4-turbo';
+            
+            if (!message) return;
+            
+            // Add user message to chat
+            addMessage(message, 'user');
+            
+            // Clear input and show loading
+            input.value = '';
+            showLoading(true);
+            document.getElementById('sendBtn').disabled = true;
+            
+            // Send to AI
+            fetch('/ai-chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: message,
+                    model: model
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                showLoading(false);
+                document.getElementById('sendBtn').disabled = false;
+                
+                if (data.error) {
+                    addMessage(`Error: ${data.error}`, 'system');
+                } else {
+                    // Add AI response
+                    addMessage(data.response, 'ai');
+                    
+                    // Show search results if any
+                    if (data.search_results && data.search_results.length > 0) {
+                        showSearchResults(data.search_results, data.total_results);
+                    } else {
+                        hideSearchResults();
+                    }
+                }
+            })
+            .catch(error => {
+                showLoading(false);
+                document.getElementById('sendBtn').disabled = false;
+                addMessage(`Network error: ${error.message}`, 'system');
+                console.error('Error:', error);
+            });
+        }
+
+        function addMessage(text, type) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            
+            if (type === 'ai') {
+                messageDiv.innerHTML = `<div class="ai-response">${text}</div>`;
+            } else {
+                messageDiv.textContent = text;
+            }
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function showLoading(show) {
+            document.getElementById('loading').style.display = show ? 'block' : 'none';
+        }
+
+        function showSearchResults(results, total) {
+            const resultsContainer = document.getElementById('searchResults');
+            const resultsTitle = document.getElementById('resultsTitle');
+            const resultsContent = document.getElementById('resultsContent');
+            
+            resultsTitle.textContent = `Found ${total} search results`;
+            resultsContent.innerHTML = '';
+            
+            results.slice(0, 20).forEach(result => {
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'result-item';
+                
+                const episodeMatch = result.title.match(/ep(\d+)/);
+                const episodeNum = episodeMatch ? episodeMatch[1] : 'Unknown';
+                
+                resultDiv.innerHTML = `
+                    <div class="result-title">Episode ${episodeNum}: ${result.title}</div>
+                    <div class="result-text">${result.text}</div>
+                    <div class="result-meta">
+                        ${result.start_time ? `⏰ ${result.start_time}` : ''} 
+                        <a href="${result.youtube_url}" target="_blank" class="youtube-link">▶️ Watch</a>
+                    </div>
+                `;
+                
+                resultsContent.appendChild(resultDiv);
+            });
+            
+            if (total > 20) {
+                const moreDiv = document.createElement('div');
+                moreDiv.className = 'result-item';
+                moreDiv.innerHTML = `<div style="text-align: center; font-style: italic; color: #666;">... and ${total - 20} more results</div>`;
+                resultsContent.appendChild(moreDiv);
+            }
+            
+            resultsContainer.style.display = 'block';
+        }
+
+        function hideSearchResults() {
+            document.getElementById('searchResults').style.display = 'none';
+        }
+
+        function clearChat() {
+            if (confirm('Clear conversation history?')) {
+                fetch('/ai-clear', { method: 'POST' })
+                    .then(() => {
+                        document.getElementById('chatMessages').innerHTML = `
+                            <div class="message system">
+                                Conversation cleared. Ask me anything about C.S. Lewis!
+                            </div>
+                        `;
+                        hideSearchResults();
+                    })
+                    .catch(error => {
+                        console.error('Error clearing chat:', error);
+                    });
+            }
+        }
+    </script>
+</body>
+</html>

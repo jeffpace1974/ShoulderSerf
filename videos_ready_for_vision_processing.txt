@@ -1,0 +1,309 @@
+Videos ready for Claude Vision processing: 76
+============================================================
+
+These videos have thumbnails downloaded and need vision processing:
+--------------------------------------------------
+  1. Video ID: pkDt_u8v3ss
+     Current Text: "C.S. Lewis Content 1915"
+     Title: Read on C. S. Lewis - ep18 : 1915 Part 6
+
+  2. Video ID: t8yyFh34nc4
+     Current Text: "C.S. Lewis Content 1915"
+     Title: Read on C. S. Lewis - ep17 : 1915 Part 5
+
+  3. Video ID: iRjrGfTM4vg
+     Current Text: "C.S. Lewis Content 1915"
+     Title: Read on C. S. Lewis - ep16 : 1915 Part 4
+
+  4. Video ID: jtDdFEvA5pQ
+     Current Text: "C.S. Lewis Content 1924"
+     Title: The Hunter, The King, The Husband...Approaching at Infinite Speed
+
+  5. Video ID: rU26RdJRUb8
+     Current Text: "C.S. Lewis Content 1924"
+     Title: The Pilgrim’s Regress -  Michael Ward
+
+  6. Video ID: mbeW3MXev4s
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Read on C. S. Lewis - ep32 : The Quest of Bleheris (Part 5)
+
+  7. Video ID: vCKf_QCS8Qk
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Read on C. S. Lewis - ep31 : The Quest of Bleheris (Part 4)
+
+  8. Video ID: lQhpErUXFeg
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Read on C. S. Lewis - ep11
+
+  9. Video ID: or6ubGtvMBs
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Read on C. S. Lewis - ep9
+
+ 10. Video ID: kUPSyguw3E8
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Read on C. S. Lewis - ep6
+
+ 11. Video ID: Ei8ZnYAVyJ8
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Read on C. S. Lewis - ep4
+
+ 12. Video ID: grgzHpn_9p4
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Read on C. S. Lewis - ep2
+
+ 13. Video ID: jOy7vawSGBo
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Standby
+
+ 14. Video ID: gaTbJWgAMGc
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Read on C. S. Lewis - ep1
+
+ 15. Video ID: jVnnrEVV8JQ
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep173 : 1922/1923 Diary and Letters (Part 50/Part1)
+
+ 16. Video ID: ogWppT20-ZE
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep171 : 1922 Diary and Letters (Part 48)
+
+ 17. Video ID: yqmcRQl9lII
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep170 : 1922 Diary and Letters (Part 47)
+
+ 18. Video ID: wqhBqXBVfeU
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep168 : 1922 Diary and Letters (Part 45)
+
+ 19. Video ID: k8jHak4M8uY
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep163 : 1922 Diary and Letters (Part 40)
+
+ 20. Video ID: sE7AcqYUCFY
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep152 : 1922 Diary and Letters (Part 36)
+
+ 21. Video ID: qQZH3ayu1rg
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep151 : 1922 Diary and Letters (Part 35)
+
+ 22. Video ID: lCkd8loVcow
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep148 : 1922 Diary and Letters (Part 32)
+
+ 23. Video ID: ufSTCNjNhw8
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep144 : 1922 Diary and Letters (Part 28)
+
+ 24. Video ID: tKO-2R-tYT0
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep139 : 1922 Diary and Letters (Part 23)
+
+ 25. Video ID: qKbTnY9SMnY
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep137 : 1922 Diary and Letters (Part 21)
+
+ 26. Video ID: u8gTL8cbdGE
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep136 : 1922 Diary and Letters (Part 20)
+
+ 27. Video ID: iZIPxxeXeW0
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep134.2 : 1922 Diary and Letters (Part 18)
+
+ 28. Video ID: pGET1sQQBf0
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep132 : 1922 Diary and Letters (Part 16)
+
+ 29. Video ID: hGQ6n__bYyY
+     Current Text: "C.S. Lewis Daily Life 1922"
+     Title: Read on C. S. Lewis - ep127 : 1922 Diary and Letters (Part 11)
+
+ 30. Video ID: t_ZcYpvG0ac
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep200 : 1923 Diary and Letters (Part 26)
+
+ 31. Video ID: twolJccdGcw
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep198 : 1923 Diary and Letters (Part 24)
+
+ 32. Video ID: u-RSiV7fRpw
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep195 : 1923 Diary and Letters (Part 21)
+
+ 33. Video ID: rTnIb8oNfDM
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep193 : 1923 Diary and Letters (Part 19)
+
+ 34. Video ID: wTuFdngHuTc
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep191 : 1923 Diary and Letters (Part 17)
+
+ 35. Video ID: ofhyBHW8z4k
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep189 : 1923 Diary and Letters (Part 15)
+
+ 36. Video ID: kXp2HoXfXc8
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep184 : 1923 Diary and Letters (Part 10)
+
+ 37. Video ID: mE57ByRzl3U
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep183 : 1923 Diary and Letters (Part 9)
+
+ 38. Video ID: jk7PSuAe3Eg
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep178 : 1923 Diary and Letters (Part 6)
+
+ 39. Video ID: yr_y-tfE3aI
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep177 : 1923 Diary and Letters (Part 5)
+
+ 40. Video ID: i7ga2qUsXSk
+     Current Text: "C.S. Lewis Daily Life 1923"
+     Title: Read on C. S. Lewis - ep175.2 : 1923 Diary and Letters (Part 3)
+
+ 41. Video ID: xwy6qszmNgA
+     Current Text: "C.S. Lewis During the War Years 1916"
+     Title: Read on C. S. Lewis - ep34 : 1916 (Part 11)
+
+ 42. Video ID: hZr0IMB9Po8
+     Current Text: "C.S. Lewis During the War Years 1916"
+     Title: Read on C. S. Lewis - ep25 : 1916 Part 7
+
+ 43. Video ID: wMLHpCq8Ct4
+     Current Text: "C.S. Lewis During the War Years 1916"
+     Title: Read on C. S. Lewis - ep22 : 1916 Part 4
+
+ 44. Video ID: gJHD287wZMk
+     Current Text: "C.S. Lewis During the War Years 1916"
+     Title: Read on C. S. Lewis - ep20 : 1916 Part 2
+
+ 45. Video ID: tECAIH0FnGM
+     Current Text: "C.S. Lewis During the War Years 1917"
+     Title: Read on C. S. Lewis - ep44 : 1917 (Part 7)
+
+ 46. Video ID: sJdniDXNt5A
+     Current Text: "C.S. Lewis During the War Years 1917"
+     Title: Read on C. S. Lewis - ep40 : 1917 (Part 3)
+
+ 47. Video ID: vmt1VU4Co-A
+     Current Text: "C.S. Lewis During the War Years 1917"
+     Title: Read on C. S. Lewis - ep39 : 1917 (Part 2)
+
+ 48. Video ID: v7aGA1muBAw
+     Current Text: "C.S. Lewis During the War Years 1918"
+     Title: Read on C. S. Lewis - ep68 : 1918 (Part 5)
+
+ 49. Video ID: q2Mq6WkFY6E
+     Current Text: "C.S. Lewis During the War Years 1918"
+     Title: Read on C. S. Lewis - ep67 : 1918 (Part 4)
+
+ 50. Video ID: scFtJbfEKM4
+     Current Text: "C.S. Lewis During the War Years 1918"
+     Title: Read on C. S. Lewis - ep64 : 1918 (Part 1)
+
+ 51. Video ID: qRBixOTYT8Y
+     Current Text: "C.S. Lewis Post-War Recovery 1919"
+     Title: Read on C. S. Lewis - ep81 : 1919 (Part 6)
+
+ 52. Video ID: mKfXxMwvVt0
+     Current Text: "C.S. Lewis Post-War Recovery 1919"
+     Title: Read on C. S. Lewis - ep75 : 1919 (Part 1)
+
+ 53. Video ID: xBWulCq82kk
+     Current Text: "C.S. Lewis Post-War Recovery 1921"
+     Title: Read on C. S. Lewis - ep115 : 1921 Letters (Part 10)
+
+ 54. Video ID: qosX_c0Ub2I
+     Current Text: "C.S. Lewis Post-War Recovery 1921"
+     Title: Read on C. S. Lewis - ep109 : 1921 Letters (Part 4)
+
+ 55. Video ID: uiFUC3CPV1k
+     Current Text: "C.S. Lewis Post-War Recovery 1921"
+     Title: Read on C. S. Lewis - ep106 : 1921 Letters (Part 1)
+
+ 56. Video ID: zCJ27kUrVFc
+     Current Text: "C.S. Lewis University Studies 1922"
+     Title: Read on C. S. Lewis - ep155 : 1922 Dymer - A Work in Progress (Part 3)
+
+ 57. Video ID: uUBlgJgRdts
+     Current Text: "C.S. Lewis University Studies 1922"
+     Title: Read on C. S. Lewis - ep154 : 1922 Dymer - A Work in Progress (Part 2)
+
+ 58. Video ID: My7OwOajaj0
+     Current Text: "Dymer A Work in Progress 1922"
+     Title: Read on C. S. Lewis - ep159 : 1922 Dymer - A Work in Progress (Part 7)
+
+ 59. Video ID: YKAIh3hvP_w
+     Current Text: "Dymer A Work in Progress 1922"
+     Title: Read on C. S. Lewis - ep158 : 1922 Dymer - A Work in Progress (Part 6)
+
+ 60. Video ID: FXsFyZkDUxc
+     Current Text: "Dymer A Work in Progress 1922"
+     Title: Read on C. S. Lewis - ep157 : 1922 Dymer - A Work in Progress (Part 5)
+
+ 61. Video ID: O7uJtBnjbwE
+     Current Text: "Dymer A Work in Progress 1922"
+     Title: Read on C. S. Lewis - ep156 : 1922 Dymer - A Work in Progress (Part 4)
+
+ 62. Video ID: MaC57tUcJEQ
+     Current Text: "1913"
+     Title: Read on C. S. Lewis - ep10
+
+ 63. Video ID: UJO0M2LSwpg
+     Current Text: "1914 Part 2"
+     Title: Read on C. S. Lewis - ep12
+
+ 64. Video ID: b33fYNav1tU
+     Current Text: "1915 Part 1"
+     Title: Read on C. S. Lewis - ep13 : 1915 Part 1
+
+ 65. Video ID: Vx8DsTkFaYo
+     Current Text: "1915 Part 2"
+     Title: Read on C. S. Lewis - ep14 : 1915 Part 2
+
+ 66. Video ID: IdwhZbc83W8
+     Current Text: "1915 Part 3"
+     Title: Read on C. S. Lewis - ep15 : 1915 Part 3
+
+ 67. Video ID: UyeWqW9RrYs
+     Current Text: "1916 Part 5"
+     Title: Read on C. S. Lewis - ep23 : 1916 Part 5
+
+ 68. Video ID: e9uJ6xZ2oyY
+     Current Text: "1916 Part 6"
+     Title: Read on C. S. Lewis - ep24 : 1916 Part 6
+
+ 69. Video ID: V6uHAsfHPwY
+     Current Text: "1916 Part 9"
+     Title: Read on C. S. Lewis - ep27 : 1916 Part 9
+
+ 70. Video ID: -UGOdDXq4qw
+     Current Text: "C.S. Lewis 1916 Part 1"
+     Title: Read on C. S. Lewis - ep19 : 1916 Part 1
+
+ 71. Video ID: -rhF9juohqM
+     Current Text: "C.S. Lewis 1916 Part 3"
+     Title: Read on C. S. Lewis - ep21 : 1916 Part 3
+
+ 72. Video ID: 8_mBexirQ8E
+     Current Text: "C.S. Lewis 1916 Part 8"
+     Title: Read on C. S. Lewis - ep26 : 1916 Part 8
+
+ 73. Video ID: GBdtgb5Bt0w
+     Current Text: "C.S. Lewis 1916 Part 10"
+     Title: Read on C. S. Lewis - ep33 : Collected Letters 1916 (Part 10)
+
+ 74. Video ID: SO7UxoiPOAY
+     Current Text: "SO7UxoiPOAY"
+     Title: Read on C. S. Lewis - ep5
+
+ 75. Video ID: Ufkk3Ofb9Q8
+     Current Text: "Ufkk3Ofb9Q8"
+     Title: Read on C. S. Lewis - ep8
+
+ 76. Video ID: a9TML0PlDs8
+     Current Text: "a9TML0PlDs8"
+     Title: The Pilgrim’s Regress -  Possible Insight on ‘The Brown Girls’
+

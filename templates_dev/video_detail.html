@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ video.title }} - C.S. Lewis Caption Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #2a5298;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .video-title {
+            font-size: 2rem;
+            color: #2a5298;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .video-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .meta-label {
+            font-weight: bold;
+        }
+
+        .video-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .video-link {
+            padding: 10px 20px;
+            background: #2a5298;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .video-link:hover {
+            background: #1e3c72;
+        }
+
+        .video-link.secondary {
+            background: #6c757d;
+        }
+
+        .video-link.secondary:hover {
+            background: #545b62;
+        }
+
+        .captions-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .captions-header {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .captions-title {
+            font-size: 1.5rem;
+            color: #2a5298;
+            margin-bottom: 10px;
+        }
+
+        .captions-count {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .caption-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background: #fafafa;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .caption-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .caption-time {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .time-info {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .timestamp-link {
+            padding: 5px 12px;
+            background: #2a5298;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            transition: background 0.3s ease;
+        }
+
+        .timestamp-link:hover {
+            background: #1e3c72;
+        }
+
+        .caption-text {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .search-input-container {
+            position: relative;
+        }
+
+        #pageSearch {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            font-size: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #pageSearch:focus {
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+        }
+
+        .clear-search {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .clear-search:hover {
+            background: #f0f0f0;
+        }
+
+        .highlight {
+            background: #ffeb3b;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .no-matches {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .video-title {
+                font-size: 1.5rem;
+            }
+
+            .video-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .video-links {
+                flex-direction: column;
+            }
+
+            .caption-time {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/" class="back-link">← Back to Search</a>
+            
+            <h1 class="video-title">{{ video.title }}</h1>
+            
+            <div class="video-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Channel:</span> {{ video.uploader or 'Unknown' }}
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Upload Date:</span> {{ video.upload_date or 'Unknown' }}
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Duration:</span> 
+                    {% if video.duration %}
+                        {{ (video.duration // 3600)|int }}:{{ "%02d"|format(((video.duration % 3600) // 60)|int) }}:{{ "%02d"|format((video.duration % 60)|int) }}
+                    {% else %}
+                        Unknown
+                    {% endif %}
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Captions:</span> {{ captions|length }} segments
+                </div>
+            </div>
+
+            <div class="video-links">
+                <a href="{{ youtube_url }}" target="_blank" class="video-link">▶️ Watch on YouTube</a>
+                <a href="javascript:void(0)" onclick="downloadCaptions()" class="video-link secondary">💾 Download Captions</a>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <div class="search-input-container">
+                <input type="text" id="pageSearch" placeholder="Search within this video's captions..." oninput="searchWithinPage()">
+                <button class="clear-search" onclick="clearSearch()" title="Clear search">✕</button>
+            </div>
+        </div>
+
+        <div class="captions-container">
+            <div class="captions-header">
+                <h2 class="captions-title">Video Captions</h2>
+                <p class="captions-count">{{ captions|length }} caption segments</p>
+            </div>
+
+            <div id="captionsContent">
+                {% for caption in captions %}
+                <div class="caption-item" data-text="{{ caption.text|lower }}">
+                    <div class="caption-time">
+                        <span class="time-info">{{ caption.start_time }} - {{ caption.end_time }}</span>
+                        <a href="{{ caption.youtube_url }}" target="_blank" class="timestamp-link">▶️ Jump to time</a>
+                    </div>
+                    <div class="caption-text">{{ caption.text }}</div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="no-matches" id="noMatches">
+                <h3>No matches found</h3>
+                <p>Try different keywords or clear the search to see all captions.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allCaptions = [];
+
+        // Initialize captions data
+        window.addEventListener('load', function() {
+            const captionItems = document.querySelectorAll('.caption-item');
+            captionItems.forEach((item, index) => {
+                allCaptions.push({
+                    element: item,
+                    text: item.dataset.text
+                });
+            });
+        });
+
+        function searchWithinPage() {
+            const query = document.getElementById('pageSearch').value.toLowerCase().trim();
+            const captionsContent = document.getElementById('captionsContent');
+            const noMatches = document.getElementById('noMatches');
+            
+            if (!query) {
+                // Show all captions
+                allCaptions.forEach(caption => {
+                    caption.element.style.display = 'block';
+                    // Remove highlights
+                    const textDiv = caption.element.querySelector('.caption-text');
+                    textDiv.innerHTML = textDiv.textContent;
+                });
+                noMatches.style.display = 'none';
+                return;
+            }
+
+            let matchCount = 0;
+            
+            allCaptions.forEach(caption => {
+                if (caption.text.includes(query)) {
+                    caption.element.style.display = 'block';
+                    matchCount++;
+                    
+                    // Highlight matches
+                    const textDiv = caption.element.querySelector('.caption-text');
+                    const originalText = textDiv.textContent;
+                    const highlightedText = highlightMatches(originalText, query);
+                    textDiv.innerHTML = highlightedText;
+                } else {
+                    caption.element.style.display = 'none';
+                }
+            });
+
+            // Show/hide no matches message
+            if (matchCount === 0) {
+                noMatches.style.display = 'block';
+            } else {
+                noMatches.style.display = 'none';
+            }
+        }
+
+        function highlightMatches(text, query) {
+            const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
+            return text.replace(regex, '<span class="highlight">$1</span>');
+        }
+
+        function escapeRegex(string) {
+            return string.replace(/[.*+?^${}()|[\\]\\]/g, '\\\\$&');
+        }
+
+        function clearSearch() {
+            document.getElementById('pageSearch').value = '';
+            searchWithinPage();
+        }
+
+        function downloadCaptions() {
+            const videoTitle = {{ video.title|tojson }};
+            const videoId = {{ video.video_id|tojson }};
+            
+            let content = `Title: ${videoTitle}\\n`;
+            content += `Video ID: ${videoId}\\n`;
+            content += `Channel: {{ video.uploader or 'Unknown' }}\\n`;
+            content += `Upload Date: {{ video.upload_date or 'Unknown' }}\\n`;
+            content += `\\n${'='.repeat(50)}\\n\\n`;
+            
+            {% for caption in captions %}
+            content += `[{{ caption.start_time }} - {{ caption.end_time }}]\\n`;
+            content += `{{ caption.text }}\\n\\n`;
+            {% endfor %}
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${videoId}_captions.txt`;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+
+        // Handle Enter key in search input
+        document.getElementById('pageSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

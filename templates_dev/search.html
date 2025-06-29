@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoulder Serf: Read on C.S. Lewis Podcast Captions Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00d4ff 0%, #5a67d8 50%, #9f7aea 100%);
+            min-height: 100vh;
+            color: #333;
+            animation: waveBackground 20s ease-in-out infinite;
+        }
+        
+        @keyframes waveBackground {
+            0%, 100% { background: linear-gradient(135deg, #00d4ff 0%, #5a67d8 50%, #9f7aea 100%); }
+            50% { background: linear-gradient(135deg, #0bc5ea 0%, #667eea 50%, #a78bfa 100%); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .stats-bar {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00d4ff, #5a67d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .search-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .search-input-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            font-size: 1.1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        #searchInput:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(45deg, #00d4ff, #5a67d8);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .search-btn:hover {
+            background: linear-gradient(45deg, #0bc5ea, #667eea);
+            transform: translateY(-50%) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+        }
+
+        .search-options {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-options label {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .search-options select {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .results-container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .results-header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .results-count {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .result-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background: #fafafa;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .result-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            gap: 15px;
+        }
+        
+        .thumbnail-container {
+            flex-shrink: 0;
+        }
+        
+        .video-thumbnail {
+            width: 200px !important;
+            height: 112px !important;
+            min-width: 200px !important;
+            min-height: 112px !important;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .no-thumbnail {
+            width: 200px !important;
+            height: 112px !important;
+            min-width: 200px !important;
+            min-height: 112px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            border-radius: 8px;
+            font-size: 2rem;
+            color: #999;
+        }
+
+        .video-info {
+            flex: 1;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00d4ff, #5a67d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .video-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .caption-text {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid transparent;
+            border-image: linear-gradient(45deg, #00d4ff, #5a67d8) 1;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 10px rgba(0, 212, 255, 0.1);
+        }
+
+        .caption-time {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .video-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .video-link {
+            padding: 8px 15px;
+            background: linear-gradient(45deg, #00d4ff, #5a67d8);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 212, 255, 0.3);
+        }
+
+        .video-link:hover {
+            background: linear-gradient(45deg, #0bc5ea, #667eea);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+        }
+
+        .video-link.secondary {
+            background: #6c757d;
+        }
+
+        .video-link.secondary:hover {
+            background: #545b62;
+        }
+        
+        .video-tags {
+            margin-top: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .tag {
+            background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(90, 103, 216, 0.1));
+            color: #00d4ff;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .video-playlists {
+            margin-top: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .playlist {
+            background: linear-gradient(45deg, rgba(159, 122, 234, 0.1), rgba(167, 139, 250, 0.1));
+            color: #9f7aea;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(159, 122, 234, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .thumbnail-text {
+            background: #fff3e0;
+            border: 1px solid #ffcc02;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #e65100;
+        }
+        
+        .match-type {
+            background: #e8f5e8;
+            color: #2e7d32;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .page-btn {
+            padding: 8px 15px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            color: #6c757d;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .page-btn:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+        }
+
+        .page-btn.active {
+            background: linear-gradient(45deg, #00d4ff, #5a67d8);
+            border-color: #00d4ff;
+            color: white;
+            box-shadow: 0 2px 10px rgba(0, 212, 255, 0.3);
+        }
+
+        .page-btn.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid #00d4ff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .search-tips {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .search-tips h3 {
+            background: linear-gradient(45deg, #00d4ff, #5a67d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .search-tips ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .search-tips li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .search-tips li::before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .search-options {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .result-header {
+                flex-direction: column;
+            }
+
+            .video-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><img src="/static/assets/SSerf Logo.jpg" alt="SSerf Logo" style="height: 40px; width: 40px; margin-right: 10px; vertical-align: middle;"> Shoulder Serf: Read on C.S. Lewis Podcast Captions Search</h1>
+            <p>Explore conversations and insights from the <a href="https://www.youtube.com/@shoulderserf" target="_blank" style="color: #9f7aea; text-decoration: none;">Shoulder Serf</a> YouTube channel</p>
+            <p><strong>🧠 Development Version</strong> - Now with thumbnails, tags, playlists, and AI-powered concept search!</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number">{{ "{:,}".format(stats.video_count) if stats.video_count else "0" }}</div>
+                <div class="stat-label">Videos</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">{{ "{:,}".format(stats.caption_count) if stats.caption_count else "0" }}</div>
+                <div class="stat-label">Caption Segments</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">{{ "{:.1f}".format(stats.database_size / (1024*1024)) if stats.database_size else "0" }} MB</div>
+                <div class="stat-label">Database Size</div>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <div class="search-input-container">
+                <input type="text" id="searchInput" placeholder="Search for topics, quotes, or ask conceptual questions..." autofocus>
+                <button class="search-btn" onclick="performSearch()">Search</button>
+            </div>
+            <div class="search-options">
+                <label>
+                    <input type="radio" name="searchType" value="keyword" checked> Keyword Search
+                </label>
+                <label>
+                    <input type="radio" name="searchType" value="concept"> 🧠 Concept Search (AI)
+                </label>
+                <label id="modelSelectLabel" style="display: none;">
+                    AI Model:
+                    <select id="modelSelect">
+                        <option value="">Loading models...</option>
+                    </select>
+                </label>
+                <label>
+                    Results per page:
+                    <select id="perPage">
+                        <option value="10">10</option>
+                        <option value="20" selected>20</option>
+                        <option value="50">50</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+            <div class="results-header">
+                <div class="results-count" id="resultsCount"></div>
+            </div>
+            <div id="resultsContent"></div>
+            <div class="pagination" id="pagination"></div>
+        </div>
+
+        <div class="search-tips">
+            <h3>Search Tips</h3>
+            <ul>
+                <li><strong>Keyword Search:</strong> Find specific words: "Narnia", "medieval literature", "Tolkien"</li>
+                <li><strong>Concept Search (AI):</strong> Ask questions: "What criticism did Lewis receive about becoming a professor?"</li>
+                <li><strong>Conceptual queries:</strong> "Lewis's relationship with his father", "His views on pain and suffering"</li>
+                <li><strong>Biographical questions:</strong> "Lewis's conversion experience", "His friendship with the Inklings"</li>
+                <li><strong>Academic topics:</strong> "His teaching methods", "Student reactions to his lectures"</li>
+                <li>💡 <strong>AI search analyzes meaning and context, not just keywords!</strong></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        let currentQuery = '';
+        let totalPages = 0;
+        let availableModels = {};
+
+        // Load available models on page load
+        function loadAvailableModels() {
+            fetch('/models')
+                .then(response => response.json())
+                .then(models => {
+                    availableModels = models;
+                    populateModelSelect();
+                })
+                .catch(error => {
+                    console.error('Failed to load models:', error);
+                });
+        }
+
+        function populateModelSelect() {
+            const modelSelect = document.getElementById('modelSelect');
+            modelSelect.innerHTML = '';
+            
+            // Add default option
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = 'Auto (Best Available)';
+            modelSelect.appendChild(defaultOption);
+            
+            // Add each available model
+            Object.entries(availableModels).forEach(([key, model]) => {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = `${model.name} - ${model.description}`;
+                option.title = `Speed: ${model.speed}, Accuracy: ${model.accuracy}`;
+                modelSelect.appendChild(option);
+            });
+            
+            // Set default to gpt-4-turbo if available, otherwise rule-based
+            if (availableModels['gpt-4-turbo']) {
+                modelSelect.value = 'gpt-4-turbo';
+            } else if (availableModels['rule_based']) {
+                modelSelect.value = 'rule_based';
+            }
+        }
+
+        // Show/hide model selection based on search type
+        function toggleSearchOptions() {
+            const searchType = document.querySelector('input[name="searchType"]:checked').value;
+            const modelLabel = document.getElementById('modelSelectLabel');
+            
+            if (searchType === 'concept') {
+                modelLabel.style.display = 'block';
+            } else {
+                modelLabel.style.display = 'none';
+            }
+        }
+
+        // Add event listeners for search type radio buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchTypeInputs = document.querySelectorAll('input[name="searchType"]');
+            searchTypeInputs.forEach(input => {
+                input.addEventListener('change', toggleSearchOptions);
+            });
+            
+            // Load models on page load
+            loadAvailableModels();
+        });
+
+        // Handle Enter key in search input
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        function performSearch(page = 1) {
+            const query = document.getElementById('searchInput').value.trim();
+            const perPage = document.getElementById('perPage').value;
+            const searchType = document.querySelector('input[name="searchType"]:checked').value;
+            
+            if (!query) {
+                alert('Please enter a search term or question');
+                return;
+            }
+
+            currentQuery = query;
+            currentPage = page;
+
+            showLoading(searchType);
+
+            // Choose endpoint based on search type
+            const endpoint = searchType === 'concept' ? '/concept-search' : '/search';
+            let url = `${endpoint}?q=${encodeURIComponent(query)}&page=${page}&per_page=${perPage}`;
+            
+            // Add model parameter for concept search
+            if (searchType === 'concept') {
+                const selectedModel = document.getElementById('modelSelect').value;
+                if (selectedModel) {
+                    url += `&model=${encodeURIComponent(selectedModel)}`;
+                }
+            }
+            
+            console.log('Fetching:', url, 'Type:', searchType, 'Model:', searchType === 'concept' ? document.getElementById('modelSelect').value : 'N/A');
+            
+            fetch(url)
+                .then(response => {
+                    console.log('Response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Search data received:', data);
+                    displayResults(data);
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    showError(`Search failed: ${error.message}. Please try again.`);
+                });
+        }
+
+        function showLoading(searchType = 'keyword') {
+            const container = document.getElementById('resultsContainer');
+            container.style.display = 'block';
+            
+            let loadingMessage = searchType === 'concept' 
+                ? 'AI is analyzing your question and searching for relevant concepts...'
+                : `Searching through ${document.querySelector('.stat-number').textContent} caption segments...`;
+            
+            // Add model information for concept search
+            if (searchType === 'concept') {
+                const selectedModel = document.getElementById('modelSelect').value;
+                const modelInfo = availableModels[selectedModel];
+                if (modelInfo) {
+                    loadingMessage = `${modelInfo.name} is analyzing your question and searching for relevant concepts...`;
+                }
+            }
+            
+            container.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>${loadingMessage}</p>
+                    ${searchType === 'concept' ? '<p style="font-size: 0.9em; color: #666; margin-top: 10px;">This may take a few moments while AI processes your query...</p>' : ''}
+                </div>
+            `;
+        }
+
+        function showError(message) {
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = `
+                <div class="no-results">
+                    <h3>⚠️ Error</h3>
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+
+        function displayResults(data) {
+            const container = document.getElementById('resultsContainer');
+            
+            // Check for server error
+            if (data.error) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <h3>⚠️ Search Error</h3>
+                        <p>${data.error}</p>
+                        <p>Please try again or contact support if the problem persists.</p>
+                    </div>
+                `;
+                container.style.display = 'block';
+                return;
+            }
+
+            if (data.results.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results">
+                        <h3>No results found</h3>
+                        <p>Try different keywords or check your spelling.</p>
+                    </div>
+                `;
+                container.style.display = 'block';
+                return;
+            }
+
+            // Ensure the results structure exists
+            container.innerHTML = `
+                <div class="results-header">
+                    <div class="results-count" id="resultsCount"></div>
+                </div>
+                <div id="resultsContent"></div>
+                <div class="pagination" id="pagination"></div>
+            `;
+
+            // Now get references to the newly created elements
+            const resultsCount = document.getElementById('resultsCount');
+            const resultsContent = document.getElementById('resultsContent');
+            const pagination = document.getElementById('pagination');
+
+            totalPages = data.pages;
+
+            // Update results count with search type info
+            let searchTypeInfo = '';
+            if (data.search_type === 'concept') {
+                let modelUsed = 'AI';
+                if (data.analysis && data.analysis.source) {
+                    const modelName = availableModels[data.analysis.source.replace('openai-', '').replace('anthropic-', '').replace('rules', 'rule_based')];
+                    if (modelName) {
+                        modelUsed = modelName.name;
+                    } else if (data.analysis.source.includes('openai-')) {
+                        modelUsed = data.analysis.source.replace('openai-', '').toUpperCase();
+                    } else if (data.analysis.source.includes('anthropic-')) {
+                        modelUsed = data.analysis.source.replace('anthropic-', '');
+                    }
+                }
+                searchTypeInfo = ` <span style="color: #2a5298; font-weight: bold;">🧠 ${modelUsed} Concept Search</span>`;
+            }
+            resultsCount.innerHTML = `Found ${data.total.toLocaleString()} results for "${data.query}" (Page ${data.current_page} of ${data.pages})${searchTypeInfo}`;
+            
+            // Add concept analysis info if available
+            if (data.analysis && data.search_type === 'concept') {
+                const analysisInfo = `
+                    <div style="margin-top: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #2a5298;">
+                        <strong>🔍 AI Analysis:</strong> ${data.analysis.explanation || 'Searched using AI-powered concept understanding'}
+                        ${data.search_queries ? '<br><strong>Search strategies:</strong> ' + data.search_queries.slice(0, 3).join(', ') : ''}
+                    </div>
+                `;
+                resultsCount.innerHTML += analysisInfo;
+            }
+
+            // Generate results HTML
+            let resultsHTML = '';
+            data.results.forEach(result => {
+                const videoTitle = escapeHtml(result.title);
+                const captionText = escapeHtml(result.text || '');
+                const uploader = escapeHtml(result.uploader || 'Unknown');
+                const thumbnailText = escapeHtml(result.thumbnail_text || '');
+                
+                // Build tags display
+                const tagsHTML = result.tags && result.tags.length > 0 
+                    ? result.tags.map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join(' ')
+                    : '';
+                
+                // Build playlists display
+                const playlistsHTML = result.playlists && result.playlists.length > 0
+                    ? result.playlists.map(playlist => `<span class="playlist">📂 ${escapeHtml(playlist)}</span>`).join(' ')
+                    : '';
+                
+                // Thumbnail image
+                const thumbnailHTML = result.thumbnail 
+                    ? `<img src="${result.thumbnail}" alt="Video thumbnail" class="video-thumbnail" loading="lazy">`
+                    : '<div class="no-thumbnail">📺</div>';
+                
+                // Match type indicator
+                const matchTypeHTML = result.match_type && result.match_type !== 'caption'
+                    ? `<span class="match-type">Found in: ${result.match_type}</span>`
+                    : '';
+                
+                resultsHTML += `
+                    <div class="result-item">
+                        <div class="result-header">
+                            <div class="thumbnail-container">
+                                ${thumbnailHTML}
+                            </div>
+                            <div class="video-info">
+                                <div class="video-title">${videoTitle}</div>
+                                <div class="video-meta">
+                                    ${uploader} • ${result.upload_date || 'Unknown date'}
+                                    ${result.start_time && result.end_time ? ` • ${result.start_time} - ${result.end_time}` : ''}
+                                    ${result.concept_score ? `<span style="color: #2a5298; margin-left: 10px;">🎯 Relevance: ${result.concept_score}</span>` : ''}
+                                    ${matchTypeHTML}
+                                </div>
+                                ${tagsHTML ? `<div class="video-tags">${tagsHTML}</div>` : ''}
+                                ${playlistsHTML ? `<div class="video-playlists">${playlistsHTML}</div>` : ''}
+                            </div>
+                        </div>
+                        ${result.text ? `<div class="caption-time">At ${result.start_time}:</div>` : ''}
+                        ${result.text ? `<div class="caption-text">${captionText}</div>` : ''}
+                        ${thumbnailText ? `<div class="thumbnail-text"><strong>Thumbnail text:</strong> ${thumbnailText}</div>` : ''}
+                        <div class="video-links">
+                            ${result.start_time ? `<a href="${result.youtube_url}" target="_blank" class="video-link">▶️ Watch at timestamp</a>` : ''}
+                            <a href="${result.youtube_url_plain}" target="_blank" class="video-link secondary">📺 Full video</a>
+                            <a href="/video/${result.video_id}" class="video-link secondary">📄 All captions</a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            resultsContent.innerHTML = resultsHTML;
+
+            // Generate pagination
+            generatePagination(data.current_page, data.pages);
+
+            container.style.display = 'block';
+        }
+
+        function generatePagination(currentPage, totalPages) {
+            const pagination = document.getElementById('pagination');
+            
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+
+            let paginationHTML = '';
+
+            // Previous button
+            if (currentPage > 1) {
+                paginationHTML += `<a href="#" class="page-btn" onclick="performSearch(${currentPage - 1})">« Previous</a>`;
+            }
+
+            // Page numbers
+            const startPage = Math.max(1, currentPage - 2);
+            const endPage = Math.min(totalPages, currentPage + 2);
+
+            if (startPage > 1) {
+                paginationHTML += `<a href="#" class="page-btn" onclick="performSearch(1)">1</a>`;
+                if (startPage > 2) {
+                    paginationHTML += `<span class="page-btn disabled">...</span>`;
+                }
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                const activeClass = i === currentPage ? 'active' : '';
+                paginationHTML += `<a href="#" class="page-btn ${activeClass}" onclick="performSearch(${i})">${i}</a>`;
+            }
+
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    paginationHTML += `<span class="page-btn disabled">...</span>`;
+                }
+                paginationHTML += `<a href="#" class="page-btn" onclick="performSearch(${totalPages})">${totalPages}</a>`;
+            }
+
+            // Next button
+            if (currentPage < totalPages) {
+                paginationHTML += `<a href="#" class="page-btn" onclick="performSearch(${currentPage + 1})">Next »</a>`;
+            }
+
+            pagination.innerHTML = paginationHTML;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Initialize focus on search input
+        window.addEventListener('load', function() {
+            document.getElementById('searchInput').focus();
+        });
+    </script>
+</body>
+</html>

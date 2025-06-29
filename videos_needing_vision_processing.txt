@@ -1,0 +1,20 @@
+Videos needing Claude Vision processing: 3
+============================================================
+
+These videos need thumbnail download and vision processing:
+--------------------------------------------------
+  1. Video ID: bjroEc1J4n0
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Impetus
+     Thumbnail URL: https://i.ytimg.com/vi/bjroEc1J4n0/maxresdefault.jpg
+
+  2. Video ID: X7dnZIneWCc
+     Current Text: "C.S. Lewis Content 1924"
+     Title: Did Jesus Say His Death is Necessary for Salvation from Sin?
+     Thumbnail URL: https://i.ytimg.com/vi/X7dnZIneWCc/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AHUBoAC1gOKAgwIABABGGUgUyhPMA8=&rs=AOn4CLAHOg6uY62udxuQseJ4fRg-_YDTmw
+
+  3. Video ID: JxmDGytc4FU
+     Current Text: "C.S. Lewis Content 1924"
+     Title: God’s Use of Evil in Storytelling
+     Thumbnail URL: https://i.ytimg.com/vi/JxmDGytc4FU/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AGSBYAC4AOKAgwIABABGGYgZihmMA8=&rs=AOn4CLBBWePQNn5YWS8YjaviLyihXniqKQ
+

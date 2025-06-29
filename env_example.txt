@@ -1,0 +1,25 @@
+# Environment Configuration for Claude GitHub Search System
+
+# GitHub Configuration
+GITHUB_TOKEN=your_github_personal_access_token_here
+GITHUB_REPO_OWNER=jeffpace
+GITHUB_REPO_NAME=Sserf
+
+# Anthropic Claude API
+ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# Database Configuration
+DATABASE_PATH=captions.db
+
+# System Configuration
+DEBUG_MODE=true
+LOG_LEVEL=INFO
+
+# Learning System Configuration
+AUTO_DOCUMENT_THRESHOLD=3  # Minimum results to trigger learning documentation
+LEARNING_DIRECTORY=search_learnings
+MAX_CONTEXT_FILES=50
+
+# API Configuration
+API_PORT=5008
+API_HOST=0.0.0.0
