@@ -7,7 +7,7 @@ import sqlite3
 import os
 
 def check_database():
-    db_path = "captions.db"
+    db_path = "captions_backup.db"
     
     if not os.path.exists(db_path):
         print(f"Database file {db_path} does not exist")

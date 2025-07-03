@@ -19,7 +19,7 @@ from datetime import datetime
 from typing import Dict, List, Any, Optional
 import base64
 import anthropic
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -31,7 +31,7 @@ class GitHubClaudeSearchSystem:
         self.anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
         self.repo_owner = os.getenv('GITHUB_REPO_OWNER', 'jeffpace')
         self.repo_name = os.getenv('GITHUB_REPO_NAME', 'Sserf')
-        self.db_path = 'captions.db'  # Local database copy
+        self.db_path = 'captions_backup.db'  # Local database copy
         
         # Initialize Anthropic client
         self.claude = anthropic.Anthropic(api_key=self.anthropic_api_key)
@@ -555,9 +555,24 @@ def context_status():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/')
+def index():
+    """Serve the GitHub Claude Search UI"""
+    return render_template('github_claude_search.html')
+
+# Initialize the search system
+search_system = GitHubClaudeSearchSystem()
+
 if __name__ == '__main__':
     print("🚀 Claude GitHub Search System Starting...")
     print("🔗 GitHub Learning Loop: Fetch Context → Claude Search → Document Patterns → Update Repo")
-    print("🌐 Access at: http://localhost:5008")
     
-    app.run(debug=True, host='0.0.0.0', port=5008)
+    # Production configuration
+    port = int(os.environ.get('PORT', 5008))
+    debug = os.environ.get('DEBUG', 'False').lower() == 'true'
+    
+    print(f"🌐 UI Access: http://localhost:{port}")
+    print(f"🔍 API Access: http://localhost:{port}/api/github-claude-search")
+    print(f"⚙️ Debug mode: {debug}")
+    
+    app.run(debug=debug, host='0.0.0.0', port=port)
