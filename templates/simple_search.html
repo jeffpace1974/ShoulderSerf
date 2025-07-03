@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Captions Search - C.S. Lewis Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #34495e, #2c3e50);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .search-section {
+            padding: 30px;
+            background: white;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 12px 18px;
+            font-size: 16px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+        }
+
+        .search-button {
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 100px;
+        }
+
+        .search-button:hover {
+            background: linear-gradient(45deg, #2980b9, #1f4e79);
+            transform: translateY(-1px);
+        }
+
+        .search-button:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 18px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2ecc71;
+        }
+
+        .status-dot.loading {
+            background: #f39c12;
+            animation: pulse 1s infinite;
+        }
+
+        .status-dot.error {
+            background: #e74c3c;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .spinner {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results-container {
+            margin-top: 25px;
+        }
+
+        .search-info {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .result-item {
+            background: #fff;
+            border: 1px solid #e1e5e9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .result-item:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .result-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 4px;
+            flex: 1;
+        }
+
+        .result-meta {
+            color: #7f8c8d;
+            font-size: 0.85em;
+        }
+
+        .youtube-link {
+            background: #ff0000;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .youtube-link:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+
+        .result-content {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid #3498db;
+            margin: 12px 0;
+        }
+
+        .result-timestamp {
+            font-weight: 600;
+            color: #3498db;
+            margin-bottom: 6px;
+            font-size: 0.9em;
+        }
+
+        .result-text {
+            line-height: 1.5;
+            color: #34495e;
+        }
+
+        .contextual-summary {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 12px 0;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        .contextual-summary h4 {
+            color: #856404;
+            margin-bottom: 6px;
+            font-size: 0.95em;
+            font-weight: 600;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f5c6cb;
+            margin: 15px 0;
+        }
+
+        .example-queries {
+            background: #e8f4f8;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .example-queries h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .example-query {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin: 6px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #d4edda;
+            font-size: 0.9em;
+        }
+
+        .example-query:hover {
+            background: #f0f8f0;
+            transform: translateX(3px);
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Simple Captions Search</h1>
+            <div class="subtitle">Direct SQLite Search - C.S. Lewis Video Captions Database</div>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Enter your search query (e.g., 'Lewis critiques Arthur's writing')"
+                    autocomplete="off"
+                >
+                <button id="searchButton" class="search-button">Search</button>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-indicator">
+                    <div id="statusDot" class="status-dot"></div>
+                    <span id="statusText">Database ready</span>
+                </div>
+                <div id="dbInfo">Loading database info...</div>
+            </div>
+
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <div>🔍 Searching captions database...</div>
+            </div>
+
+            <div id="resultsContainer" class="results-container"></div>
+
+            <div class="example-queries">
+                <h3>📝 Example Queries:</h3>
+                <div class="example-query" onclick="setQuery('Lewis critiques his friend Arthur\'s writing')">
+                    Lewis critiques his friend Arthur's writing
+                </div>
+                <div class="example-query" onclick="setQuery('robot lady composes a letter at the request of jeff')">
+                    Robot Lady composes a letter at Jeff's request
+                </div>
+                <div class="example-query" onclick="setQuery('bus ride story to aunt lily')">
+                    Bus ride story to Aunt Lily's
+                </div>
+                <div class="example-query" onclick="setQuery('boxen character who eats oranges')">
+                    Boxen character who eats oranges
+                </div>
+                <div class="example-query" onclick="setQuery('submarines in the english channel')">
+                    Submarines in the English Channel
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            🚀 Simple Direct Database Search • Terminal-Quality Results • No AI Dependencies
+        </div>
+    </div>
+
+    <script>
+        let isSearching = false;
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            checkDatabaseStatus();
+            
+            // Enter key search
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !isSearching) {
+                    performSearch();
+                }
+            });
+
+            // Search button click
+            document.getElementById('searchButton').addEventListener('click', performSearch);
+        });
+
+        function setQuery(query) {
+            document.getElementById('searchInput').value = query;
+            document.getElementById('searchInput').focus();
+        }
+
+        async function checkDatabaseStatus() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                
+                if (data.status === 'ready') {
+                    document.getElementById('statusDot').className = 'status-dot';
+                    document.getElementById('statusText').textContent = 'Database ready';
+                    document.getElementById('dbInfo').textContent = `${data.video_count} videos, ${data.caption_count} captions`;
+                } else {
+                    throw new Error(data.error || 'Database not ready');
+                }
+            } catch (error) {
+                document.getElementById('statusDot').className = 'status-dot error';
+                document.getElementById('statusText').textContent = 'Database error';
+                document.getElementById('dbInfo').textContent = 'Failed to load';
+                console.error('Database status error:', error);
+            }
+        }
+
+        async function performSearch() {
+            if (isSearching) return;
+
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) {
+                alert('Please enter a search query');
+                return;
+            }
+
+            setSearching(true);
+            showLoading(true);
+            clearResults();
+
+            try {
+                const response = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Search failed');
+                }
+
+                displayResults(data);
+
+            } catch (error) {
+                showError('Search failed: ' + error.message);
+                console.error('Search error:', error);
+            } finally {
+                setSearching(false);
+                showLoading(false);
+            }
+        }
+
+        function setSearching(searching) {
+            isSearching = searching;
+            const button = document.getElementById('searchButton');
+            const statusDot = document.getElementById('statusDot');
+            
+            if (searching) {
+                button.textContent = 'Searching...';
+                button.disabled = true;
+                statusDot.className = 'status-dot loading';
+                document.getElementById('statusText').textContent = 'Searching database...';
+            } else {
+                button.textContent = 'Search';
+                button.disabled = false;
+                statusDot.className = 'status-dot';
+                document.getElementById('statusText').textContent = 'Database ready';
+            }
+        }
+
+        function showLoading(show) {
+            document.getElementById('loadingSpinner').style.display = show ? 'block' : 'none';
+        }
+
+        function clearResults() {
+            document.getElementById('resultsContainer').innerHTML = '';
+        }
+
+        function showError(message) {
+            document.getElementById('resultsContainer').innerHTML = `
+                <div class="error-message">
+                    <strong>❌ Error:</strong> ${message}
+                </div>
+            `;
+        }
+
+        function displayResults(data) {
+            const container = document.getElementById('resultsContainer');
+
+            if (data.status === 'no_results' || !data.results || data.results.length === 0) {
+                container.innerHTML = `
+                    <div class="error-message">
+                        <strong>🔍 No results found</strong><br>
+                        Try rephrasing your query or using different keywords.
+                    </div>
+                `;
+                return;
+            }
+
+            let html = `
+                <div class="search-info">
+                    <strong>🎯 Search Results:</strong> Found ${data.count} results using ${data.method}
+                </div>
+            `;
+
+            data.results.forEach((result, index) => {
+                const timestamp = formatTimestamp(result.start_time);
+
+                html += `
+                    <div class="result-item">
+                        <div class="result-header">
+                            <div>
+                                <div class="result-title">${result.title || 'C.S. Lewis Episode'}</div>
+                                <div class="result-meta">Video ID: ${result.video_id}</div>
+                            </div>
+                            <a href="${result.youtube_url}" target="_blank" class="youtube-link">
+                                ▶️ ${timestamp}
+                            </a>
+                        </div>
+                        ${result.contextual_summary ? `
+                            <div class="contextual-summary">
+                                <h4>🎯 Why this result is relevant:</h4>
+                                <div>${result.contextual_summary}</div>
+                            </div>
+                        ` : ''}
+                        <div class="result-content">
+                            <div class="result-timestamp">🕐 ${timestamp}</div>
+                            <div class="result-text">${result.text}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function formatTimestamp(timeStr) {
+            // Convert "00:14:44.120s" to "14:44"
+            const match = timeStr.match(/(\d+):(\d+):(\d+)/);
+            if (match) {
+                const hours = parseInt(match[1]);
+                const minutes = parseInt(match[2]);
+                const seconds = parseInt(match[3]);
+                
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+            return timeStr;
+        }
+    </script>
+</body>
+</html>
