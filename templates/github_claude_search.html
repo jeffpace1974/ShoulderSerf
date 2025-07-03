@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude GitHub Search - C.S. Lewis Captions Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .search-section {
+            padding: 40px;
+            background: white;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #e1e5e9;
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+        }
+
+        .search-button {
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-width: 120px;
+        }
+
+        .search-button:hover {
+            background: linear-gradient(45deg, #2980b9, #1f4e79);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .search-button:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2ecc71;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.loading {
+            background: #f39c12;
+        }
+
+        .status-dot.error {
+            background: #e74c3c;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results-container {
+            margin-top: 30px;
+        }
+
+        .result-item {
+            background: #fff;
+            border: 1px solid #e1e5e9;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .result-item:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .result-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .result-meta {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .youtube-link {
+            background: #ff0000;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .youtube-link:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+
+        .result-content {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+
+        .result-timestamp {
+            font-weight: 600;
+            color: #3498db;
+            margin-bottom: 8px;
+        }
+
+        .result-text {
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        .search-quality {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #f5c6cb;
+            margin: 20px 0;
+        }
+
+        .example-queries {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .example-queries h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .example-query {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #d4edda;
+        }
+
+        .example-query:hover {
+            background: #f0f8f0;
+            transform: translateX(5px);
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 Claude GitHub Search</h1>
+            <div class="subtitle">Intelligent C.S. Lewis Captions Research with Real-time GitHub Context</div>
+        </div>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Enter your research query (e.g., 'robot lady composes a letter at the request of jeff')"
+                    autocomplete="off"
+                >
+                <button id="searchButton" class="search-button">Search</button>
+            </div>
+
+            <div class="status-bar">
+                <div class="status-indicator">
+                    <div id="statusDot" class="status-dot"></div>
+                    <span id="statusText">Ready - GitHub context loaded</span>
+                </div>
+                <div id="contextInfo">Latest commit: <span id="commitSha">Loading...</span></div>
+            </div>
+
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <div>🔍 Claude is analyzing your query with latest GitHub context...</div>
+            </div>
+
+            <div id="resultsContainer" class="results-container"></div>
+
+            <div class="example-queries">
+                <h3>📝 Example Queries:</h3>
+                <div class="example-query" onclick="setQuery('robot lady composes a letter at the request of jeff where she imagines what CS Lewis would say about our YouTube project')">
+                    Robot Lady composes a letter imagining what Lewis would say about the YouTube project
+                </div>
+                <div class="example-query" onclick="setQuery('bus ride story to aunt lily')">
+                    Bus ride story to Aunt Lily's
+                </div>
+                <div class="example-query" onclick="setQuery('boxen character who eats oranges')">
+                    Boxen character who eats oranges
+                </div>
+                <div class="example-query" onclick="setQuery('submarines in the english channel')">
+                    Submarines in the English Channel
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            🚀 Powered by Claude API with autonomous GitHub learning • Real-time context updates • Terminal-quality search intelligence
+        </div>
+    </div>
+
+    <script>
+        let isSearching = false;
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            checkContextStatus();
+            
+            // Enter key search
+            document.getElementById('searchInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !isSearching) {
+                    performSearch();
+                }
+            });
+
+            // Search button click
+            document.getElementById('searchButton').addEventListener('click', performSearch);
+        });
+
+        function setQuery(query) {
+            document.getElementById('searchInput').value = query;
+            document.getElementById('searchInput').focus();
+        }
+
+        async function checkContextStatus() {
+            try {
+                const response = await fetch('/api/context-status');
+                const data = await response.json();
+                
+                if (data.status === 'ready') {
+                    document.getElementById('statusDot').className = 'status-dot';
+                    document.getElementById('statusText').textContent = `Ready - ${data.files_loaded} files loaded`;
+                    document.getElementById('commitSha').textContent = data.last_commit?.substring(0, 8) || 'Unknown';
+                } else {
+                    throw new Error(data.error || 'Context not ready');
+                }
+            } catch (error) {
+                document.getElementById('statusDot').className = 'status-dot error';
+                document.getElementById('statusText').textContent = 'Context loading failed';
+                console.error('Context status error:', error);
+            }
+        }
+
+        async function performSearch() {
+            if (isSearching) return;
+
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) {
+                alert('Please enter a search query');
+                return;
+            }
+
+            setSearching(true);
+            showLoading(true);
+            clearResults();
+
+            try {
+                const response = await fetch('/api/github-claude-search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Search failed');
+                }
+
+                displayResults(data);
+
+            } catch (error) {
+                showError('Search failed: ' + error.message);
+                console.error('Search error:', error);
+            } finally {
+                setSearching(false);
+                showLoading(false);
+            }
+        }
+
+        function setSearching(searching) {
+            isSearching = searching;
+            const button = document.getElementById('searchButton');
+            const statusDot = document.getElementById('statusDot');
+            
+            if (searching) {
+                button.textContent = 'Searching...';
+                button.disabled = true;
+                statusDot.className = 'status-dot loading';
+                document.getElementById('statusText').textContent = 'Claude analyzing query...';
+            } else {
+                button.textContent = 'Search';
+                button.disabled = false;
+                statusDot.className = 'status-dot';
+                document.getElementById('statusText').textContent = 'Ready - GitHub context loaded';
+            }
+        }
+
+        function showLoading(show) {
+            document.getElementById('loadingSpinner').style.display = show ? 'block' : 'none';
+        }
+
+        function clearResults() {
+            document.getElementById('resultsContainer').innerHTML = '';
+        }
+
+        function showError(message) {
+            document.getElementById('resultsContainer').innerHTML = `
+                <div class="error-message">
+                    <strong>❌ Error:</strong> ${message}
+                </div>
+            `;
+        }
+
+        function displayResults(data) {
+            const container = document.getElementById('resultsContainer');
+            const results = data.results;
+
+            if (!results || !results.results || results.results.length === 0) {
+                container.innerHTML = `
+                    <div class="error-message">
+                        <strong>🔍 No results found</strong><br>
+                        Try rephrasing your query or using different keywords.
+                    </div>
+                `;
+                return;
+            }
+
+            let html = `
+                <div style="background: #e8f5e8; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <strong>🎯 Search Results:</strong> Found ${results.results.length} relevant segments
+                    <div class="search-quality">✨ Terminal-Quality Claude Intelligence</div>
+                </div>
+            `;
+
+            results.results.forEach((result, index) => {
+                const timestamp = formatTimestamp(result.start_time);
+                const timestampSeconds = convertToSeconds(result.start_time);
+                const youtubeUrl = `https://www.youtube.com/watch?v=${result.video_id}&t=${timestampSeconds}s`;
+
+                html += `
+                    <div class="result-item">
+                        <div class="result-header">
+                            <div>
+                                <div class="result-title">${result.title || 'C.S. Lewis Episode'}</div>
+                                <div class="result-meta">Video ID: ${result.video_id}</div>
+                            </div>
+                            <a href="${youtubeUrl}" target="_blank" class="youtube-link">
+                                ▶️ Watch at ${timestamp}
+                            </a>
+                        </div>
+                        <div class="result-content">
+                            <div class="result-timestamp">🕐 ${timestamp}</div>
+                            <div class="result-text">${result.text}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            if (results.analysis) {
+                html += `
+                    <div style="background: #f0f8ff; padding: 20px; border-radius: 10px; margin-top: 20px; border-left: 4px solid #3498db;">
+                        <strong>🧠 Claude Analysis:</strong><br>
+                        ${results.analysis}
+                    </div>
+                `;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function formatTimestamp(timeStr) {
+            // Convert "00:14:44.120s" to "14:44"
+            const match = timeStr.match(/(\d+):(\d+):(\d+)/);
+            if (match) {
+                const hours = parseInt(match[1]);
+                const minutes = parseInt(match[2]);
+                const seconds = parseInt(match[3]);
+                
+                if (hours > 0) {
+                    return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                } else {
+                    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+                }
+            }
+            return timeStr;
+        }
+
+        function convertToSeconds(timeStr) {
+            // Convert "00:14:44.120s" to total seconds for YouTube URL
+            const match = timeStr.match(/(\d+):(\d+):(\d+)/);
+            if (match) {
+                const hours = parseInt(match[1]);
+                const minutes = parseInt(match[2]);
+                const seconds = parseInt(match[3]);
+                return (hours * 3600) + (minutes * 60) + seconds;
+            }
+            return 0;
+        }
+    </script>
+</body>
+</html>
