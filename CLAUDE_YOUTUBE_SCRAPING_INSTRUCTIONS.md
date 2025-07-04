@@ -1,7 +1,10 @@
 # Claude YouTube Scraping Instructions
 
+## ⚠️ CRITICAL WARNING
+**Before starting any YouTube scraping project, READ SECTION 6 for mandatory implementation requirements. Using incorrect yt-dlp parameters results in 90%+ failure rates.**
+
 ## Overview
-These are the exact steps Claude should follow to scrape YouTube videos and add them to a captions database, based on the workflow used in the Sserf project. This includes the mandatory 4-criteria thumbnail text extraction protocol.
+These are the exact steps Claude should follow to scrape YouTube videos and add them to a captions database, based on the workflow used in the Sserf project. This includes the mandatory 4-criteria thumbnail text extraction protocol and critical fixes to avoid common failures.
 
 ## Prerequisites Setup
 
@@ -29,6 +32,21 @@ project/
 - `src/youtube/scraper.py` - Core scraping functionality  
 - `src/database/models.py` - Database operations
 - Existing database file (usually `captions_backup.db` or `captions.db`)
+
+### 4. Critical Implementation Requirements
+
+**⚠️ IMPORTANT**: To avoid common scraping failures (like achieving only 8% success rate), ensure these fixes are implemented from the start:
+
+**Required yt-dlp Parameters:**
+- Use `--write-auto-subs` (gets auto-generated captions) 
+- Use `--sub-langs 'en.*'` (all English variants, not just 'en')
+- Include rate limiting: `--sleep-interval` and `--max-sleep-interval`
+- Implement batch processing with delays between requests
+
+**Do NOT use these problematic parameters:**
+- ❌ `--write-subs` only (misses auto-generated captions)
+- ❌ `--sub-lang 'en'` (too restrictive, misses variants)
+- ❌ No rate limiting (causes YouTube 429 errors)
 
 ## Step-by-Step YouTube Scraping Workflow
 
@@ -62,20 +80,29 @@ yt-dlp --flat-playlist --dump-json "[CHANNEL_URL]" | grep -o '"id":"[^"]*"' | cu
 
 ### Phase 2: Scraping Execution
 
-**Method A: Scrape Entire Channel**
+**⚠️ CRITICAL**: Before running these commands, verify that `src/youtube/scraper.py` uses the correct parameters (see Section 6 below).
+
+**Method A: Test with Small Batch First (RECOMMENDED)**
+```bash
+python3 youtube_cli.py --db [database_file] channel "[CHANNEL_URL]" --max-videos 10
+```
+**Purpose**: Verify scraping works correctly before processing entire channel.
+
+**Method B: Scrape Entire Channel (After successful test)**
 ```bash
 python3 youtube_cli.py --db [database_file] channel "[CHANNEL_URL]"
 ```
 
-**Method B: Scrape Specific Videos**
+**Method C: Scrape Specific Videos**
 ```bash
 python3 youtube_cli.py --db [database_file] video "[VIDEO_URL]"
 ```
 
-**Method C: Limited Channel Scrape (for testing)**
+**Method D: Resume Incomplete Scraping**
 ```bash
-python3 youtube_cli.py --db [database_file] channel "[CHANNEL_URL]" --max-videos 10
+python3 youtube_cli.py --db [database_file] resume "[CHANNEL_URL]"
 ```
+**Purpose**: Continue scraping videos that failed or were missed in previous runs.
 
 ### Phase 3: Monitor Scraping Progress
 
@@ -175,6 +202,100 @@ python3 youtube_cli.py --db captions_backup.db list
 python3 youtube_cli.py --db captions_backup.db export VIDEO_ID output.txt
 ```
 
+## Section 6: Critical scraper.py Implementation
+
+**⚠️ MANDATORY**: Use this exact implementation to avoid 90%+ failure rates.
+
+### Correct download_captions Method:
+```python
+def download_captions(self, video_url: str, lang: str = 'en') -> Optional[str]:
+    """Download captions for a video using yt-dlp with proper auto-caption support."""
+    try:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            cmd = [
+                'yt-dlp',
+                '--write-auto-subs',      # ✅ Gets auto-generated captions
+                '--write-subs',           # ✅ Also gets manual subs if available
+                '--sub-langs', 'en.*',    # ✅ All English variants
+                '--sub-format', 'vtt',
+                '--skip-download',
+                '--output', os.path.join(temp_dir, '%(title)s.%(ext)s'),
+                '--sleep-interval', '2',   # ✅ Rate limiting protection
+                '--max-sleep-interval', '5',
+                video_url
+            ]
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+            
+            # Find VTT files with better pattern matching
+            vtt_files = []
+            for f in os.listdir(temp_dir):
+                if f.endswith('.vtt') and ('en' in f.lower() or 'auto' in f.lower()):
+                    vtt_files.append(f)
+            
+            if vtt_files:
+                # Prefer auto-generated captions if multiple files
+                vtt_file = None
+                for f in vtt_files:
+                    if 'auto' in f.lower():
+                        vtt_file = f
+                        break
+                if not vtt_file:
+                    vtt_file = vtt_files[0]
+                
+                vtt_path = os.path.join(temp_dir, vtt_file)
+                with open(vtt_path, 'r', encoding='utf-8') as file:
+                    return file.read()
+                    
+            return None
+            
+    except subprocess.TimeoutExpired:
+        logger.error(f"Timeout downloading captions for: {video_url}")
+        return None
+    except Exception as e:
+        logger.error(f"Error downloading captions: {e}")
+        return None
+```
+
+### Required: Rate-Limited Channel Scraping
+Add this method to YouTubeScraper class:
+```python
+def scrape_channel_with_rate_limiting(self, channel_url: str, max_videos: Optional[int] = None):
+    """Scrape channel with proper rate limiting to avoid 429 errors."""
+    import time
+    import random
+    
+    video_urls = self.get_channel_videos(channel_url, max_videos)
+    if not video_urls:
+        return []
+    
+    results = []
+    batch_size = 10
+    
+    for i in range(0, len(video_urls), batch_size):
+        batch = video_urls[i:i+batch_size]
+        logger.info(f"Processing batch {i//batch_size + 1}")
+        
+        for j, video_url in enumerate(batch):
+            if j > 0:  # Add delays between videos
+                delay = 2 + random.uniform(0, 2)
+                time.sleep(delay)
+            
+            try:
+                video_info, captions = self.get_video_captions(video_url)
+                if video_info:
+                    results.append((video_info, captions or []))
+            except Exception as e:
+                logger.error(f"Error processing {video_url}: {e}")
+                time.sleep(5)  # Longer delay after errors
+        
+        # Delay between batches
+        if i + batch_size < len(video_urls):
+            time.sleep(10)
+    
+    return results
+```
+
 ## Thumbnail Text Extraction Code Pattern
 
 ```python
@@ -215,25 +336,31 @@ def extract_thumbnail_text_for_video(video_id, database_path):
 
 ### Common Issues and Solutions
 
-**1. "No captions found" Warnings**
-- This is normal - not all videos have captions
-- Tool will continue processing other videos
-- Videos without captions are still added to database for completeness
+**1. LOW SUCCESS RATE (8-15% videos scraped successfully)**
+**Problem**: Using `--write-subs` only and `--sub-lang 'en'`
+**Solution**: Use the exact code from Section 6 above with `--write-auto-subs` and `--sub-langs 'en.*'`
 
-**2. Database Connection Errors**
+**2. YouTube 429 Rate Limiting Errors**
+**Problem**: No delays between requests, processing too aggressively
+**Solution**: Implement the rate-limited scraping method from Section 6
+
+**3. "No captions found" for 90%+ of videos**
+**Problem**: Missing auto-generated captions (most common type)
+**Solution**: Ensure `--write-auto-subs` is included in yt-dlp command
+
+**4. VTT File Detection Failures**
+**Problem**: Looking for exact filename matches
+**Solution**: Use pattern matching for files containing 'en' or 'auto' in filename
+
+**5. Database Connection Errors**
 - Verify database file exists and is accessible
 - Check file permissions
 - Ensure database path is correct
 
-**3. yt-dlp Errors**
+**6. yt-dlp Errors**
 - Update yt-dlp: `pip install --upgrade yt-dlp`
 - Check if video/channel is accessible
 - Verify URL format is correct
-
-**4. Rate Limiting**
-- Tool handles this automatically
-- If persistent issues, add delays between requests
-- Consider processing in smaller batches
 
 ### Recovery Procedures
 
@@ -276,12 +403,20 @@ git push origin main
 
 Before considering scraping complete:
 
+- [ ] **Success rate >80%** - If below 80%, implement Section 6 fixes
 - [ ] Database stats show expected increase in videos/captions
 - [ ] Search functionality tested with new content
 - [ ] All new videos processed through 4-criteria thumbnail protocol
-- [ ] Failed videos documented and explained
+- [ ] Failed videos documented and explained (should be <20%)
+- [ ] No persistent 429 rate limiting errors
 - [ ] Database backed up and added to repository
 - [ ] Project documentation updated if needed
+
+**Success Rate Benchmarks:**
+- **>90%** = Excellent (using proper auto-caption support)
+- **80-90%** = Good (some videos legitimately have no captions)
+- **50-80%** = Poor (missing auto-captions, implement Section 6 fixes)
+- **<50%** = Critical failure (wrong yt-dlp parameters, fix immediately)
 
 ## Integration Notes
 
